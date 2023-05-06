@@ -3,7 +3,7 @@ author: "Minh T. Nguyen"
 title: "About Me"
 date: "2023-03-11"
 tags: ["about me"]
-categories: ["Experience"]
+categories: ["experience"]
 series: ["My Experience"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
@@ -28,27 +28,27 @@ weight: 2
 <details><summary><strong>Research Assistant</strong> @ Terrestrial Robotics Engineering & Controls Lab (Virginia Tech)</summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> C#, C++, Unity.</summary>
     <summary style="display: flex">
-        <img src="https://github.com/mnguyen0226swetest/hugo_demo/blob/main/static/profile_images/trec/force_bot_rt.gif?raw=true" alt="TREC" style="height:150px;">
+        <img src="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/force_bot_rt.gif?raw=true" alt="TREC" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/trec/demo_2.jpeg" alt="TREC" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/trec/demo_2.jpeg" alt="TREC" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/trec/demo_3.jpeg" alt="TREC" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/trec/demo_3.jpeg" alt="TREC" style="height:150px;">
     </summary>
     <summary>▪ Date: 09/2021 - 05/2022.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
         <summary>▪ Improved transparency by applying ROS-Bridge data transfer pipeline between the low-level robotic controller and Unity.</summary>
         <summary>▪ Created 3D interactive simulation environments in Unity with VR headsets and Haptix Gloves synchronization.</summary>
-        <summary>▪ <a href="https://github.com/mnguyen0226swetest/hugo_demo/blob/main/static/profile_images/trec/poster.jpeg">Poster</a>, <a href="https://github.com/mnguyen0226swetest/hugo_demo/blob/main/static/profile_images/trec/presentation.pdf">Presentation</a>.</summary>
+        <summary>▪ <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/poster.jpeg">Poster</a>, <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/presentation.pdf">Presentation</a>.</summary>
     </blockquote></details>
 </blockquote></details>
 
 <details><summary><strong>Machine Learning Intern</strong> @ Heron Systems (Shield AI Subsidiary) </summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Javascript, PyTorch, Pandas, Plotly, SpaCy, Flask, MySQL.</summary>
     <summary style="display: flex">
-        <img src="https://github.com/mnguyen0226swetest/hugo_demo/blob/main/static/profile_images/heron_systems/shield_ai_starcraft.gif?raw=true" alt="" style="height:150px;">
+        <img src="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/heron_systems/shield_ai_starcraft.gif?raw=true" alt="" style="height:150px;">
     </summary>
     <summary>▪ Date: 05/2021 - 08/2021.</summary>
     <summary>▪ Location: Alexandria, Virginia.</summary>
@@ -63,7 +63,7 @@ weight: 2
 <details><summary><strong>Research Assistant</strong> @ Geo Lab (William & Mary College) </summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Tensorflow, Matplotlib.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/geo_lab/shapley_tool.png" alt="Geo-Lab" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/geo_lab/shapley_tool.png" alt="Geo-Lab" style="height:150px;">
     </summary>
     <summary>▪ Date: 09/2020 - 05/2021.</summary>
     <summary>▪ Location: Williamsburg, Virginia.</summary>
@@ -76,16 +76,16 @@ weight: 2
 <details><summary><strong>Research Assistant</strong> @ Hybrid Electric Vehicle Team (Virginia Tech) </summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> C++, MATLAB.</summary>
     <summary style="display: flex">
-        <img src="https://github.com/mnguyen0226swetest/hugo_demo/blob/main/static/profile_images/hevt/hevt_rt.gif?raw=true" alt="hevt" style="height:150px;">
+        <img src="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/hevt/hevt_rt.gif?raw=true" alt="hevt" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/hevt/chevrolet.jpeg" alt="hevt" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/hevt/chevrolet.jpeg" alt="hevt" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/hevt/mrr.jpeg" alt="hevt" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/hevt/mrr.jpeg" alt="hevt" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/hevt/mobileye.jpeg" alt="hevt" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/hevt/mobileye.jpeg" alt="hevt" style="height:150px;">
     </summary>
     <summary>▪ Date: 09/2020 - 05/2021.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
@@ -107,7 +107,7 @@ weight: 2
 <details><summary><strong>Research Assistant</strong> @ Wireless Lab (Virginia Tech) </summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> C++, Python.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/wireless/prototype.jpeg" alt="wireless" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/wireless/prototype.jpeg" alt="wireless" style="height:150px;">
     </summary>
     <summary>▪ Date: 05/2020 - 08/2020.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
@@ -162,10 +162,10 @@ weight: 2
 <details><summary><strong>Books.JBP</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Java, Vue.js, MySQL, Figma.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/book_jbp/official_home_page.png" alt="Book-JBP Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/book_jbp/official_home_page.png" alt="Book-JBP Image" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/book_jbp/offcial_category_page.png" alt="Book-JBP Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/book_jbp/offcial_category_page.png" alt="Book-JBP Image" style="height:150px;">
     </summary>
     <summary>▪ Developed a single-page full-stack e-commerce web app; followed DAO pattern and SOLID principles.</summary>
     <summary>▪ <a href="https://github.com/mnguyen0226/bookstore_js">Github</a>.</summary>
@@ -174,10 +174,10 @@ weight: 2
 <details><summary><strong>Flask-Y</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Javascript, MySQL, Flask API, Werkzeug API, CKEditor API, Bootstrap 5.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/flask_y/MVC_model.png" alt="Flask-Y Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/flask_y/MVC_model.png" alt="Flask-Y Image" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/flask_y/hacker_new_redesign.png" alt="Flask-Y Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/flask_y/hacker_new_redesign.png" alt="Flask-Y Image" style="height:150px;">
     </summary>
     <summary>▪ Redesigned Y Combinator's Hacker News to be more user-friendly (Reddit style).</summary>
     <summary>▪ Developed a multi-page full-stack media web app that allows multiple users to sign-up, login, and manage/comment/vote posts.</summary>
@@ -187,13 +187,13 @@ weight: 2
 <details><summary><strong>Smart Home Simulation</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> C++, Circuit Design, Arduino, MIT Mobile App Inventor.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/smart_home/advanced_smart_home_structure.png" alt="Smart Home Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/smart_home/advanced_smart_home_structure.png" alt="Smart Home Image" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/smart_home/arduino_circuit_advanced_sm.png" alt="Smart Home Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/smart_home/arduino_circuit_advanced_sm.png" alt="Smart Home Image" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226swetest/hugo_demo/main/static/profile_images/smart_home/mit_app_user_interface.png" alt="Smart Home Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/smart_home/mit_app_user_interface.png" alt="Smart Home Image" style="height:150px;">
     </summary>
     <summary>▪ Designed, built, and tested hardware simulation with 8 automated sensors, controlled wirelessly via an Android mobile app.</summary>
     <summary>▪ Appointed to class's teaching assistant by professor due to project's design, presentation, report, and assistance to classmates.</summary>
