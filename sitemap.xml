@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/posts/test_post/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/categories/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/posts/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/series/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/tags/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/tags/test/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/categories/test/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/personal_site_v2/series/test/</loc>
+    <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url>
+</urlset>
