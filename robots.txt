@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://mnguyen0226.github.io/personal_site_v2/sitemap.xml
+Sitemap: https://mnguyen0226.github.io/sitemap.xml

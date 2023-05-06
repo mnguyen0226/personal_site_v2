@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Minh T. Nguyen</title>
-    <link>https://mnguyen0226.github.io/personal_site_v2/categories/</link>
+    <link>https://mnguyen0226.github.io/categories/</link>
     <description>Recent content in Categories on Minh T. Nguyen</description>
     <image>
       <title>Minh T. Nguyen</title>
-      <url>https://mnguyen0226.github.io/personal_site_v2/papermod-cover.png</url>
-      <link>https://mnguyen0226.github.io/personal_site_v2/papermod-cover.png</link>
+      <url>https://mnguyen0226.github.io/papermod-cover.png</url>
+      <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 May 2023 15:57:04 -0400</lastBuildDate><atom:link href="https://mnguyen0226.github.io/personal_site_v2/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 15:57:04 -0400</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>test</title>
-      <link>https://mnguyen0226.github.io/personal_site_v2/categories/test/</link>
+      <link>https://mnguyen0226.github.io/categories/test/</link>
       <pubDate>Fri, 05 May 2023 15:57:04 -0400</pubDate>
       
-      <guid>https://mnguyen0226.github.io/personal_site_v2/categories/test/</guid>
+      <guid>https://mnguyen0226.github.io/categories/test/</guid>
       <description></description>
     </item>
     
