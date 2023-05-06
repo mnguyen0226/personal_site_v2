@@ -5,6 +5,9 @@
     <loc>https://mnguyen0226.github.io/posts/test_post/</loc>
     <lastmod>2023-05-05T15:57:04-04:00</lastmod>
   </url><url>
+    <loc>https://mnguyen0226.github.io/about/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/categories/</loc>
     <lastmod>2023-05-05T15:57:04-04:00</lastmod>
   </url><url>
@@ -28,5 +31,18 @@
   </url><url>
     <loc>https://mnguyen0226.github.io/series/test/</loc>
     <lastmod>2023-05-05T15:57:04-04:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/about-me/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/categories/experience/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/my-experience/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/archives/</loc>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/search/</loc>
   </url>
 </urlset>

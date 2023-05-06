@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Minh T. Nguyen</title>
-    <link>https://mnguyen0226.github.io/</link>
-    <description>Recent content on Minh T. Nguyen</description>
+    <title>about me on Minh T. Nguyen</title>
+    <link>https://mnguyen0226.github.io/tags/about-me/</link>
+    <description>Recent content in about me on Minh T. Nguyen</description>
     <image>
       <title>Minh T. Nguyen</title>
       <url>https://mnguyen0226.github.io/papermod-cover.png</url>
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 May 2023 15:57:04 -0400</lastBuildDate><atom:link href="https://mnguyen0226.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test Post</title>
-      <link>https://mnguyen0226.github.io/posts/test_post/</link>
-      <pubDate>Fri, 05 May 2023 15:57:04 -0400</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/test_post/</guid>
-      <description>Sample Post 1.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/about-me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://mnguyen0226.github.io/about/</link>
@@ -28,8 +19,6 @@
       <guid>https://mnguyen0226.github.io/about/</guid>
       <description>👨‍💻 Experience Graduate Research Assistant @ Deloitte Touches x Commonwealth Cyber Initiatives ▪ Tech Stack: Python, Tensorflow, Matplotlib, Pandas, Seaborn. ▪ Date: 05/2022 - 08/2022. ▪ Location: Arlington, Virginia. Responsibilities ▪ Forecasted water levels and localized overflowed water tanks during storms by applying a temporal deep-learning model; reduced 25-30% total operation/maintenance costs and prevented pollution to DC&#39;s local rivers. ▪ Built an interactable explainable dashboard using the MDS algorithm for the literature database; provided new insights for stakeholders.</description>
     </item>
-    
-    
     
   </channel>
 </rss>
