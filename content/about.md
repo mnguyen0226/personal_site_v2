@@ -217,28 +217,28 @@ weight: 2
 </blockquote></details>
 
 ## 🙌 Volunteers
-<details><summary><strong>President</strong> @ Teaching Robotics & Engineering Club at Virginia Tech</summary><blockquote>
+<details><summary><strong>President</strong> @ Teaching Robotics & Engineering Club (Virginia Tech)</summary><blockquote>
     <summary>▪ Taught C/C++, Arduino, and electric foundations and robotics projects for 15-25 club members.</summary>
     <summary>▪ Supervised club Officers in making teaching materials and mentoring club members.</summary>
 </blockquote></details>
 
-<details><summary><strong>Industry Relations Chair</strong> @ IEEE Student Branch at Virginia Tech</summary><blockquote>
+<details><summary><strong>Industry Relations Chair</strong> @ IEEE Student Branch (Virginia Tech)</summary><blockquote>
     <summary>▪ Tripled the number of participants by hosting peer networking events and info sessions to connect students to faculty-sponsored and company-sponsored opportunities in the ECE department.</summary>
     <summary>▪ Collaborated with company representatives in IEEE@VT Summit, resume review sessions, and tech talks.</summary>
     <summary>▪ Raised a $6,000 annual sponsorship from Collins Aerospace, Lockheed Martin, Boeing, and Texas Instruments.</summary>
 </blockquote></details>
 
-<details><summary><strong>Student Mentor</strong> @ Center for Enhancement of Engineering Diversity at Virginia Tech</summary><blockquote>
+<details><summary><strong>Student Mentor</strong> @ Center for Enhancement of Engineering Diversity (Virginia Tech)</summary><blockquote>
     <summary>▪ Served as a sounding board for various issues that confront first-year students during the first 10 weeks.
 </summary>
     <summary>▪ Held weekly meetings to provide 10 mentees about how to smoothly transition into Virginia Tech culture.</summary>
 </blockquote></details>
 
-<details><summary><strong>Officer</strong> @ IEEE Student Branch at Virginia Tech</summary><blockquote>
+<details><summary><strong>Officer</strong> @ IEEE Student Branch (Virginia Tech)</summary><blockquote>
     <summary>▪ Organized “Fun Friday’s” peer networking events and the IEEE Summit industry/leadership conference.</summary>
 </blockquote></details>
 
-<details><summary><strong>Math Team Captain</strong> @ St. Paul Preparatory School</summary><blockquote>
+<details><summary><strong>Captain</strong> @ Math Team (St. Paul Preparatory School)</summary><blockquote>
     <summary>▪ Won Team Second Place in the 2017 Minnesota High School Mathematics League Tournament.</summary>
     <summary>▪ Assisted the teacher with explaining difficult problems to members.</summary>
     <summary>▪ Assigned math areas to different teammates based on skill sets to boost the team's total score.</summary>
