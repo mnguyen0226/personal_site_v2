@@ -8,7 +8,7 @@ series: ["My Experience"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: true
-weight: 2
+weight: 5
 ---
 
 
@@ -157,6 +157,7 @@ weight: 2
 
 ## 📜 Publication
 - <p>"DeepH20: Cyber attack detection in water distribution systems using deep learning." Nazmul Sikder, <strong>Minh T. Nguyen</strong>, Donald Elliot, Feras Batarseh. Elsevier's Journal of Water Process Engineering (Vol 52.) (04/2023). <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855?dgcid=coauthor">Link.</a></p>
+- <p>"AI for Cyberbiosecurity in Water Systems—A Survey." Daniel Sobien, Mehmet O. Yardimci, <strong>Minh T. Nguyen</strong>, Wan-Yi Mao, Vinita Fordham, Abdul Rahman, Susan Duncan, Feras Batarseh. Springer's Cyberbiosecurity Book (01/2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-26034-6_13">Link.</a></p>
 
 ## 💻 Projects
 <details><summary><strong>Books.JBP</strong></summary><blockquote>
