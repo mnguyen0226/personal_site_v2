@@ -73,12 +73,11 @@ params:
         Content: >
             - ☕ Hi, this is Minh. I'm documenting my career and learning notes in this blog. 
             
-            - 👀 **[I am currently looking for software engineer / machine learning / data science internship opportunities in summer 2023 and/or fall 2023.](https://www.linkedin.com/in/minhbtnguyen/)**
-
             - 🤝 Let's connect and discuss how I can provide service to your team! 
 
-            - 📨 I am best reached via **mnguyen0226@vt.edu** or via direct message on **[LinkedIn](https://www.linkedin.com/in/minhbtnguyen/)**.
+            - 👀 **[I am currently looking for software engineer / machine learning / data science internship opportunities in summer 2023 and/or fall 2023.](https://www.linkedin.com/in/minhbtnguyen/)**
 
+            - 📨 I am best reached via **mnguyen0226@vt.edu** or via direct message on **[LinkedIn](https://www.linkedin.com/in/minhbtnguyen/)**.            
     socialIcons:
         - name: linkedin
           url: "https://www.linkedin.com/in/minhbtnguyen/"
