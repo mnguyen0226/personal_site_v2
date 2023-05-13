@@ -532,7 +532,7 @@ The example above violates the ISP because the children should not be forced to 
 **Fixed:** It will be better to segregate the parent (`WebPage`) class into smaller interface(s) that meet the needs of each child. We can separate `render()`, `save()`, and `delete()` functions into multiple classes.
 
 <center>
-    <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/isp.png" />
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/isp.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 8. Design refactored with interface segregation principle.
