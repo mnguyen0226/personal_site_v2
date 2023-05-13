@@ -17,7 +17,7 @@ weight: 2
 I recently finished an excellent graduate course, Software Engineering (CS5704), and learned about different aspects of software projects and how different-size companies handle their technical/business changes to deliver successful products to their customer. Some important topics are Process Models (Waterfall, V-Model, Spiral, Agile), Requirements Definition, and Architecture Design Patterns. Especially, S.O.L.I.D principles have struck me as must-known concepts for writing better and cleaner code.
 
 **Why do S.O.L.I.D principles matter?**
-According to Robert Martin, bad code slows down the development team as it is **confusing** and **fragile**. Confusing code does not explain what it is doing, while fragile code breaks in many places when you change one or a few lines of code.
+According to Uncle Bob, bad code slows down the development team as it is **confusing** and **fragile**. Confusing code does not explain what it is doing, while fragile code breaks in many places when you change one or a few lines of code.
 
 
 What we want is the code that is **clear**, **rigid**, and **reusable**.
@@ -206,7 +206,9 @@ class RequestHandler:
 </p></details>
 </br>
 
-**Fix:** The example above violates OCP because every time a new request type is added (e.g., PATCH), our `RequestHandler` class needs to be modified. This can introduce new bugs into existing code. As the OCP stated, we should design our code to be fixed but extended. A solution to OCP violation is to separate each request type into individual classes, thus abstracting the `RequestHandler` class. Therefore, if we want to add a PATCH request, we can extend our API by adding a new `PatchRequestHander` class.
+The example above violates OCP because every time a new request type is added (e.g., PATCH), our `RequestHandler` class needs to be modified. This can introduce new bugs into existing code. As the OCP stated, we should design our code to be fixed but extended.
+
+**Fix:** A solution to OCP violation is to separate each request type into individual classes, thus abstracting the `RequestHandler` class. Therefore, if we want to add a PATCH request, we can extend our API by adding a new `PatchRequestHander` class.
 
 <center>
     <img style="width: 90%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/ocp.png" />
@@ -318,7 +320,7 @@ class ModelPipeline:
 </p></details>
 </br>
 
-Your Data Engineer teammate develops a new way of processing the dataset. Luckily, due to your guideline of OCP, your teammate can easily extend the existing baseline model by inheriting the `DataPreprocessor` class without the risk of breaking your functional baseline design.
+Your teammate develops a new way of processing the dataset. Luckily, due to your guideline of OCP, your teammate can easily extend the existing baseline model by inheriting the `DataPreprocessor` class without the risk of breaking your functional baseline design.
 
 <details open><summary>
 <span style="color:#286EE0">Code Example</span>
@@ -349,7 +351,7 @@ class NewDataPreprocessor(DataPreprocessor):
 </figcaption>
 
 ### Web Development & Data Science Example
-Let's say that you are to design a codebase to write processed data into a MySQL database and a CSV file (You can think of adding new columns into a database by scraping or engineering new features).
+Let's say that you are to design a codebase at Netflix to write processed data into a MySQL database and a CSV file (You can think of adding new columns into a database by scraping or engineering new features).
 
 <details open><summary>
 <span style="color:#286EE0">Code Example</span>
@@ -603,7 +605,7 @@ class AdminPage(Renderable, Savable, Deletable):
 
 ### Data Science Example
 
-Let's say that you are a Data Scientist at LinkedIn who is working on a Multimodal project. You are tasked to process Image and Text data. Like the web development example above, you want separate interfaces for each subtask and inherit related interfaces to process images and text accordingly.
+Let's say that you are a Data Scientist at LinkedIn who is working on a multimodal application. You are tasked to process image and text data. Like the web development example above, you want separate interfaces for each subtask and inherit related interfaces to process images and text accordingly.
 
 <details open><summary>
 <span style="color:#286EE0">Code Example</span>
@@ -714,7 +716,7 @@ class AppleMusic:
 
 The Apple Music example above violates DIP as the `AppleMusic` class directly depends on `StripeProcessor` class, a specific low-level implementation. Imagine that Stripe provides Stripe Payment API version 2.0, which has a massive change in multiple methods. Our `AppleMusic` (and any other class that uses the `StripeProcessor` object) will be broken. We will have to fix every single line that uses `StripeProcessor`'s methods.
 
-**Fixed:** `AppleMusic` and `StripeProcessor` classes should depend on abstractions (or a wrapper for StripeProcessor) to avoid such catastrophe. In addition, we can easily swap the external API (says, Venmo Payment API) within the wrapper class by having a wrapper.
+**Fixed:** `AppleMusic` and `StripeProcessor` classes should depend on abstractions (or a wrapper for StripeProcessor) to avoid such catastrophe. In addition, we can easily swap the external API (e.g., Venmo Payment API) within the wrapper class by having a wrapper.
 
 <center>
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/dip.png" />
@@ -768,7 +770,7 @@ class AppleMusic:
 </br>
 
 ### Data Science Example
-Let's say you are a Data Analyst at Deloitte who is in charge of plotting the dataset to show insight to stakeholders. Similarly to the Apply Music example above, creating a wrapper for the data visualization task would be best.
+Let's say you are a Data Analyst at Deloitte who is in charge of plotting the dataset to show insight to stakeholders. Similarly to the Apple Music example above, creating a wrapper for the data visualization task would be best.
 
 <details open><summary>
 <span style="color:#286EE0">Code Example</span>
