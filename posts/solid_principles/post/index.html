@@ -703,7 +703,7 @@ According to Robert Martin, bad code slows down the development team as it is <s
 <p>The example above violates the ISP because the children should not be forced to depend on the parent&rsquo;s method(s) they do not use. While the <code>AdminPage</code> class inherits just fine, the <code>HomePage</code> class can&rsquo;t use the <code>delete()</code> function. This creates an unnecessary dependency!</p>
 <p><strong>Fixed:</strong> It will be better to segregate the parent (<code>WebPage</code>) class into smaller interface(s) that meet the needs of each child. We can separate <code>render()</code>, <code>save()</code>, and <code>delete()</code> functions into multiple classes.</p>
 <center>
-    <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/isp.png" />
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/isp.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 8. Design refactored with interface segregation principle.
