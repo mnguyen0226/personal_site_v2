@@ -10,7 +10,7 @@ aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
 draft: false
-weight: 5
+weight: 2
 ---
 <p style="color: #286EE0"><strong>Status:</strong> [Latest]</p>
 
