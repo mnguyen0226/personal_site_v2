@@ -2,8 +2,8 @@
 author: "Minh T. Nguyen"
 title: "Multi-Task Learning for Image Classification"
 date: "2023-03-20"
-description: "(Hard-parameter sharing) multi-Task learning for image classification compared between vision transformers (ViT) and deep residual network (ResNet-152)."
-tags: ["multi-task learning", "python", "tensorflow", "transformers"]
+description: "(Hard-parameter sharing) multi-task learning for image classification compared between vision transformers (ViT) and deep residual network (ResNet-152)."
+tags: ["multi-task learning", "python", "tensorflow", "transformers", "resnet"]
 categories: ["deep learning"]
 series: ["Software Engineering"]
 aliases: ["migrate-from-jekyl"]
