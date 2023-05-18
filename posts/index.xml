@@ -12,21 +12,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Multi-Task Learning for Image Classification</title>
-      <link>https://mnguyen0226.github.io/posts/multitask_learning/post/</link>
-      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/multitask_learning/post/</guid>
-      <description>(Hard-parameter sharing) multi-Task learning for image classification compared between vision transformers (ViT) and deep residual network (ResNet-152).</description>
-    </item>
-    
-    <item>
       <title>S.O.L.I.D Principles Explained</title>
       <link>https://mnguyen0226.github.io/posts/solid_principles/post/</link>
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/solid_principles/post/</guid>
       <description>Robert C. Martin (Uncle Bob)&amp;#39;s S.O.L.I.D principles in software engineering explained with Python examples through the lense of web development and machine learning applications.</description>
+    </item>
+    
+    <item>
+      <title>Multi-Task Learning for Image Classification</title>
+      <link>https://mnguyen0226.github.io/posts/multitask_learning/post/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/multitask_learning/post/</guid>
+      <description>(Hard-parameter sharing) multi-Task learning for image classification compared between vision transformers (ViT) and deep residual network (ResNet-152).</description>
     </item>
     
   </channel>

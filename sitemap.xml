@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mnguyen0226.github.io/posts/multitask_learning/post/</loc>
-    <lastmod>2023-03-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/posts/solid_principles/post/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/posts/multitask_learning/post/</loc>
+    <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/about/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
