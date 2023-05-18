@@ -57,7 +57,7 @@ There are three research questions that I want to tackle:
 </ol>
 
 ## CiFAR-10 & CiFAR-100 Datasets
-For the CiFAR-10 dataset, I have selected two tasks: Task 1 involves a 10-class classification, while Task 2 focuses on binary classification by categorizing the ten classes into "animal" or "vehicle" labels. For the CiFAR-100 dataset, I have identified two tasks: Task 1 encompasses a 100-class classification, and Task 2 involves a 20-superclass classification, where the 100 classes are grouped into 20 superclasses, such as aquatic mammals, fish, flowers, and food containers. The dataset details can be found on the [University of Toronto's website](https://www.cs.toronto.edu/~kriz/CiFAR.html).
+For the CiFAR-10 dataset, I have selected two tasks: Task 1 involves a 10-class classification, while Task 2 focuses on binary classification by categorizing the ten classes into "animal" or "vehicle" labels. For the CiFAR-100 dataset, I have identified two tasks: Task 1 encompasses a 100-class classification, and Task 2 involves a 20-superclass classification, where the 100 classes are grouped into 20 superclasses, such as aquatic mammals, fish, flowers, and food containers. The dataset details can be found on the [University of Toronto's website](https://www.cs.toronto.edu/~kriz/cifar.html).
 
 <center>
     <img style="width: 60%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/cifar10.png" />
