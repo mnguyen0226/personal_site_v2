@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designing Machine Learning Systems: A Summary</title>
+      <link>https://mnguyen0226.github.io/posts/ml_systems_design/post/</link>
+      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/ml_systems_design/post/</guid>
+      <description>Chip Huyen&amp;#39;s guide to design machine learning systems - a comprehensive overview.</description>
+    </item>
+    
     <item>
       <title>Multi-Task Learning for Image Classification</title>
       <link>https://mnguyen0226.github.io/posts/multitask_learning/post/</link>

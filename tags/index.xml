@@ -12,20 +12,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>machine learning</title>
-      <link>https://mnguyen0226.github.io/tags/machine-learning/</link>
+      <title>paper-reading</title>
+      <link>https://mnguyen0226.github.io/tags/paper-reading/</link>
       <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mnguyen0226.github.io/tags/machine-learning/</guid>
+      <guid>https://mnguyen0226.github.io/tags/paper-reading/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>systems design</title>
-      <link>https://mnguyen0226.github.io/tags/systems-design/</link>
-      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
+      <title>data science</title>
+      <link>https://mnguyen0226.github.io/tags/data-science/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mnguyen0226.github.io/tags/systems-design/</guid>
+      <guid>https://mnguyen0226.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     
@@ -53,6 +53,15 @@
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/tags/solid-principles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://mnguyen0226.github.io/tags/web-development/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/web-development/</guid>
       <description></description>
     </item>
     

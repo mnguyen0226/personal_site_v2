@@ -17,7 +17,7 @@
     <loc>https://mnguyen0226.github.io/categories/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/machine-learning/</loc>
+    <loc>https://mnguyen0226.github.io/categories/deep-learning/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/machine-learning/</loc>
@@ -29,19 +29,22 @@
     <loc>https://mnguyen0226.github.io/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mnguyen0226.github.io/tags/paper-reading/</loc>
+    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/posts/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/systems-design/</loc>
+    <loc>https://mnguyen0226.github.io/categories/systems-design/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/categories/data-science/</loc>
+    <loc>https://mnguyen0226.github.io/tags/data-science/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
@@ -59,11 +62,8 @@
     <loc>https://mnguyen0226.github.io/tags/solid-principles/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/categories/web-development/</loc>
+    <loc>https://mnguyen0226.github.io/tags/web-development/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/categories/deep-learning/</loc>
-    <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/multi-task-learning/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
