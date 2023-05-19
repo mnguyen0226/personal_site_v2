@@ -155,7 +155,7 @@ In support of the semiconductor industry, the [CHIPS and Science Act](https://ww
 The right infrastructure setup can automate processes, saving engineering time, accelerating ML application development and delivery, reducing the risk of bugs, and enabling new use cases. Conversely, a poorly implemented infrastructure can be cumbersome and costly to replace.
 
 <center>
-    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/tools.png" />
+    <img style="width: 90%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/tools.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 8. ML layers of tools to build reliable infrastructure.
@@ -184,7 +184,7 @@ This team structure at Netflix allows for a seamless collaboration where special
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/netflix_team.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 9. Netflix's full cycle data science development with specialists create reusable tools.
+    Fig. 9. Netflix's full cycle data science development with specialists create reusable tools. (Image source: 
     <a href="https://netflixtechblog.com/full-cycle-developers-at-netflix-a08c31f83249" class="img_footer"> Netflix Technology Blog</a>).
 </figcaption>
 
