@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mnguyen0226.github.io/posts/paper_reading_thread/post/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/posts/ml_systems_design/post/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -15,39 +18,42 @@
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/deep-learning/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/categories/machine-learning/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/machine-learning/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/paper-reading/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/categories/systems-design/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/</loc>
-    <lastmod>2023-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/data-science/</loc>
-    <lastmod>2023-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/categories/machine-learning/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/machine-learning/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/paper-reading/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/posts/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/categories/software-engineer/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/categories/systems-design/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/</loc>
+    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/data-science/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/python/</loc>

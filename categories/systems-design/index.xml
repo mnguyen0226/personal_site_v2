@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/systems-design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/systems-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paper-Reading Thread</title>
+      <link>https://mnguyen0226.github.io/posts/paper_reading_thread/post/</link>
+      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/paper_reading_thread/post/</guid>
+      <description>Notes on papers I read.</description>
+    </item>
+    
     <item>
       <title>Designing Machine Learning Systems: A Summary</title>
       <link>https://mnguyen0226.github.io/posts/ml_systems_design/post/</link>
