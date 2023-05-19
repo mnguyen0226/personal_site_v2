@@ -244,7 +244,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/mcafee.jpg" />
 </center>
 <figcaption class="img_footer">
-    Fig. 10. McAfee Knob, Roanoke, Virginia, U.S.A.
+    Fig. 10. Morning hike at McAfee Knob, Roanoke, Virginia, U.S.A.
 </figcaption>
 
 <!-- CSS Styling -->
