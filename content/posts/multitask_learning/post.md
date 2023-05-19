@@ -245,11 +245,11 @@ arXiv:2010.11929, 2020.
 [14] X. Zheng, B. Wu, X. Zhu, and X. Zhu. Multi-task deep learning seismic impedance inversion optimization based on homoscedastic uncertainty. Applied Sciences, 12(3):1200, 2022.
 
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/twin_cities.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/minneapolis.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 6. Minneapolis, Minnesota, U.S.A. (Image source: 
-    <a href="https://unsplash.com/photos/EEnQO32I-YY" class="img_footer">Josh Hild @ Unsplash</a>).
+    Fig. 6. Sunset at Minneapolis, Minnesota, U.S.A. (Image source: 
+    <a href="https://unsplash.com/photos/ohK_uJJm2G8" class="img_footer">Nicole Geri @ Unsplash</a>).
 </figcaption>
 
 <!-- CSS Styling -->
