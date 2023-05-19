@@ -53,12 +53,12 @@ The following collection of topics and papers draws from the [Applied Deep Learn
 ### Large Networks
 <details>
     <summary>
-    <strong>D. Cireşan et al.</strong> 
-    <a href="Multi-column Deep Neural Networks for Image Classification"> Multi-column Deep Neural Networks for Image Classification</a> (2012).
+        <strong>D. Cireşan et al.</strong>
+        <a href="Multi-column Deep Neural Networks for Image Classification"> Multi-column Deep Neural Networks for Image Classification</a> (2012).
     </summary>
     <blockquote>
             <summary>
-                ▪ Percentage of Understanding: 0%
+                <img src="https://geps.dev/progress/70">
             </summary>
             <summary>
                 ▪ Q1:
