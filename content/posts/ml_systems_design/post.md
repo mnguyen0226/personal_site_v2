@@ -3,8 +3,8 @@ author: "Minh T. Nguyen"
 title: "Designing Machine Learning Systems: A Summary"
 date: "2023-05-08"
 description: "Chip Huyen's guide to design machine learning systems - a comprehensive overview."
-tags: ["machine learning", "systems design"]
-categories: ["machine learning"]
+tags: ["paper-reading"]
+categories: ["machine learning", "systems design", "deep learning"]
 series: ["Machine Learning"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
