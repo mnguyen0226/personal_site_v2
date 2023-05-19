@@ -5,7 +5,7 @@ date: "2023-03-20"
 description: "(Hard-parameter sharing) multi-task learning for image classification compared between vision transformers (ViT) and deep residual network (ResNet-152)."
 tags: ["multi-task learning", "python", "tensorflow", "transformers", "resnet"]
 categories: ["deep learning"]
-series: ["Software Engineering"]
+series: ["Machine Learning"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
