@@ -4,7 +4,7 @@ title: "S.O.L.I.D Principles Explained"
 date: "2023-04-28"
 description: "Robert C. Martin (Uncle Bob)'s S.O.L.I.D principles in software engineering explained with Python examples through the lense of web development and machine learning applications."
 tags: ["solid principles", "python", "web development", "data science", "long-read"]
-categories: ["software engineering", "machine-learning"]
+categories: ["software engineer", "machine-learning"]
 series: ["Software Engineering"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
