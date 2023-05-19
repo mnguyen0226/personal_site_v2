@@ -853,7 +853,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/hcm_city_unsplash.jpg" />
 </center>
 <figcaption class="img_footer">
-    Fig. 11. Ho Chi Minh City, Viet Nam. (Image source: 
+    Fig. 11. Sunrise at Ho Chi Minh City, Viet Nam. (Image source: 
     <a href="https://unsplash.com/photos/75rWOqdKCdM" class="img_footer">Peter Nguyen @ Unsplash</a>).
 </figcaption>
 
