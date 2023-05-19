@@ -199,7 +199,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023solid,
+@article{nguyen2023mlsys,
   title   = "Designing Machine Learning Systems: A Summary.",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",

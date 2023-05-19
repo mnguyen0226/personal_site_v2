@@ -200,7 +200,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023solid,
+@article{nguyen2023mtl,
   title   = "Multi-Task Learning for Image Classification.",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
