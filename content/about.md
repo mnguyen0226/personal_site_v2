@@ -10,8 +10,6 @@ ShowToc: true
 TocOpen: true
 weight: 5
 ---
-
-
 ## 👨‍💻 Experience
 
 <details><summary><strong>Graduate Research Assistant</strong> @ Deloitte Touches x Commonwealth Cyber Initiatives </summary><blockquote>
@@ -155,7 +153,7 @@ weight: 5
 
 </blockquote></details>
 
-## 📜 Publication
+## 📜 Publications
 - <p>"DeepH20: Cyber attack detection in water distribution systems using deep learning." Nazmul Sikder, <strong>Minh T. Nguyen</strong>, Donald Elliot, Feras Batarseh. Elsevier's Journal of Water Process Engineering (Vol 52.) (04/2023). <a href="https://www.sciencedirect.com/science/article/abs/pii/S2214714423000855?dgcid=coauthor">Link.</a></p>
 - <p>"AI for Cyberbiosecurity in Water Systems—A Survey." Daniel Sobien, Mehmet O. Yardimci, <strong>Minh T. Nguyen</strong>, Wan-Yi Mao, Vinita Fordham, Abdul Rahman, Susan Duncan, Feras Batarseh. Springer's Cyberbiosecurity Book (01/2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-26034-6_13">Link.</a></p>
 
