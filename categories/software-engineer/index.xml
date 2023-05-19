@@ -17,7 +17,16 @@
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/paper_reading_thread/post/</guid>
-      <description>Notes on papers I read.</description>
+      <description>Notes on (1) papers I read.</description>
+    </item>
+    
+    <item>
+      <title>S.O.L.I.D Principles Explained</title>
+      <link>https://mnguyen0226.github.io/posts/solid_principles/post/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/solid_principles/post/</guid>
+      <description>Robert C. Martin (Uncle Bob)&amp;#39;s S.O.L.I.D principles in software engineering explained with Python examples through the lense of web development and machine learning applications.</description>
     </item>
     
   </channel>
