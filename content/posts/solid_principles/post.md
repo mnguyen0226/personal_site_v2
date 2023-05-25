@@ -822,7 +822,7 @@ Here, the `BusinessInsight` class depends on the `Plotter` abstraction through i
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (May 2023). S.O.L.I.D Principles Explained.</summary>
+    <summary>Nguyen, Minh. (April 2023). S.O.L.I.D Principles Explained.</summary>
     <summary>https://mnguyen0226.github.io/posts/solid_principles/post/.</summary>
 </blockquote>
 
