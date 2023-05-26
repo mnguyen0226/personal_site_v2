@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>systems design on Minh T. Nguyen</title>
-    <link>https://mnguyen0226.github.io/categories/systems-design/</link>
-    <description>Recent content in systems design on Minh T. Nguyen</description>
+    <title>kubernetes on Minh T. Nguyen</title>
+    <link>https://mnguyen0226.github.io/tags/kubernetes/</link>
+    <description>Recent content in kubernetes on Minh T. Nguyen</description>
     <image>
       <title>Minh T. Nguyen</title>
       <url>https://mnguyen0226.github.io/papermod-cover.png</url>
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/systems-design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
@@ -18,15 +18,6 @@
       
       <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
       <description>Virginia Tech Computer Science Department&amp;#39;s Mathbridge web app architecture explained.</description>
-    </item>
-    
-    <item>
-      <title>Designing Machine Learning Systems: A Summary</title>
-      <link>https://mnguyen0226.github.io/posts/ml_systems_design/post/</link>
-      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/ml_systems_design/post/</guid>
-      <description>Chip Huyen&amp;#39;s guide to design machine learning systems - a brief overview.</description>
     </item>
     
   </channel>

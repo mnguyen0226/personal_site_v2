@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>html / css on Minh T. Nguyen</title>
+    <link>https://mnguyen0226.github.io/tags/html-/-css/</link>
+    <description>Recent content in html / css on Minh T. Nguyen</description>
+    <image>
+      <title>Minh T. Nguyen</title>
+      <url>https://mnguyen0226.github.io/papermod-cover.png</url>
+      <link>https://mnguyen0226.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://mnguyen0226.github.io/tags/html-/-css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Data Visualization Web App with Dash</title>
+      <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
+      <description>Virginia Tech Computer Science Department&amp;#39;s Mathbridge web app architecture explained.</description>
+    </item>
+    
+  </channel>
+</rss>

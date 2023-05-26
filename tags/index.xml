@@ -10,7 +10,52 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dash</title>
+      <link>https://mnguyen0226.github.io/tags/dash/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/dash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://mnguyen0226.github.io/tags/docker/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://mnguyen0226.github.io/tags/kubernetes/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://mnguyen0226.github.io/tags/python/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://mnguyen0226.github.io/tags/web-development/</link>
+      <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>paper-reading</title>
       <link>https://mnguyen0226.github.io/tags/paper-reading/</link>
@@ -39,29 +84,11 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>https://mnguyen0226.github.io/tags/python/</link>
-      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>solid principles</title>
       <link>https://mnguyen0226.github.io/tags/solid-principles/</link>
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/tags/solid-principles/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web development</title>
-      <link>https://mnguyen0226.github.io/tags/web-development/</link>
-      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/tags/web-development/</guid>
       <description></description>
     </item>
     
@@ -107,6 +134,15 @@
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/tags/about-me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html / css</title>
+      <link>https://mnguyen0226.github.io/tags/html-/-css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/html-/-css/</guid>
       <description></description>
     </item>
     
