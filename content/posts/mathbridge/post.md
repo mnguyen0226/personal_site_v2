@@ -91,7 +91,7 @@ Cited as:
 
 <blockquote>
     <summary>Nguyen, Minh. (May 2023). Building a Data Visualization Web App with Dash.</summary>
-    <summary>https://mnguyen0226.github.io/posts/ma/post/.</summary>
+    <summary>https://mnguyen0226.github.io/posts/mathbridge/post/.</summary>
 </blockquote>
 
 Or 
