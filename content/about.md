@@ -117,7 +117,7 @@ weight: 5
 ## 🔧 Skills 
 
 - **Languages:** Python, SQL, Java, Javascript, HTML, CSS.
-- **Web Development Tools:** Flask, Vue.js, MySQL, SQLite, Git, Docker, Figma.
+- **Web Development Tools:** Flask, Vue.js, Dash, MySQL, SQLite, Git, Docker, Kubernetes, Figma.
 - **Data Science Tools:** Tensorflow, PyTorch, Scikit-learn, NumPy, Matplotlib, Pandas, Seaborn, Plotly, BeautifulSoup, OpenCV.
 
 ## 🎓 Education
