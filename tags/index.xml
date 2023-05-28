@@ -12,11 +12,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>data science</title>
+      <link>https://mnguyen0226.github.io/tags/data-science/</link>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>long-read</title>
       <link>https://mnguyen0226.github.io/tags/long-read/</link>
       <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/tags/long-read/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paper-reading</title>
+      <link>https://mnguyen0226.github.io/tags/paper-reading/</link>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/tags/paper-reading/</guid>
       <description></description>
     </item>
     
@@ -62,24 +80,6 @@
       <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>paper-reading</title>
-      <link>https://mnguyen0226.github.io/tags/paper-reading/</link>
-      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/tags/paper-reading/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data science</title>
-      <link>https://mnguyen0226.github.io/tags/data-science/</link>
-      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     
