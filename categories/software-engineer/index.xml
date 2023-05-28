@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/software-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/software-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning for Profile-Matching System</title>
+      <link>https://mnguyen0226.github.io/posts/profile_matching/post/</link>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/profile_matching/post/</guid>
+      <description>(Potential) machine learning solutions for profile-matching problem.</description>
+    </item>
+    
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
