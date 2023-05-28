@@ -81,7 +81,7 @@ Consider the task of matching buyers and sellers as a recommendation system, whe
 ### Rule-based Filtering
 Rule-based filtering is a non-personalized approach that does not require the application of ML. In this method, the sellers' profiles are filtered based on the buyer's selected filtering tabs or questionnaire responses. This approach relies solely on the Seller database and can serve as a good starting point for our system.
 
-**Pros:** 
+✅ **Pros:**
 <details><summary>
 Minimal data requirement.
 </summary><blockquote>
@@ -91,7 +91,7 @@ Minimal data requirement.
 </blockquote></details>
 </br>
 
-**Cons:** 
+❌ **Cons:** 
 <details><summary>
 Lack of personalization.
 </summary><blockquote>
@@ -113,7 +113,7 @@ Profile-based filtering is a personalized algorithm that utilizes the features o
 
 For example, in Fig. 4, we observe that `Buyer 1` has engaged with `Seller 1`, `Seller 2`, and `Seller 3` in the past, indicating relevance through actions such as starring the profile, engaging in conversations, providing feedback, or making purchases. Since `Seller 4` has a similar profile to `Seller 1`, `Seller 2`, and `Seller 3`, the system will recommend `Seller 4` to `Buyer 1`.
 
-**Pros:** 
+✅ **Pros:** 
 <details><summary>
 Recommendations of newly added seller profiles.
 </summary><blockquote>
@@ -123,7 +123,7 @@ Recommendations of newly added seller profiles.
 </blockquote></details>
 </br>
 
-**Cons:** 
+❌ **Cons:** 
 <details><summary>
 Challenges in discovering new buyer interests.
 </summary><blockquote>
@@ -147,7 +147,7 @@ For instance, in Fig. 5, the objective is to recommend a new seller's profile to
 
 The main difference between collaborative filtering and profile-based filtering is that collaborative filtering does not rely on the features of sellers' profiles. Instead, it exclusively relies on the historical interactions of buyers to make recommendations.
 
-**Pros:** 
+✅ **Pros:** 
 <details><summary>
 No domain knowledge required.
 </summary><blockquote>
@@ -157,7 +157,7 @@ No domain knowledge required.
 </blockquote></details>
 </br>
 
-**Cons:** 
+❌ **Cons:** 
 <details><summary>
 Accuracy issues with few seller profiles.
 </summary><blockquote>
@@ -223,7 +223,7 @@ To implement this system, we train a model that maps each listing to an embeddin
 
 When recommending similar listings, our system searches the embedding space for listings that are closest to the ones currently being viewed. In Fig. 9, we illustrate this process by selecting the top 3 listings with the closest embeddings. One simple supervised learning algorithm that can be used for this task is the K-Nearest Neighbor (KNN) algorithm.
 
-**Pros:**
+✅ **Pros:**
 <details><summary>
 Timely recommendations.
 </summary><blockquote>
@@ -247,7 +247,7 @@ Embedding space efficiency.
 </blockquote></details>
 </br>
 
-**Cons:**
+❌ **Cons:**
 <details><summary>
 Limited long-term preferences.
 </summary><blockquote>
@@ -310,7 +310,7 @@ In the Pointwise Learning to Rank (LTR) approach, we utilize a binary classifica
 </figcaption>
 </br>
 
-**Pros:**
+✅ **Pros:**
 <details><summary>
 Simplicity.
 </summary><blockquote>
@@ -334,7 +334,7 @@ Efficient computation.
 </blockquote></details>
 </br>
 
-**Cons:**
+❌ **Cons:**
 <details><summary>
 Limited context.
 </summary><blockquote>
@@ -346,7 +346,7 @@ Limited context.
 ### Edge Prediction
 The Edge Prediction approach is commonly used in social media platforms as it encourages users to build larger networks. As we are not trying to build a social network, this approach might not be suitable for our SaaS. In this approach, we enhance the model by incorporating graph information. This allows the model to leverage additional knowledge extracted from the social graph to predict the existence of an edge (connection) between two nodes (users). It's important to note that the graph represents the relationships or edges between nodes, capturing the connections between users in the system.
 
-**Pros:**
+✅ **Pros:**
 <details><summary>
 Social context.
 </summary><blockquote>
@@ -370,7 +370,7 @@ Scalability.
 </blockquote></details>
 </br>
 
-**Cons:**
+❌ **Cons:**
 <details><summary>
 Increased complexity.
 </summary><blockquote>
@@ -406,7 +406,7 @@ Slow customer support is a common challenge that can be addressed effectively th
 
 **Matching Algorithm:** To address the routing challenge, a combination of NLP techniques, text processing, and feature extraction can be employed. For multi-class classification, lightweight algorithms like Decision Trees can be utilized. Alternatively, deep learning models such as pretrained BERT can be employed for more complex conversation and text classification tasks.
 
-**Pros:**
+✅ **Pros:**
 <details><summary>
 Enhanced customer support.
 </summary><blockquote>
@@ -437,7 +437,7 @@ Advanced NLP capabilities.
 </blockquote></details>
 </br>
 
-**Cons:**
+❌ **Cons:**
 <details><summary>
 Lack of human interaction.
 </summary><blockquote>
