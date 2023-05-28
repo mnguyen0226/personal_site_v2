@@ -135,8 +135,9 @@ Let's say that in our SaaS platfomr, after a buyer has clicked on a seller's pro
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system_4.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 7. XXX.
+    Fig. 7. Similar agent-profile listing system diagram.
 </figcaption>
+</br>
 
 **Assumptions:** The input is the list of sellers' profiles that the buyer is currently viewing (either through manual filtering or selection via click). The output is the ranked list of similar listing the buyer is likely to click on next. This system can be used for both non-logged-in (anonymous) or logged-in buyer.
 
@@ -150,7 +151,7 @@ Let's say that in our SaaS platfomr, after a buyer has clicked on a seller's pro
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/buyer_seller_db_2.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 8. XXX.
+    Fig. 8. Examples of Buyer, Seller, Buyer-Seller Interaction databases.
 </figcaption>
 </br>
 
@@ -160,7 +161,7 @@ Let's say that in our SaaS platfomr, after a buyer has clicked on a seller's pro
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/embed_space.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 9. XXX.
+    Fig. 9. KNN for similar seller profile listing.
 </figcaption>
 </br>
 
@@ -172,7 +173,7 @@ To recommend similar listing, we search the embedding space for listings closest
     <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system_5.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 10. XXX.
+    Fig. 10. People-you-might-know system diagram.
 </figcaption>
 
 **Assumptions:**
@@ -197,7 +198,7 @@ To recommend similar listing, we search the embedding space for listings closest
     <img style="width: 40%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/binary_class.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 12. XXX.
+    Fig. 12. Buyer-seller profile-matching classification diagram.
 </figcaption>
 
 ### Edge Prediction
