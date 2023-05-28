@@ -32,7 +32,7 @@ What we want is the code that is **clear**, **rigid**, and **reusable**.
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/cartoons/code_blame_cartoon.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 1. Don't let your code (or yourself) take on all the responsibilties in the project. Divide and conquer! (Image source: 
+    Fig. 1: Divide and conquer! Distribute responsibilities to avoid code and project overload (Image source: 
     <a href="https://www.monkeyuser.com/2018/blame/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
 
@@ -74,7 +74,7 @@ In the example above, the class `PostPurchaseProcess` violates the SRP as it con
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/srp.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2. Design refactored with single responsibility principle.
+    Fig. 2: Design refactored with the Single Responsibility Principle for improved clarity and maintainability.
 </figcaption>
 
 </br>
@@ -151,7 +151,7 @@ However, I don't find this principle helpful in a Kaggle or data science project
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/cartoons/code_reminiscing_cartoon.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 3. Sometime it is hard to implement new features without refactor the code.</br>
+    Fig. 3: The challenge of implementing new features without refactoring existing code</br>
     (Image source: 
     <a href="https://www.monkeyuser.com/2018/reminiscing/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -214,9 +214,8 @@ The example above violates OCP because every time a new request type is added (e
     <img style="width: 90%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/ocp.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 4. Design refactored with open-closed principle.
+    Fig. 4: Refactored design showcasing the application of the Open-Closed Principle.
 </figcaption>
-
 </br>
 
 <details open><summary>
@@ -345,7 +344,7 @@ class NewDataPreprocessor(DataPreprocessor):
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/cartoons/code_reuse_cartoon.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 5. Design your codebase to be more predictable for later reuse.</br> 
+    Fig. 5: Creating a predictable and reusable codebase design</br> 
     (Image source: 
     <a href="https://www.monkeyuser.com/2018/code-reuse/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -409,7 +408,7 @@ Here, our base class `DataHandler` defined two methods, `write_db()` and `write_
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/lsp.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 6. Design refactored with liskov substitution principle.
+    Fig. 6: Codebase design refactored with Liskov Substitution Principle.
 </figcaption>
 
 </br>
@@ -454,8 +453,7 @@ If you have an object of type `WriteDB` or `WriteCSV`, you can safely use it whe
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/cartoons/code_features_cartoon.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 7
-    . Extensive class can be hard to be refactored, inherited, or reused.</br>
+    Fig. 7: Challenges of dealing with extensive classes for refactoring, inheritance, and reusability
     (Image source: 
     <a href="https://www.monkeyuser.com/2020/features/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -537,7 +535,7 @@ The example above violates the ISP because the children should not be forced to 
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/isp.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 8. Design refactored with interface segregation principle.
+    Fig. 8: Design refactored to adhere to the Interface Segregation Principle, promoting interface granularity and avoiding client dependencies on unnecessary methods.
 </figcaption>
 
 </br>
@@ -685,7 +683,7 @@ Here, we have the defined separate interfaces for data load, removing duplicates
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/cartoons/code_implementation_cartoon.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 9. Create a wrapper and hide the details. Not everyone need to know all the nitty-gritty of the system (Image source: 
+    Fig. 9: Implementation of a wrapper to encapsulate system details and provide a simplified interface to users, shielding them from unnecessary complexity and internal workings (Image source: 
     <a href="https://www.monkeyuser.com/2018/implementation/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
 
@@ -722,7 +720,7 @@ The Apple Music example above violates DIP as the `AppleMusic` class directly de
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/diagrams/dip.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 10. Design refactored with dependency inversion principle.
+    Fig. 10: Refactoring design with the Dependency Inversion Principle, where high-level modules depend on abstractions, promoting loose coupling and flexibility in the system architecture.
 </figcaption>
 
 </br>
@@ -853,7 +851,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/solid_principles/imgs/hcm_city_unsplash.jpg" />
 </center>
 <figcaption class="img_footer">
-    Fig. 11. Sunrise at Ho Chi Minh City, Viet Nam. (Image source: 
+    Fig. 11: Sunrise at Ho Chi Minh City, Viet Nam (Image source: 
     <a href="https://unsplash.com/photos/75rWOqdKCdM" class="img_footer">Peter Nguyen @ Unsplash</a>).
 </figcaption>
 

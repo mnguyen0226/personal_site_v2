@@ -23,8 +23,8 @@ Similar matching services can be observed in popular dating apps like Tinder and
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/people_connection.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 1: Harnessing the Power of Technology to Connect People.</br>
-    (Image Source: 
+    Fig. 1: Harnessing the power of technology to connect people</br>
+    (Image source: 
     <a href="https://www.freecodecamp.org/news/deep-dive-into-graph-traversals-227a90c6a261/" class="img_footer">freeCodeCamp</a>).
 </figcaption>
 </br>
@@ -56,7 +56,7 @@ Consider the task of matching buyers and sellers as a recommendation system, whe
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2: Diagram illustrating Agent-Profile Recommendation System.
+    Fig. 2: Diagram illustrating Agent-Profile recommendation system.
 </figcaption>
 </br>
 
@@ -72,7 +72,7 @@ Consider the task of matching buyers and sellers as a recommendation system, whe
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/buyer_seller_db.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 3: Illustration of Buyer, Seller, and Buyer-Seller Interaction Databases.
+    Fig. 3: Illustration of Buyer, Seller, and Buyer-Seller Interaction databases.
 </figcaption>
 </br>
 
@@ -107,7 +107,7 @@ Profile-based filtering is a personalized algorithm that utilizes the features o
     <img style="width: 60%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system_2.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 4: Illustration of Profile-based Filtering Algorithm Diagram.
+    Fig. 4: Illustration of Profile-based Filtering algorithm diagram.
 </figcaption>
 </br>
 
@@ -139,7 +139,7 @@ Collaborative filtering is a filtering solution that leverages the similarities 
     <img style="width: 75%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system_3.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 5: Illustration of Collaborative Filtering Algorithm Diagram.
+    Fig. 5: Illustration of Collaborative Filtering algorithm diagram.
 </figcaption>
 </br>
 
@@ -179,7 +179,7 @@ Inability to handle niche interests.
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/filter_compare.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 6: Comparison Table of Profile-based Filtering and Collaborative Filtering.
+    Fig. 6: Comparison table of Profile-based Filtering and Collaborative Filtering.
 </figcaption>
 
 ## Similar Agent-Profile Listing
@@ -189,7 +189,7 @@ In our SaaS platform, we can incorporate a feature that presents a list of "simi
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system_4.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 7. Illustration of Similar Agent-Profile Listing Algorithm Diagram.
+    Fig. 7: Illustration of Similar Agent-Profile Listing algorithm diagram.
 </figcaption>
 </br>
 
@@ -205,7 +205,7 @@ In our SaaS platform, we can incorporate a feature that presents a list of "simi
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/buyer_seller_db_2.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 8: Examples of Buyer, Seller, and Buyer-Seller Interaction Databases.
+    Fig. 8: Examples of Buyer, Seller, and Buyer-Seller Interaction databases.
 </figcaption>
 </br>
 
@@ -215,7 +215,7 @@ In our SaaS platform, we can incorporate a feature that presents a list of "simi
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/embed_space.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 9: KNN for Similar Seller Profile Listing.
+    Fig. 9: KNN for Similar Seller Profile Listing algorithm.
 </figcaption>
 </br>
 
@@ -277,7 +277,7 @@ This system is particularly useful when buyers are unsure of what they want but 
     <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/system_5.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 10. Illustration of PYMK Algorithm Diagram.
+    Fig. 10: Illustration of PYMK algorithm diagram.
 </figcaption>
 </br>
 
@@ -293,7 +293,7 @@ This system is particularly useful when buyers are unsure of what they want but 
     <img style="width: 45%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/buyer_seller_db_3.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 11: Examples of Buyer, Seller, and Buyer-Seller Rating Databases.
+    Fig. 11: Examples of Buyer, Seller, and Buyer-Seller Rating databases.
 </figcaption>
 </br>
 
@@ -306,7 +306,7 @@ In the Pointwise Learning to Rank (LTR) approach, we utilize a binary classifica
     <img style="width: 40%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/binary_class.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 12. Illustration of LTR Algorithm Diagram.
+    Fig. 12: Illustration of LTR algorithm diagram.
 </figcaption>
 </br>
 
@@ -393,7 +393,7 @@ Slow customer support is a common challenge that can be addressed effectively th
     <img style="width: 40%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/chatbot.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 13. Chatbot. (Image Source: 
+    Fig. 13: Chatbot (Image source: 
     <a href="https://siamcomputing.com/digital-transformation/chatbot/" class="img_footer">Siam Computing</a>).
 </figcaption>
 </br>
@@ -513,7 +513,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/profile_matching/imgs/halongbay.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 14: Early Morning Mist at Ha Long Bay, Vietnam. (Image Source: 
+    Fig. 14: Early morning mist at Ha Long Bay, Vietnam (Image source: 
     <a href="https://unsplash.com/photos/-HtfdIHSbsE" class="img_footer"> Warren @ Unsplash</a>).
 </figcaption>
 

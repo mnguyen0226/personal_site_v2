@@ -20,7 +20,7 @@ Chip Huyen, a Vietnamese writer, computer scientist, and co-founder of Claypot A
     <img style="width: 25%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/book.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 1. Book cover.
+    Fig. 1: Designing Machine Learning Systems's cover
     (Image source: 
     <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/" class="img_footer"> O'Reilly</a>).
 </figcaption>
@@ -32,7 +32,7 @@ In her book, Chip Huyen presents an overview of ML systems, defining eight main 
     <img style="width: 90%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/ml_system_diagram_.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2. Machine learning system components.
+    Fig. 2: Diagram illustrating the components of a machine learning system </br>
     (Image inspired from: 
     <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/" class="img_footer"> O'Reilly</a>).
 </figcaption>
@@ -48,7 +48,7 @@ Chip's definition of machine learning revolves around learning complex patterns 
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/swe_vs_ml_.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 3. SWE vs. ML.
+    Fig. 3: Comparison between Software Engineering and Machine Learning </br>
     (Image inspired from: 
     <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/" class="img_footer"> O'Reilly</a>).
 </figcaption>
@@ -62,7 +62,7 @@ While ML metrics like accuracy or F1 score are important, most companies priorit
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/architecture_cartoon.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 4. Integration in SWE or ML need to be align with business.</br>
+    Fig. 4: Alignment of Integration in Software Engineering and Machine Learning with business objectives 
     (Image source: 
     <a href="https://www.monkeyuser.com/2018/architecture/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -89,7 +89,7 @@ When it comes to data labeling, there are several options to consider:
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/training_dataset.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 5. Finding a suitable dataset and processing it for specific task is crucial for intended application purposes.
+    Fig. 5: Importance of dataset selection and processing for targeted application </br>
     (Image source: 
     <a href="https://www.monkeyuser.com/2019/ai-training-datasets/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -117,7 +117,7 @@ Consideration of distributed training paradigms is important when dealing with l
     <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/distributed_training.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 6. Data parallelism vs. model parallelism.
+    Fig. 6: Comparison of Data Parallelism and Model Parallelism </br>
     (Image source: 
     <a href="https://www.anyscale.com/blog/what-is-distributed-training" class="img_footer">anyscale.com</a>).
 </figcaption>
@@ -145,7 +145,7 @@ Model deployment options include cloud deployment to platforms like AWS or GCP a
     <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/chips.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 7. Google's Pixel 6 Tensor Chip, Apple's M1 Chip, Tesla's D1 Chip.
+    Fig. 7: Google's Pixel 6 Tensor Chip, Apple's M1 Chip, Tesla's D1 Chip.
 </figcaption>
 </br>
 
@@ -158,7 +158,7 @@ The right infrastructure setup can automate processes, saving engineering time, 
     <img style="width: 90%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/tools.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 8. ML layers of tools to build reliable infrastructure.
+    Fig. 8: Machine learning infrastructure layers for building reliable systems.
 </figcaption>
 </br>
 
@@ -184,7 +184,7 @@ This team structure at Netflix allows for a seamless collaboration where special
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/netflix_team.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 9. Netflix's full cycle data science development with specialists create reusable tools. (Image source: 
+    Fig. 9: Netflix's full cycle data science development with specialists create reusable tools. (Image source: 
     <a href="https://netflixtechblog.com/full-cycle-developers-at-netflix-a08c31f83249" class="img_footer"> Netflix Technology Blog</a>).
 </figcaption>
 
@@ -244,7 +244,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/ml_systems_design/imgs/mcafee.jpg" />
 </center>
 <figcaption class="img_footer">
-    Fig. 10. Morning hike at McAfee Knob, Roanoke, Virginia, U.S.A.
+    Fig. 10: Morning hike at McAfee Knob, Roanoke, Virginia, U.S.A.
 </figcaption>
 
 <!-- CSS Styling -->

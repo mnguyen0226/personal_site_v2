@@ -20,7 +20,7 @@ Recently, I had an opportunity of joining the Mathbridge project, led by Virgini
     <img style="width: 65%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/feature_imp.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 1. Only after document, test, and code review are completed that a feature-implementation task is considered completed.
+    Fig. 1: Only after document, test, and code review are completed that a feature-implementation task is considered completed
     (Image source: 
     <a href="https://www.monkeyuser.com/2020/feature-complete/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -37,7 +37,7 @@ Dash combines the best of both worlds, incorporating elements of React and Flask
     <img style="width: 90%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/mathbridge_architecture.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2. Overall architecture of Mathbridge.
+    Fig. 2: Architecture of Mathbridge.
 </figcaption>
 </br>
 Let's dive into the front-end and back-end aspects of the application:
@@ -59,7 +59,7 @@ To make the deployment process more convenient, I pushed the built and tested Do
     <img style="width: 60%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/deployment.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 3. Always check whether the product is deployed, else no update will be made.</br>
+    Fig. 3: Always check whether the product is deployed, else no update will be made</br>
     (Image source: 
     <a href="https://www.facebook.com/ismonkeyuser/photos/in-case-you-missed-it-here-is-the-weekend-after-the-deployment-story/2721752794770387/?paipv=0&eav=AfZ2PwoIv78ySAd-HaeD5CDFg6wMQOZ83bOMqjmsfPC9-p2vJXrbr6zWuZmeyRtzJ4g&_rdr" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -77,7 +77,7 @@ In conclusion, our data visualization web application built using Dash has laid 
     <img style="width: 60%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/production_ready.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 4. Project development is an iterative process, until the requirements are met and satisfied 😆.
+    Fig. 4: Project development is an iterative process, until the requirements are met and satisfied 😆
     (Image source: 
     <a href="https://www.monkeyuser.com/2018/production-ready/" class="img_footer">MonkeyUser.com</a>).
 </figcaption>
@@ -121,7 +121,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/danang.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 5. Golden Bridge in Da Nang, Viet Nam. (Image source: 
+    Fig. 5: Golden Bridge in Da Nang, Viet Nam (Image source: 
     <a href="https://unsplash.com/photos/5QbZIJV8k4E" class="img_footer"> Jet Dela Cruz @ Unsplash</a>).
 </figcaption>
 

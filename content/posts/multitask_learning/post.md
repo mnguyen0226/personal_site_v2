@@ -22,8 +22,8 @@ In recent years, MTL has gained significant attention as a powerful technique to
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/mtl_tesla.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 1. Multi-Task Learning makes it possible to deploy large model in constraint settings.</br>
-    (Image source: 
+    Fig. 1: Leveraging Multi-Task Learning for deploying large models in constraint settings </br>
+    (Image Source: 
     <a href="https://www.youtube.com/watch?v=IHH47nZ7FZU" class="img_footer">Andrej Karpathy @ Tesla</a>).
 </figcaption>
 </br>
@@ -43,7 +43,7 @@ There are two main approaches to implementing MTL: "hard-parameter" sharing and 
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/hps_vs_sps_.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2. Hard-parameter sharing vs soft-parameter sharing.</br>
+    Fig. 2: Comparison of Hard-Parameter Sharing and Soft-Parameter Sharing in Multi-Task Learning
     (Image inspired from 
     <a href="https://thegradient.pub/how-to-do-multi-task-learning-intelligently/" class="img_footer">The Gradient</a>).
 </figcaption>
@@ -63,8 +63,8 @@ For the CiFAR-10 dataset, I have selected two tasks: Task 1 involves a 10-class 
     <img style="width: 60%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/cifar10.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 3. CiFAR-10 dataset.
-    (Image source:
+    Fig. 3: CiFAR-10 dataset
+    (Image Source:
     <a href="https://www.cs.toronto.edu/~kriz/CiFAR.html" class="img_footer">University of Toronto</a>).
 </figcaption>
 
@@ -76,8 +76,8 @@ locations. In contrast, convolutional neural networks (CNN) focus on extracting 
     <img style="width: 70%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/original_vit_arch.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 4. Original vision transformers architecture.</br>
-    (Image source:
+    Fig. 4: Architecture of the Vision Transformers
+    (Image Source:
     <a href="https://arxiv.org/abs/2010.11929" class="img_footer">Dosovitskiy, Alexey, et al.</a>).
 </figcaption>
 </br>
@@ -127,8 +127,8 @@ Deep residual network-152 layers, also known as ResNet-152, is a convolutional n
     <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/original_resnet_arch.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 5. Original ResNet architecture.
-    (Image source:
+    Fig. 5: Architecture of the ResNet
+    (Image Source:
     <a href="https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html" class="img_footer">He, Kaiming, et al.</a>).
 </figcaption>
 </br>
@@ -248,7 +248,7 @@ arXiv:2010.11929, 2020.
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/multitask_learning/imgs/minneapolis.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 6. Sunset at Minneapolis, Minnesota, U.S.A. (Image source: 
+    Fig. 6: Sunset over Minneapolis, Minnesota, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/ohK_uJJm2G8" class="img_footer">Nicole Geri @ Unsplash</a>).
 </figcaption>
 
