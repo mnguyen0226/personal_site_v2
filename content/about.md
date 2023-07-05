@@ -12,6 +12,12 @@ weight: 5
 ---
 ## 👨‍💻 Experience
 
+<details><summary><strong>Full Stack Engineering Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
+    <summary><em><strong>▪ Tech Stack:</strong></em> Javascript, React.js, MongoDB, Express, Node.js.</summary>
+    <summary>▪ Date: 06/2023 - Present.</summary>
+    <summary>▪ Location: Singapore (Remote).</summary>
+</blockquote></details>
+
 <details><summary><strong>Graduate Research Assistant</strong> @ Deloitte Touches x Commonwealth Cyber Initiatives </summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Tensorflow, Matplotlib, Pandas, Seaborn.</summary>
     <summary>▪ Date: 05/2022 - 08/2022.</summary>
