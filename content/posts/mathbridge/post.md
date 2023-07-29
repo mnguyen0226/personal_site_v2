@@ -1,7 +1,7 @@
 ---
 author: "Minh T. Nguyen"
 title: "Building a Data Visualization Web App with Dash"
-date: "2023-05-18"
+date: "2023-05-27"
 description: "Virginia Tech Computer Science Department's Mathbridge web app architecture explained."
 tags: ["web development", "dash", "python", "html / css" ,"docker", "kubernetes"]
 categories: ["software engineer", "machine learning", "systems design"]

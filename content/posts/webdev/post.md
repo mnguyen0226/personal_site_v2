@@ -9,7 +9,7 @@ series: ["Software Engineering"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
-draft: true
+draft: false
 weight: 5
 ---
 

@@ -1,7 +1,7 @@
 ---
 author: "Minh T. Nguyen"
 title: "Machine Learning for Profile-Matching System"
-date: "2023-05-27"
+date: "2023-06-15"
 description: "Discover the potential of machine learning for precise and efficient profile matching.."
 tags: ["web development", "long-read", "paper-reading", "data science"]
 categories: ["software engineer", "machine learning", "systems design"]

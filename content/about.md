@@ -12,10 +12,15 @@ weight: 5
 ---
 ## 👨‍💻 Experience
 
-<details><summary><strong>Full Stack Engineering Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
+<details><summary><strong>Software Engineer Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Javascript, React.js, MongoDB, Express, Node.js.</summary>
     <summary>▪ Date: 06/2023 - Present.</summary>
     <summary>▪ Location: Singapore (Remote).</summary>
+    <details><summary><strong>Responsibilities</strong></summary><blockquote>
+        <summary>▪ Designed and built the property listing website with JavaScript, PostgreSQL, Strapi CMS, and Next.js to save 40% development costs.</summary>
+        <summary>▪ Established CI/CD and AWS infrastructure utilizing Amplify, S3, RDS, and EC2.</summary>
+        <summary>▪ Engaged in the full Agile cycle including daily stand‑ups, sprint reviews, sprint plannings, and retrospectives.</summary>
+    </blockquote></details>
 </blockquote></details>
 
 <details><summary><strong>Graduate Research Assistant</strong> @ Deloitte Touches x Commonwealth Cyber Initiatives </summary><blockquote>
@@ -23,9 +28,9 @@ weight: 5
     <summary>▪ Date: 05/2022 - 08/2022.</summary>
     <summary>▪ Location: Arlington, Virginia.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
-        <summary>▪ Forecasted water levels and localized overflowed water tanks during storms by applying a temporal deep-learning model; reduced 25-30% total operation/maintenance costs and prevented pollution to DC's local rivers.</summary>
-        <summary>▪ Built an interactable explainable dashboard using the MDS algorithm for the literature database; provided new insights for stakeholders.</summary>
-        <summary>▪ Implemented TimeGAN; synthesized the dataset by 50%, improved prediction accuracy by 4%, and gained more data from stakeholders.</summary>
+        <summary>▪ Developed and fine‑tuned RNN, LSTM, and Transformer forecasting models with Python and Tensorflow, reducing operational costs by 30%.</summary>
+        <summary>▪ Enhanced time‑series data quality via data cleaning, feature engineering, exploratory data analysis (EDA) using Pandas and Plotly.</summary>
+        <summary>▪ Designed and implemented the visualization dashboard with Python and Dash for seamless integration of ML into existing SCADA system.</summary>        <summary>▪ Boosted prediction accuracy by 4% and doubled database records by implementing TimeGAN data synthesis model.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -57,9 +62,9 @@ weight: 5
     <summary>▪ Date: 05/2021 - 08/2021.</summary>
     <summary>▪ Location: Alexandria, Virginia.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
-        <summary>▪ Coded custom neural networks for classifying army-winning probabilities in DARPA's Game Breaker program.</summary>
-        <summary>▪ Assured RNN/LSTM/GRU/Transformer-based models' performance before product deployment by developing NLP evaluation tests.</summary>
-        <summary>▪ Built a web dashboard showing army composition and deep learning model prediction results; contributed to the company's second round of funding from DARPA by providing demonstrative use cases of the dashboard in the final presentation and report.</summary>
+        <summary>▪ Developed and refined the classification model using Python and PyTorch, predicting battle outcomes for DARPA’s Game Breaker.</summary>
+        <summary>▪ Determined optimal pre‑deployment configurations for LSTM, GRU, and Transformer models by evaluating them using IMDb dataset.</summary>
+        <summary>▪ Built the dashboard with Python, Dash, and SQLAlchemy of the models, aiding in the securement of DARPA’s $1M second funding round.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -72,8 +77,10 @@ weight: 5
     <summary>▪ Date: 09/2020 - 05/2021.</summary>
     <summary>▪ Location: Williamsburg, Virginia.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
-        <summary>▪ Led a team of 5 to develop CNN models for road quality classification via satellite images, combined with AutoEncoder for data-poisoning defense tasks; won 3rd place (out of 8 competing universities) in model performance and contributions.</summary>
-        <summary>▪ Contributed 30% of the benchmark dataset by collecting and balancing classes with image augmentation techniques.</summary>
+        <summary>▪ Led a team to develop CNN models (ResNet, VGG, Inception‑V3) with Python and Tensorflow for satellite‑image‑based road quality classification.</summary>
+        <summary>▪ Enhanced benchmark dataset by 40% through efficient data collection and class balancing using image augmentation techniques.</summary>
+        <summary>▪ Mitigated 70% of data‑poisoning attacks on the model by implementing and fine‑tuning an Auto‑Encoder.</summary>
+        <summary>▪ Achieved 3rd place among eight competing universities.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -104,7 +111,8 @@ weight: 5
     <summary>▪ Date: 05/2020 - 05/2021.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
-        <summary>▪ Assisted instructors in grading assignments and mentoring 25 students in the semester-long Smart Home Simulation project.</summary>
+        <summary>▪ Conducted 3 two‑hour office sessions and graded labs for 50+ students 2 times per week.</summary>
+        <summary>▪ Proactively addressed student inquiries on micro‑controller applications and software development in C.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -122,22 +130,23 @@ weight: 5
 
 ## 🔧 Skills 
 
-- **Languages:** Python, SQL, Java, Javascript, HTML, CSS.
-- **Web Development Tools:** Flask, Vue.js, Dash, MySQL, SQLite, Git, Docker, Kubernetes, Figma.
+- **Frontend:** JavaScript, TypeScript, HTML5, CSS, SCSS | React.js, Next.js, Vue.js.
+- **Backend:** Python, Java, SQL | Flask, Dash, Node.js, RESTful API | MySQL, SQLite, PostgreSQL.
 - **Data Science Tools:** Tensorflow, PyTorch, Scikit-learn, NumPy, Matplotlib, Pandas, Seaborn, Plotly, BeautifulSoup, OpenCV.
+- **Others:** Docker, Kubernetes, AWS, Git, Linux.
 
 ## 🎓 Education
 
 <details><summary><strong>Master of Science in Computer Engineering</strong></summary><blockquote>
     <summary>▪ Concentration: Software & Machine Intelligence.</summary>
-    <summary>▪ GPA: 3.82.</summary>
-    <summary>▪ Date: 08/2022 - 05/2024.</summary>
-    <summary>▪ Location: Arlington, Virginia.</summary>
+    <summary>▪ GPA: 3.75.</summary>
+    <summary>▪ Date: 08/2022 - Present.</summary>
+    <summary>▪ Location: Falls Church, Virginia.</summary>
 </blockquote></details>
 
 <details><summary><strong>Bachelor of Science in Computer Engineering</strong> (Graduated)</summary><blockquote>
     <summary>▪ Concentration: Machine Learning, Computer Science Minor.</summary>
-    <summary>▪ GPA: 3.62.</summary>
+    <summary>▪ GPA: 3.60.</summary>
     <summary>▪ Date: 08/2018 - 05/2022.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
 </blockquote></details>
@@ -164,30 +173,33 @@ weight: 5
 - <p>"AI for Cyberbiosecurity in Water Systems—A Survey." Daniel Sobien, Mehmet O. Yardimci, <strong>Minh T. Nguyen</strong>, Wan-Yi Mao, Vinita Fordham, Abdul Rahman, Susan Duncan, Feras Batarseh. Springer's Cyberbiosecurity Book (01/2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-26034-6_13">Link.</a></p>
 
 ## 💻 Projects
-<details><summary><strong>Mathbridge</strong></summary><blockquote>
+<details><summary><strong>Machine Learning Algorithms Visualization</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Dash, Bootstrap, Docker, Kubernetes, HTML, CSS.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/mathbridge/mathbridge.png" alt="Book-JBP Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/mathbridge/mathbridge2.png" alt="" style="height:150px;">
         &nbsp;
         &nbsp;
     </summary>
-    <summary>▪ Developed a visualization webapp for Virginia Tech's Computer Science Department as an machine learning algorithm explanation and playground .</summary>
+    <summary>▪ Designed and built the user‑friendly website to aid CS students in effectively comprehending complex ML and statistics concepts.</summary>
+    <summary>▪ Dockerized and deployed the website on Virginia Tech’s Rancher (Kubernetes) cluster to improve scalability and reliability.</summary>
     <summary>▪ <a href="https://mathbridge.discovery.cs.vt.edu/">Link</a>.</summary>
 </blockquote></details>
 
-<details><summary><strong>Books.JBP</strong></summary><blockquote>
+<details><summary><strong>Web Bookstore</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Java, Vue.js, MySQL, Figma, HTML, CSS.</summary>
     <summary style="display: flex">
-        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/book_jbp/official_home_page.png" alt="Book-JBP Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/book_jbp/official_home_page.png" alt="" style="height:150px;">
         &nbsp;
         &nbsp;
-        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/book_jbp/offcial_category_page.png" alt="Book-JBP Image" style="height:150px;">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/book_jbp/offcial_category_page.png" alt="" style="height:150px;">
     </summary>
-    <summary>▪ Developed a single-page full-stack e-commerce web app; followed DAO pattern and SOLID principles.</summary>
+    <summary>▪ Developed the single‑page website with client/server‑side transaction validation, session handling, and user history tracking.</summary>
+    <summary>▪ Implemented the middleware and RESTful APIs with Java Servlet, Apache Tomcat and MySQL database.</summary>
+    <summary>▪ Employed the Data Access Object (DAO) design pattern and adhered to SOLID principles, ensuring the modular and maintainable system.</summary>
     <summary>▪ <a href="https://github.com/mnguyen0226/bookstore_js">Github</a>.</summary>
 </blockquote></details>
 
-<details><summary><strong>Flask-Y</strong></summary><blockquote>
+<details><summary><strong>Web News</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Javascript, MySQL, Flask API, Werkzeug API, CKEditor API, Bootstrap, HTML, CSS.</summary>
     <summary style="display: flex">
         <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/flask_y/MVC_model.png" alt="Flask-Y Image" style="height:150px;">
@@ -195,8 +207,8 @@ weight: 5
         &nbsp;
         <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/flask_y/hacker_new_redesign.png" alt="Flask-Y Image" style="height:150px;">
     </summary>
-    <summary>▪ Redesigned Y Combinator's Hacker News to be more user-friendly (Reddit style).</summary>
-    <summary>▪ Developed a multi-page full-stack media web app that allows multiple users to sign-up, login, and manage/comment/vote posts.</summary>
+    <summary>▪ Transformed Y Combinator’s Hacker News into a user‑centric web app, leveraging RESTful APIs for efficient data interchange.</summary>
+    <summary>▪ Developed a multi‑page functionality including user registration, login, post management, commenting system, and voting mechanism.</summary>
     <summary>▪ <a href="https://github.com/mnguyen0226/flask_y">Github</a>.</summary>
 </blockquote></details>
 
