@@ -38,14 +38,5 @@
       <description>Robert C. Martin (Uncle Bob)&amp;#39;s S.O.L.I.D principles in software engineering explained with Python examples through the lense of web development and machine learning applications.</description>
     </item>
     
-    <item>
-      <title>Understand Web Development</title>
-      <link>https://mnguyen0226.github.io/posts/webdev/post/</link>
-      <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/webdev/post/</guid>
-      <description>Virginia Tech&amp;#39;s Web Development course note.</description>
-    </item>
-    
   </channel>
 </rss>
