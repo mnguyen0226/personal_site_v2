@@ -13,10 +13,19 @@
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
-      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
       <description>Virginia Tech Computer Science Department&amp;#39;s Mathbridge web app architecture explained.</description>
+    </item>
+    
+    <item>
+      <title>Understand Web Development</title>
+      <link>https://mnguyen0226.github.io/posts/webdev/post/</link>
+      <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/webdev/post/</guid>
+      <description>Virginia Tech&amp;#39;s Web Development course note.</description>
     </item>
     
   </channel>

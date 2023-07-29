@@ -10,11 +10,11 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
-      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
       <description>Virginia Tech Computer Science Department&amp;#39;s Mathbridge web app architecture explained.</description>

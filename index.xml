@@ -10,11 +10,11 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Machine Learning for Profile-Matching System</title>
       <link>https://mnguyen0226.github.io/posts/profile_matching/post/</link>
-      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/profile_matching/post/</guid>
       <description>Discover the potential of machine learning for precise and efficient profile matching..</description>
@@ -23,7 +23,7 @@
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
-      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
       <description>Virginia Tech Computer Science Department&amp;#39;s Mathbridge web app architecture explained.</description>
@@ -62,7 +62,16 @@
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/about/</guid>
-      <description>👨‍💻 Experience Full Stack Engineering Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Javascript, React.js, MongoDB, Express, Node.js. ▪ Date: 06/2023 - Present. ▪ Location: Singapore (Remote). Graduate Research Assistant @ Deloitte Touches x Commonwealth Cyber Initiatives ▪ Tech Stack: Python, Tensorflow, Matplotlib, Pandas, Seaborn. ▪ Date: 05/2022 - 08/2022. ▪ Location: Arlington, Virginia. Responsibilities ▪ Forecasted water levels and localized overflowed water tanks during storms by applying a temporal deep-learning model; reduced 25-30% total operation/maintenance costs and prevented pollution to DC&#39;s local rivers.</description>
+      <description>👨‍💻 Experience Software Engineer Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Javascript, React.js, MongoDB, Express, Node.js. ▪ Date: 06/2023 - Present. ▪ Location: Singapore (Remote). Responsibilities ▪ Designed and built the property listing website with JavaScript, PostgreSQL, Strapi CMS, and Next.js to save 40% development costs. ▪ Established CI/CD and AWS infrastructure utilizing Amplify, S3, RDS, and EC2. ▪ Engaged in the full Agile cycle including daily stand‑ups, sprint reviews, sprint plannings, and retrospectives.</description>
+    </item>
+    
+    <item>
+      <title>Understand Web Development</title>
+      <link>https://mnguyen0226.github.io/posts/webdev/post/</link>
+      <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/webdev/post/</guid>
+      <description>Virginia Tech&amp;#39;s Web Development course note.</description>
     </item>
     
     

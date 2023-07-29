@@ -10,11 +10,11 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Machine Learning for Profile-Matching System</title>
       <link>https://mnguyen0226.github.io/posts/profile_matching/post/</link>
-      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/profile_matching/post/</guid>
       <description>Discover the potential of machine learning for precise and efficient profile matching..</description>
@@ -23,7 +23,7 @@
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
-      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
       <description>Virginia Tech Computer Science Department&amp;#39;s Mathbridge web app architecture explained.</description>
@@ -54,6 +54,15 @@
       
       <guid>https://mnguyen0226.github.io/posts/multitask_learning/post/</guid>
       <description>(Hard-parameter sharing) multi-task learning for image classification compared between vision transformers (ViT) and deep residual network (ResNet-152).</description>
+    </item>
+    
+    <item>
+      <title>Understand Web Development</title>
+      <link>https://mnguyen0226.github.io/posts/webdev/post/</link>
+      <pubDate>Thu, 02 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/webdev/post/</guid>
+      <description>Virginia Tech&amp;#39;s Web Development course note.</description>
     </item>
     
   </channel>

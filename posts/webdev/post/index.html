@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Understand Web Development | Minh T. Nguyen</title>
+<meta name="keywords" content="web development, vue.js, mysql, java, html / css, figma, long-read">
+<meta name="description" content="Virginia Tech&#39;s Web Development course note.">
+<meta name="author" content="Minh T. Nguyen">
+<link rel="canonical" href="https://mnguyen0226.github.io/posts/webdev/post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="apple-touch-icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="mask-icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Understand Web Development" />
+<meta property="og:description" content="Virginia Tech&#39;s Web Development course note." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mnguyen0226.github.io/posts/webdev/post/" /><meta property="og:image" content="https://mnguyen0226.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-02T00:00:00+00:00" />
+<meta property="og:see_also" content="https://mnguyen0226.github.io/posts/mathbridge/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/solid_principles/post/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mnguyen0226.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="Understand Web Development"/>
+<meta name="twitter:description" content="Virginia Tech&#39;s Web Development course note."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://mnguyen0226.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Understand Web Development",
+      "item": "https://mnguyen0226.github.io/posts/webdev/post/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understand Web Development",
+  "name": "Understand Web Development",
+  "description": "Virginia Tech's Web Development course note.",
+  "keywords": [
+    "web development", "vue.js", "mysql", "java", "html / css", "figma", "long-read"
+  ],
+  "articleBody": "Status: [Latest]\nCourse Description: Web application with Topics regarding Networking, Security, Encryption, Database concepts, Distributed Computing models. After completion, student should knows about the e-commerce technology\nData centric web app: authentication, authorization, session handling, resource management, user history. Recognize fundamental internet and web protocols such as TCP, UDP, HTTP (including GET and POST) requests and identify the characteristics of ech Identify key features of client-side web technology: HTML, CSS, Javascript and use them to implemnt a basic web application design Identify key features of server-side web technology such as REST APIs and the DAO patterns, and use them in an application to create dynamically-generated web content. Discuss application security issues related to web-based, systems, including authentication, authorization, confidentiality, and adata integrity. Note: later add the quiz session of midterm, final, and assignment to text. Create a repo to post the project every week!\nWeek 1: Application Design Inter-Networking Circuit Packet Switching\nCircuit Switch Network vs Packet Switch Network: Circuit Switch Original phone system had a purely circuit switched foundation. All information within a call takes exactly the same fixed path. Routing only occurs before the call. Packet Switch The Internet protocol (IP) provides a decentralized packet-switched foundation. Each packet is individually and continuously routed, based on its destination address. Packets may arrive out of order. A packet may be dropped or lost. A packet may be duplcated. TCP-UDP\nTCP == Transmission Control Protocol. This is a connection-oriented protocal favors reliability over speed. This is the most compliment to the internet protocol. First, you will establish connection between two devices, which is called a handshake. This protocol make sure that you get all the info intact. Due to its speed and reliable, TCP is most common to be paired with IP UDP == Universal Datagram Protocal: This is a connection-less protocal (without handshake), the package is just streaming without caring the other device turn on or not. UDP is great for live streaming videos (fast over perfect, the packet lost just make it lag). Examples: Amazon uses TCP as we want payment reliability Dropbox uses TCP as we trust Dropbox maintain the sent document intact DNS Lookup (has a domain name and want to get IP address) use a packet of info to check UDP. Facebook uses TCP to make sure the info is sent correctly. Gmail uses TCP. VOIP (voice of IP) uses UDP as we can ask people to repeat. World of Warcraft uses UDP Netflix uses a combination between TCP and UDP. OSI Reference Model\nOpen Systems Interconnection (OSI) is an abstract model of networking which divide communication network into 7 layers. This is the most popular communication model that represent how communicate over the internet. OSI is a protocol reference models provide an abstract view of the network, and group functionality into layers. Each layer provide a service to the one above it and each has their own set of protocol to make sure the network will work. OSI has 7 layers: 1st (Physical Layer): Deliver bits over physical link (or wireless). Worry about 1 bit to 1 place to another. Analog vs Digital vs Radio Signal? 2nd (Data Link Layer): Groups bits into addressed frames for transmission over physical links (over local media network). Address for local machine only, not IP address. So that the bit can get 1 node to another within a local area network. We plug the cable to network hub and that hub tell the bit where to go within the local network. 3rd (Network Layer): Deliver packets with routing services across multiple data links. Connect data links (or local area network). This is where the internetworking happen. This is the internet layer where the internet protocal resides. 4rd (Transport Layer): Deliver data from operating system to operating system, not just computer to computer. When the data get to OS, it should be ready to use. This is there the data is package together. This is where error checking occurs. This is where TCP and UP perform their function. 5th (Session Layer): Manages connection between local and remote application. Concerns with sockets and ports in the machine. 6th (Presentation Layer): Convert operating system standards to or from network representations. This is where encryption resides. This is how our application SEE the network 7th (Application Layer): Ensure communication between distributed software components. This is where we develop our application. Distributed Computing Model\nClient-Server Model: most common model. The server sits idle to the request. The client initiate the request. To first establish the connection, we use TCP (connection-oriented protocol). The client request a service and the server response to the request. The client-server model is call a 2-tier Model. 3-tier-model (MVC): Most common Presentation tier: Front-end interface and send request to the client. The main function is to translate tasks annd results to something the user can undestand. Logic tier: Handle the request, often that request involves in the data tier. The main function is to coordinate the applicaiton, processes commands, make logical decisions and evaluates, and performs calculations. It also moves and processes data between the two surrounded layers. Data tier: information is store and retrieved. The information is then passed back to the logic tier for processing, and then eventually back to the user. Note: The llogic tier can become complex and split into multiple tiers. We called it a multi-tier model. Peer-to-Peer Model: All the nodes shared resource to each other. Popular in Napstern MP3 file-share, here, every computer is a server and a client. Sockets Ports\nA network socket is an endpoint of a connection across a computer network. An endpoint of a connection is not a device but an application in device. Socket not only include an IP address in a particular device, but also a particular port for a software application is listening, port 80 is default for web server. For example: When you type in domain name “nytime.com”, a domain name server (DNS) translate it to an IP address (such as 8.8.8.8). An Internet Socket consists of: A transport protocol (TCP, UDP, …). An IP address (IPv4 or IPv6). A port (default for web servers is 80). Socket socket = getSocket(type=\"TCP\") connect(socket, address=\"8.8.8.8\", port=\"80\") send(socket, \"Hello, world!\") close(socket) A DNS (domain name server) translate a name server “nytime.com” to IP address (8.8.8.8). IPv4: 32 bits with 2^32 unique addresses. This is not enough for the internet. Each number is 8 bits so we have 4 number x 8 bits = 32 bits per address. Ex: 8.8.8.8 IPv6: Add more internet addressing, use 128 bits addressing. (0-FFFF) Each number is 8 bits so we have 16 number x 8 bits = 128 bits per address Ex: 2001:4860:4860:8888 W3 Roadmap Notes The distinction between front-end and back-end is fundamental to web development. Front-end development involves the code that is served to the client (a web browswer). Back-end development involves the code that is run on the server. Typically a database, code related to sharing the data and the business logic for the application. Learn the basic: HTML: HTML + HTTP CSS: CSS + Responsive Design JS: JS + ES5 + ES6 Note: ES5 is a Javascript specification. Almost all browswers are ES5 compliant, but most modern browsers are also ES6 compliant. Dig Deeper: HTML: HTML DOM, XMLHttpRequest (XHR). CSS: CSS Icons, Google Fonts. JS: XML, JSON, AJAX, Fetch API Note: XHR is supported in almost every browswer. AJAX uses the XHR so clients can access and update data on the server without having to refresh the page. Fetch is slowly replacing AJAX/SHR. It does everything they can do, it’s easier to use and it works well with web services. What is AJAX (Asynchronous Javascript and XML)? A Web Dev technique to send and retrieve data in the background without having to refresh the page. Every second that the Twitter web makes a request to its server to check if there is any updates or tweet. So, instead of sending new request through HTTP URL bar, AJAX us Javascript XMLHttpRequest object to make http request behind the scene. Choose Tech/Framework: CSS: Grids, Flexbox, Bootstrap JS: jQuery, Angular, React, Vue.js Note: Boostrap is the main CSS frameworks. Grids and flexbox are important layout technologies that can be use with/without Bootstrap Additional Resources The Non-Designer’s Design Book: Read Chapter 1-5. Designing for accessibility W3Schools Web Development Roadmap W3Schools HTML5 Tutorial Codebase Week 2: Design in HTML \u0026 CSS HTTP HTTP, Servlets, and JSP\nWebsite is a static page with HTML + CSS that connect to the internet. Native GUI Application is an application that run locally in your machine. But the user have to download the application while keep it update. Usually it is written in Java. Best of both world: Dynamic Web Application: Run on the web while update. Web Client vs Web Server: Client allows the user to request resources from the web server and display the result of that request. The client use the web browser and the browswer knows how to communicate with the server and the browswer knows how to interpret HTML code and it render the webpage recieved by the server. Server recieves request from client, allocate the resource and send back to client. HTML vs HTTP: HTML (Hypertext Markup Language): The server typically sends the browser instructions written in HTML. This tells the browser how to display the requested content to the user HTTP (Hypertext Transfer Protocol): The protocol used by clients and servers to communicate with one another. It handles the simple request and response conversations. Request Response\nHTTP Protocol is the request-response protocol for the web. Key elements of the HTTP request stream: HTTP methods (action to be performed) The page to access (a URL). Form parameters (like arguments to a method) Key elements of the HTTP response stream: A status code (for whether the request was successful) Content-type (text, picture, HTML) Content (actual HTML, image,…) There are 2 types of HTTP requests: GET: The user click a link to a new page, then the browswer sends a GET request to the server, asking for the new page. POST: The users fills out the form and hit the submit button, then the browswer sends a POST request to the server, giving the server the data from the form. Note: You can send some data with a a get request. It appears after ? in the URL, the param is separate by \u0026. However: The total number of char you sent with GET is limted by the server. The data you sent is appended to the URL in the address bard, so it will be expose. For GET, the request belong to the request line (limited char) while POST stores the request to request body (payload). Other HTTP Request Methods: HEAD: Same as GET but returns only HTTP Headers and no document body. PUT: Uploads a representation of the specified URI. DELETE: Deletes the specified resource. OPTIONS: Returns the HTTP mehtods that the server supports. CONNECT: Converts the request connection to the transparent TCP/IP tunnel. Status Code: Check Image 200 == the request is OK for sucessful HTML. 403 == the request is OK but the server refuse to response to it! Try to access forbidden directory. 404 == page can’t be found. But can reappear. Happen if we put wrong URL 500 == internal server error. Some generic error in the server side but other message does not make sense! Cookie = small piece of data store in browser so the website know certain info about you! Dynamic Sites\nURL (Uniform Resource Locator): Every resource in url has specific address. http://www.wickedlysmart.com:80/beeradvice/select/beer1.html http is the protocol. www.wickedlysmart.com is the unique name of server (mapped to unique IP address) 80 is the default web server /beeradvice/select/ is the path to the resource. beer1.html is name of the request content. How does everything connect and work together? a user typpe URL to browswer. The browser sends a HTTP GET request. The GET request sent to the server. The server found the page identified in the URL. The server generate the HTTP response that include the page with 200 status code The HTTP response is sent to the browser The browser renders the HTML. Vue 3 Fundamentals Vue is a Javascript frameworkd that makes use of a multiple components to implement a Single-Page Application. Single-page application just have one HTML page (index.html). Vue uses JavaScript to modify that page so that it can look like any traditional web page in the application. We use Vue for its reactivity property: There are 2 ways of data-binding. Let’s say we have a string and print-out that string, we can bind (with directive v-model) the input tag with that string using v-model. When we change the input, the data will be changed (and synced). Additional Resources Head-First Servlets and JSP W3Schools HTML5 W3Schools CSS A Complete Guide to Flexbox Codebase Week 3: Design in Vue.js Codebase Week 4: DAO Pattern \u0026 RestAPI Databases\nDatabase proide structure of data, protect data from unauthorized access or changes. Relational databases: table of related data. “Relation” is a set of columns of related data. Foreign Key: A primary key in a table when it call from another table. Types of Database relationship: One-to-many: For example, to map a CustomerID (first col) of a table to a (second col) of another table. Many-to-many: For example, many order can include many dishes and many dishes can include many order. We can’t use foreigh and primany key directly but we have to use a linking table One-to-one: To associate 1 record from 1 table to another record in another table. DAO Patterns (implemented with JDBC)\nData Access Object Pattern: DAO is a popular design pattern to implement persistence layer of Java application. DAO object is a way to represent the database as a Java class which provide a CRUD operations. DAO Find Methods\nFor product DAO, we can have findAll() that return a list of model objects. findByCategoryId() findByProductId() REST APIs\nCodebase Week 5: Fetch Codebase Week 6: State Management Codebase Week 7: Session Management Codebase Week 8: Client-Side Validation Codebase Week 9: Server-Side Validation Codebase Week 10: Transaction \u0026 Hardening Codebase Citation Cited as:\nNguyen, Minh. (Feb 2023). Web Development Note. https://mnguyen0226.github.io/posts/webdev/post/. Or\n@article{nguyen2023mlsys, title = \"Web Development Note.\", author = \"Nguyen, Minh\", journal = \"mnguyen0226.github.io\", year = \"2023\", month = \"February\", url = \"https://mnguyen0226.github.io/posts/webdev/post/\" } Reference Fig. X. Sunday at Washington DC, U.S.A. (Image source: Jorge Alcala @ Unsplash). ",
+  "wordCount" : "2405",
+  "inLanguage": "en",
+  "datePublished": "2023-02-02T00:00:00Z",
+  "dateModified": "2023-02-02T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Minh T. Nguyen"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mnguyen0226.github.io/posts/webdev/post/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Minh T. Nguyen",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mnguyen0226.github.io/favicon/android-chrome-192x192.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://mnguyen0226.github.io/" accesskey="h" title="Minh T. Nguyen (Alt + H)">Minh T. Nguyen</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://mnguyen0226.github.io/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://mnguyen0226.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://mnguyen0226.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Understand Web Development
+    </h1>
+    <div class="post-description">
+      Virginia Tech&#39;s Web Development course note.
+    </div>
+    <div class="post-meta"><span title='2023-02-02 00:00:00 +0000 UTC'>February 2, 2023</span>&nbsp;·&nbsp;12 min&nbsp;·&nbsp;Minh T. Nguyen
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#week-1-application-design" aria-label="Week 1: Application Design">Week 1: Application Design</a><ul>
+                        
+                <li>
+                    <a href="#inter-networkinghttpswwwyoutubecomwatchvy_i9ztkrbvqlistplrjaigwvuv548gjejr5mvtqhkotaoll_pab_channeldr_k" aria-label="Inter-Networking"><a href="https://www.youtube.com/watch?v=y_i9zTKRbVQ&amp;list=PLRjaigwVuv548GJeJR5MvTqhKOTaolL_p&amp;ab_channel=Dr_K">Inter-Networking</a></a></li>
+                <li>
+                    <a href="#w3-roadmap-notes" aria-label="W3 Roadmap Notes">W3 Roadmap Notes</a></li>
+                <li>
+                    <a href="#additional-resources" aria-label="Additional Resources">Additional Resources</a></li>
+                <li>
+                    <a href="#codebase" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-2-design-in-html--css" aria-label="Week 2: Design in HTML &amp;amp; CSS">Week 2: Design in HTML &amp; CSS</a><ul>
+                        
+                <li>
+                    <a href="#httphttpswwwyoutubecomwatchvn_fwzii9d-qlistplrjaigwvuv55p6poy8ph2hdlswenffontab_channeldr_k" aria-label="HTTP"><a href="https://www.youtube.com/watch?v=n_FWZii9D-Q&amp;list=PLRjaigwVuv55p6POy8pH2hdlswenFfoNT&amp;ab_channel=Dr_K">HTTP</a></a></li>
+                <li>
+                    <a href="#vue-3-fundamentals" aria-label="Vue 3 Fundamentals">Vue 3 Fundamentals</a></li>
+                <li>
+                    <a href="#additional-resources-1" aria-label="Additional Resources">Additional Resources</a></li>
+                <li>
+                    <a href="#codebase-1" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-3-design-in-vuejs" aria-label="Week 3: Design in Vue.js">Week 3: Design in Vue.js</a><ul>
+                        
+                <li>
+                    <a href="#codebase-2" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-4-dao-pattern--restapi" aria-label="Week 4: DAO Pattern &amp;amp; RestAPI">Week 4: DAO Pattern &amp; RestAPI</a><ul>
+                        
+                <li>
+                    <a href="#codebase-3" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-5-fetch" aria-label="Week 5: Fetch">Week 5: Fetch</a><ul>
+                        
+                <li>
+                    <a href="#codebase-4" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-6-state-management" aria-label="Week 6: State Management">Week 6: State Management</a><ul>
+                        
+                <li>
+                    <a href="#codebase-5" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-7-session-management" aria-label="Week 7: Session Management">Week 7: Session Management</a><ul>
+                        
+                <li>
+                    <a href="#codebase-6" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-8-client-side-validation" aria-label="Week 8: Client-Side Validation">Week 8: Client-Side Validation</a><ul>
+                        
+                <li>
+                    <a href="#codebase-7" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-9-server-side-validation" aria-label="Week 9: Server-Side Validation">Week 9: Server-Side Validation</a><ul>
+                        
+                <li>
+                    <a href="#codebase-8" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#week-10-transaction--hardening" aria-label="Week 10: Transaction &amp;amp; Hardening">Week 10: Transaction &amp; Hardening</a><ul>
+                        
+                <li>
+                    <a href="#codebase-9" aria-label="Codebase">Codebase</a></li></ul>
+                </li>
+                <li>
+                    <a href="#citation" aria-label="Citation">Citation</a></li>
+                <li>
+                    <a href="#reference" aria-label="Reference">Reference</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p style="color: #286EE0"><strong>Status:</strong> [Latest]</p>
+<p><strong>Course Description:</strong> Web application with Topics regarding Networking, Security, Encryption, Database concepts, Distributed Computing models. After completion, student should knows about the e-commerce technology</p>
+<ul>
+<li>Data centric web app: authentication, authorization, session handling, resource management, user history.</li>
+<li>Recognize fundamental internet and web protocols such as TCP, UDP, HTTP (including GET and POST) requests and identify the characteristics of ech</li>
+<li>Identify key features of client-side web technology: HTML, CSS, Javascript and use them to implemnt a basic web application design</li>
+<li>Identify key features of server-side web technology such as REST APIs and the DAO patterns, and use them in an application to create dynamically-generated web content.</li>
+<li>Discuss application security issues related to web-based, systems, including authentication, authorization, confidentiality, and adata integrity.</li>
+</ul>
+<p><strong>Note</strong>: later add the quiz session of midterm, final, and assignment to text. Create a repo to post the project every week!</p>
+<h2 id="week-1-application-design">Week 1: Application Design<a hidden class="anchor" aria-hidden="true" href="#week-1-application-design">#</a></h2>
+<h3 id="inter-networkinghttpswwwyoutubecomwatchvy_i9ztkrbvqlistplrjaigwvuv548gjejr5mvtqhkotaoll_pab_channeldr_k"><a href="https://www.youtube.com/watch?v=y_i9zTKRbVQ&amp;list=PLRjaigwVuv548GJeJR5MvTqhKOTaolL_p&amp;ab_channel=Dr_K">Inter-Networking</a><a hidden class="anchor" aria-hidden="true" href="#inter-networkinghttpswwwyoutubecomwatchvy_i9ztkrbvqlistplrjaigwvuv548gjejr5mvtqhkotaoll_pab_channeldr_k">#</a></h3>
+<p><strong>Circuit Packet Switching</strong></p>
+<ul>
+<li>Circuit Switch Network vs Packet Switch Network:
+<ul>
+<li>Circuit Switch
+<ul>
+<li>Original phone system had a purely circuit switched foundation.</li>
+<li>All information within a call takes exactly the same fixed path.</li>
+<li>Routing only occurs before the call.</li>
+</ul>
+</li>
+<li>Packet Switch
+<ul>
+<li>The Internet protocol (IP) provides a decentralized packet-switched foundation.</li>
+<li>Each packet is individually and continuously routed, based on its destination address.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Packets may arrive out of order. A packet may be dropped or lost. A packet may be duplcated.</li>
+</ul>
+<p><strong>TCP-UDP</strong></p>
+<ul>
+<li>TCP == Transmission Control Protocol. This is a connection-oriented protocal favors reliability over speed. This is the most compliment to the internet protocol. First, you will establish connection between two devices, which is called a handshake. This protocol make sure that you get all the info intact. Due to its speed and reliable, TCP is most common to be paired with IP</li>
+<li>UDP == Universal Datagram Protocal: This is a connection-less protocal (without handshake), the package is just streaming without caring the other device turn on or not. UDP is great for live streaming videos (fast over perfect, the packet lost just make it lag).</li>
+<li>Examples:
+<ul>
+<li>Amazon uses TCP as we want payment reliability</li>
+<li>Dropbox uses TCP as we trust Dropbox maintain the sent document intact</li>
+<li>DNS Lookup (has a domain name and want to get IP address) use a packet of info to check UDP.</li>
+<li>Facebook uses TCP to make sure the info is sent correctly.</li>
+<li>Gmail uses TCP.</li>
+<li>VOIP (voice of IP) uses UDP as we can ask people to repeat.</li>
+<li>World of Warcraft uses UDP</li>
+<li>Netflix uses a combination between TCP and UDP.</li>
+</ul>
+</li>
+</ul>
+<p><strong>OSI Reference Model</strong></p>
+<ul>
+<li>Open Systems Interconnection (OSI) is an abstract model of networking which divide communication network into 7 layers. This is the most popular communication model that represent how communicate over the internet.</li>
+<li>OSI is a protocol reference models provide an abstract view of the network, and group functionality into layers. Each layer provide a service to the one above it and each has their own set of protocol to make sure the network will work.</li>
+<li>OSI has 7 layers:
+<ul>
+<li>1st (Physical Layer): Deliver bits over physical link (or wireless). Worry about 1 bit to 1 place to another. Analog vs Digital vs Radio Signal?</li>
+<li>2nd (Data Link Layer): Groups bits into addressed frames for transmission over physical links (over local media network). Address for local machine only, not IP address. So that the bit can get 1 node to another within a local area network. We plug the cable to network hub and that hub tell the bit where to go within the local network.</li>
+<li>3rd (Network Layer): Deliver packets with routing services across multiple data links. Connect data links (or local area network). This is where the internetworking happen. This is the internet layer where the internet protocal resides.</li>
+<li>4rd (Transport Layer): Deliver data from operating system to operating system, not just computer to computer. When the data get to OS, it should be ready to use. This is there the data is package together. This is where error checking occurs. This is where TCP and UP perform their function.</li>
+<li>5th (Session Layer): Manages connection between local and remote application. Concerns with sockets and ports in the machine.</li>
+<li>6th (Presentation Layer): Convert operating system standards to or from network representations. This is where encryption resides. This is how our application SEE the network</li>
+<li>7th (Application Layer): Ensure communication between distributed software components. This is where we develop our application.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Distributed Computing Model</strong></p>
+<ul>
+<li>Client-Server Model: most common model. The server sits idle to the request. The client initiate the request. To first establish the connection, we use TCP (connection-oriented protocol). The client request a service and the server response to the request. The client-server model is call a 2-tier Model.</li>
+<li>3-tier-model (MVC): Most common
+<ul>
+<li>Presentation tier: Front-end interface and send request to the client. The main function is to translate tasks annd results to something the user can undestand.</li>
+<li>Logic tier: Handle the request, often that request involves in the data tier. The main function is to coordinate the applicaiton, processes commands, make logical decisions and evaluates, and performs calculations. It also moves and processes data between the two surrounded layers.</li>
+<li>Data tier: information is store and retrieved. The information is then passed back to the logic tier for processing, and then eventually back to the user.</li>
+<li>Note: The llogic tier can become complex and split into multiple tiers. We called it a multi-tier model.</li>
+</ul>
+</li>
+<li>Peer-to-Peer Model: All the nodes shared resource to each other. Popular in Napstern MP3 file-share, here, every computer is a server and a client.</li>
+</ul>
+<p><strong>Sockets Ports</strong></p>
+<ul>
+<li>A network socket is an endpoint of a connection across a computer network. An endpoint of a connection is not a device but an application in device. Socket not only include an IP address in a particular device, but also a particular port for a software application is listening, port 80 is default for web server.
+<ul>
+<li>For example: When you type in domain name &ldquo;nytime.com&rdquo;, a domain name server (DNS) translate it to an IP address (such as 8.8.8.8).</li>
+</ul>
+</li>
+<li>An Internet Socket consists of:
+<ul>
+<li>A transport protocol (TCP, UDP, &hellip;).</li>
+<li>An IP address (IPv4 or IPv6).</li>
+<li>A port (default for web servers is 80).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="n">getSocket</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&#34;TCP&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">connect</span><span class="p">(</span><span class="n">socket</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s2">&#34;8.8.8.8&#34;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="s2">&#34;80&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">send</span><span class="p">(</span><span class="n">socket</span><span class="p">,</span> <span class="s2">&#34;Hello, world!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">close</span><span class="p">(</span><span class="n">socket</span><span class="p">)</span>
+</span></span></code></pre></div></li>
+<li>A DNS (domain name server) translate a name server &ldquo;nytime.com&rdquo; to IP address (8.8.8.8).
+<ul>
+<li>IPv4: 32 bits with 2^32 unique addresses. This is not enough for the internet.
+<ul>
+<li>Each number is 8 bits so we have 4 number x 8 bits = 32 bits per address.</li>
+<li>Ex: 8.8.8.8</li>
+</ul>
+</li>
+<li>IPv6: Add more internet addressing, use 128 bits addressing. (0-FFFF)
+<ul>
+<li>Each number is 8 bits so we have 16 number x 8 bits = 128 bits per address</li>
+<li>Ex: 2001:4860:4860:8888</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="w3-roadmap-notes">W3 Roadmap Notes<a hidden class="anchor" aria-hidden="true" href="#w3-roadmap-notes">#</a></h3>
+<ul>
+<li>The distinction between front-end and back-end is fundamental to web development. Front-end development involves the code that is served to the client (a web browswer). Back-end development involves the code that is run on the server. Typically a database, code related to sharing the data and the business logic for the application.</li>
+<li>Learn the basic:
+<ul>
+<li>HTML: HTML + HTTP</li>
+<li>CSS: CSS + Responsive Design</li>
+<li>JS: JS + ES5 + ES6</li>
+<li>Note: ES5 is a Javascript specification. Almost all browswers are ES5 compliant, but most modern browsers are also ES6 compliant.</li>
+</ul>
+</li>
+<li>Dig Deeper:
+<ul>
+<li>HTML: HTML DOM, XMLHttpRequest (XHR).</li>
+<li>CSS: CSS Icons, Google Fonts.</li>
+<li>JS: XML, JSON, AJAX, Fetch API</li>
+<li>Note: XHR is supported in almost every browswer. AJAX uses the XHR so clients can access and update data on the server without having to refresh the page. Fetch is slowly replacing AJAX/SHR. It does everything they can do, it&rsquo;s easier to use and it works well with web services.</li>
+</ul>
+</li>
+<li>What is <a href="https://www.youtube.com/watch?v=3l13qGLTgNw&amp;ab_channel=WebConcepts">AJAX</a> (Asynchronous Javascript and XML)? A Web Dev technique to send and retrieve data in the background without having to refresh the page.
+<ul>
+<li>Every second that the Twitter web makes a request to its server to check if there is any updates or tweet. So, instead of sending new request through HTTP URL bar, AJAX us Javascript XMLHttpRequest object to make http request behind the scene.</li>
+</ul>
+</li>
+<li>Choose Tech/Framework:
+<ul>
+<li>CSS: Grids, Flexbox, Bootstrap</li>
+<li>JS: jQuery, Angular, React, Vue.js</li>
+<li>Note: Boostrap is the main CSS frameworks. Grids and flexbox are important layout technologies that can be use with/without Bootstrap</li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-resources">Additional Resources<a hidden class="anchor" aria-hidden="true" href="#additional-resources">#</a></h3>
+<ul>
+<li><a href="">The Non-Designer&rsquo;s Design Book</a>: Read Chapter 1-5.</li>
+<li><a href="">Designing for accessibility</a></li>
+<li><a href="">W3Schools Web Development Roadmap</a></li>
+<li><a href="">W3Schools HTML5 Tutorial</a></li>
+</ul>
+<h3 id="codebase">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase">#</a></h3>
+<h2 id="week-2-design-in-html--css">Week 2: Design in HTML &amp; CSS<a hidden class="anchor" aria-hidden="true" href="#week-2-design-in-html--css">#</a></h2>
+<h3 id="httphttpswwwyoutubecomwatchvn_fwzii9d-qlistplrjaigwvuv55p6poy8ph2hdlswenffontab_channeldr_k"><a href="https://www.youtube.com/watch?v=n_FWZii9D-Q&amp;list=PLRjaigwVuv55p6POy8pH2hdlswenFfoNT&amp;ab_channel=Dr_K">HTTP</a><a hidden class="anchor" aria-hidden="true" href="#httphttpswwwyoutubecomwatchvn_fwzii9d-qlistplrjaigwvuv55p6poy8ph2hdlswenffontab_channeldr_k">#</a></h3>
+<p><strong>HTTP, Servlets, and JSP</strong></p>
+<ul>
+<li>Website is a static page with HTML + CSS that connect to the internet.</li>
+<li>Native GUI Application is an application that run locally in your machine. But the user have to download the application while keep it update. Usually it is written in Java.</li>
+<li>Best of both world: Dynamic Web Application: Run on the web while update.</li>
+<li>Web Client vs Web Server:
+<ul>
+<li>Client allows the user to request resources from the web server and display the result of that request. The client use the web browser and the browswer knows how to communicate with the server and the browswer knows how to interpret HTML code and it render the webpage recieved by the server.</li>
+<li>Server recieves request from client, allocate the resource and send back to client.</li>
+</ul>
+</li>
+<li>HTML vs HTTP:
+<ul>
+<li>HTML (Hypertext Markup Language): The server typically sends the browser instructions written in HTML. This tells the browser how to display the requested content to the user</li>
+<li>HTTP (Hypertext Transfer Protocol): The protocol used by clients and servers to communicate with one another. It handles the simple request and response conversations.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Request Response</strong></p>
+<ul>
+<li>HTTP Protocol is the request-response protocol for the web.</li>
+<li>Key elements of the HTTP request stream:
+<ul>
+<li>HTTP methods (action to be performed)</li>
+<li>The page to access (a URL).</li>
+<li>Form parameters (like arguments to a method)</li>
+</ul>
+</li>
+<li>Key elements of the HTTP response stream:
+<ul>
+<li>A status code (for whether the request was successful)</li>
+<li>Content-type (text, picture, HTML)</li>
+<li>Content (actual HTML, image,&hellip;)</li>
+</ul>
+</li>
+<li>There are 2 types of HTTP requests:
+<ul>
+<li>GET: The user click a link to a new page, then the browswer sends a GET request to the server, asking for the new page.</li>
+<li>POST: The users fills out the form and hit the submit button, then the browswer sends a POST request to the server, giving the server the data from the form.</li>
+<li>Note: You can send some data with a a get request. It appears after ? in the URL, the param is separate by &amp;. However:
+<ul>
+<li>The total number of char you sent with GET is limted by the server.</li>
+<li>The data you sent is appended to the URL in the address bard, so it will be expose.</li>
+</ul>
+</li>
+<li>For GET, the request belong to the request line (limited char) while POST stores the request to request body (payload).</li>
+</ul>
+</li>
+<li>Other HTTP Request Methods:
+<ul>
+<li>HEAD: Same as GET but returns only HTTP Headers and no document body.</li>
+<li>PUT: Uploads a representation of the specified URI.</li>
+<li>DELETE: Deletes the specified resource.</li>
+<li>OPTIONS: Returns the HTTP mehtods that the server supports.</li>
+<li>CONNECT: Converts the request connection to the transparent TCP/IP tunnel.</li>
+</ul>
+</li>
+<li>Status Code: Check Image
+<ul>
+<li>200 == the request is OK for sucessful HTML.</li>
+<li>403 == the request is OK but the server refuse to response to it! Try to access forbidden directory.</li>
+<li>404 == page can&rsquo;t be found. But can reappear. Happen if we put wrong URL</li>
+<li>500 == internal server error. Some generic error in the server side but other message does not make sense!</li>
+</ul>
+</li>
+<li>Cookie = small piece of data store in browser so the website know certain info about you!</li>
+</ul>
+<p><strong>Dynamic Sites</strong></p>
+<ul>
+<li>URL (Uniform Resource Locator): Every resource in url has specific address.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">http://www.wickedlysmart.com:80/beeradvice/select/beer1.html
+</span></span></code></pre></div><ul>
+<li><code>http</code> is the protocol.</li>
+<li><code>www.wickedlysmart.com</code> is the unique name of server (mapped to unique IP address)</li>
+<li><code>80</code> is the default web server</li>
+<li><code>/beeradvice/select/</code> is the path to the resource.</li>
+<li><code>beer1.html</code> is name of the request content.</li>
+</ul>
+</li>
+<li>How does everything connect and work together?
+<ul>
+<li>
+<ol>
+<li>a user typpe URL to browswer.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>The browser sends a HTTP GET request.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>The GET request sent to the server.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>The server found the page identified in the URL.</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>The server generate the HTTP response that include the page with 200 status code</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>The HTTP response is sent to the browser</li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li>The browser renders the HTML.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="vue-3-fundamentals">Vue 3 Fundamentals<a hidden class="anchor" aria-hidden="true" href="#vue-3-fundamentals">#</a></h3>
+<ul>
+<li>Vue is a Javascript frameworkd that makes use of a multiple components to implement a Single-Page Application. Single-page application just have one HTML page (index.html). Vue uses JavaScript to modify that page so that it can look like any traditional web page in the application.</li>
+<li>We use Vue for its reactivity property: There are 2 ways of data-binding. Let&rsquo;s say we have a string and print-out that string, we can bind (with directive v-model) the input tag with that string using v-model. When we change the input, the data will be changed (and synced).</li>
+</ul>
+<h3 id="additional-resources-1">Additional Resources<a hidden class="anchor" aria-hidden="true" href="#additional-resources-1">#</a></h3>
+<ul>
+<li><a href="">Head-First Servlets and JSP</a></li>
+<li><a href="">W3Schools HTML5</a></li>
+<li><a href="">W3Schools CSS</a></li>
+<li><a href="">A Complete Guide to Flexbox</a></li>
+</ul>
+<h3 id="codebase-1">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-1">#</a></h3>
+<h2 id="week-3-design-in-vuejs">Week 3: Design in Vue.js<a hidden class="anchor" aria-hidden="true" href="#week-3-design-in-vuejs">#</a></h2>
+<h3 id="codebase-2">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-2">#</a></h3>
+<h2 id="week-4-dao-pattern--restapi">Week 4: DAO Pattern &amp; RestAPI<a hidden class="anchor" aria-hidden="true" href="#week-4-dao-pattern--restapi">#</a></h2>
+<p><strong>Databases</strong></p>
+<ul>
+<li>Database proide structure of data, protect data from unauthorized access or changes.</li>
+<li>Relational databases: table of related data. &ldquo;Relation&rdquo; is a set of columns of related data.</li>
+<li>Foreign Key: A primary key in a table when it call from another table.</li>
+<li>Types of Database relationship:
+<ul>
+<li>One-to-many: For example, to map a CustomerID (first col) of a table to a (second col) of another table.</li>
+<li>Many-to-many: For example, many order can include many dishes and many dishes can include many order. We can&rsquo;t use foreigh and primany key directly but we have to use a linking table</li>
+<li>One-to-one: To associate 1 record from 1 table to another record in another table.</li>
+</ul>
+</li>
+</ul>
+<p><strong>DAO Patterns (implemented with JDBC)</strong></p>
+<ul>
+<li>Data Access Object Pattern: DAO is a popular design pattern to implement persistence layer of Java application.</li>
+<li>DAO object is a way to represent the database as a Java class which provide a CRUD operations.</li>
+</ul>
+<p><strong><a href="https://www.youtube.com/watch?v=Xj93xLTRqhg&amp;ab_channel=Dr_K">DAO Find Methods</a></strong></p>
+<ul>
+<li>For product DAO, we can have
+<ul>
+<li>findAll() that return a list of model objects.</li>
+<li>findByCategoryId()</li>
+<li>findByProductId()</li>
+</ul>
+</li>
+</ul>
+<p><strong>REST APIs</strong></p>
+<h3 id="codebase-3">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-3">#</a></h3>
+<h2 id="week-5-fetch">Week 5: Fetch<a hidden class="anchor" aria-hidden="true" href="#week-5-fetch">#</a></h2>
+<h3 id="codebase-4">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-4">#</a></h3>
+<h2 id="week-6-state-management">Week 6: State Management<a hidden class="anchor" aria-hidden="true" href="#week-6-state-management">#</a></h2>
+<h3 id="codebase-5">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-5">#</a></h3>
+<h2 id="week-7-session-management">Week 7: Session Management<a hidden class="anchor" aria-hidden="true" href="#week-7-session-management">#</a></h2>
+<h3 id="codebase-6">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-6">#</a></h3>
+<h2 id="week-8-client-side-validation">Week 8: Client-Side Validation<a hidden class="anchor" aria-hidden="true" href="#week-8-client-side-validation">#</a></h2>
+<h3 id="codebase-7">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-7">#</a></h3>
+<h2 id="week-9-server-side-validation">Week 9: Server-Side Validation<a hidden class="anchor" aria-hidden="true" href="#week-9-server-side-validation">#</a></h2>
+<h3 id="codebase-8">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-8">#</a></h3>
+<h2 id="week-10-transaction--hardening">Week 10: Transaction &amp; Hardening<a hidden class="anchor" aria-hidden="true" href="#week-10-transaction--hardening">#</a></h2>
+<h3 id="codebase-9">Codebase<a hidden class="anchor" aria-hidden="true" href="#codebase-9">#</a></h3>
+<h2 id="citation">Citation<a hidden class="anchor" aria-hidden="true" href="#citation">#</a></h2>
+<p>Cited as:</p>
+<blockquote>
+    <summary>Nguyen, Minh. (Feb 2023). Web Development Note.</summary>
+    <summary>https://mnguyen0226.github.io/posts/webdev/post/.</summary>
+</blockquote>
+<p>Or</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">@article<span class="o">{</span>nguyen2023mlsys,
+</span></span><span class="line"><span class="cl">  <span class="nv">title</span>   <span class="o">=</span> <span class="s2">&#34;Web Development Note.&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">author</span>  <span class="o">=</span> <span class="s2">&#34;Nguyen, Minh&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">journal</span> <span class="o">=</span> <span class="s2">&#34;mnguyen0226.github.io&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">year</span>    <span class="o">=</span> <span class="s2">&#34;2023&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">month</span>   <span class="o">=</span> <span class="s2">&#34;February&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">url</span>     <span class="o">=</span> <span class="s2">&#34;https://mnguyen0226.github.io/posts/webdev/post/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h2>
+<center>
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/webdev/imgs/washingtondc.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. X. Sunday at Washington DC, U.S.A. (Image source: 
+    <a href="https://unsplash.com/photos/fbtHV94f-bA" class="img_footer">Jorge Alcala @ Unsplash</a>).
+</figcaption>
+<!-- CSS Styling -->
+<style>
+.img_size {
+  width: 100%;
+}
+
+.img_footer {
+    color: #888888;
+    text-align: center;
+}
+</style>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://mnguyen0226.github.io/tags/web-development/">web development</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/vue.js/">vue.js</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/mysql/">mysql</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/java/">java</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/html-/-css/">html / css</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/figma/">figma</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/long-read/">long-read</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://mnguyen0226.github.io/posts/multitask_learning/post/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Multi-Task Learning for Image Classification</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Understand Web Development on twitter"
+        href="https://twitter.com/intent/tweet/?text=Understand%20Web%20Development&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f&amp;hashtags=webdevelopment%2cvue.js%2cmysql%2cjava%2chtml%2fcss%2cfigma%2clong-read">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Understand Web Development on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f&amp;title=Understand%20Web%20Development&amp;summary=Understand%20Web%20Development&amp;source=https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Understand Web Development on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f&title=Understand%20Web%20Development">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Understand Web Development on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Understand Web Development on whatsapp"
+        href="https://api.whatsapp.com/send?text=Understand%20Web%20Development%20-%20https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Understand Web Development on telegram"
+        href="https://telegram.me/share/url?text=Understand%20Web%20Development&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2fwebdev%2fpost%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://mnguyen0226.github.io/">Minh T. Nguyen</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

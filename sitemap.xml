@@ -3,10 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mnguyen0226.github.io/posts/profile_matching/post/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/mathbridge/post/</loc>
-    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/ml_systems_design/post/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
@@ -20,59 +20,62 @@
     <loc>https://mnguyen0226.github.io/about/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mnguyen0226.github.io/posts/webdev/post/</loc>
+    <lastmod>2023-02-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/categories/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/data-science/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/machine-learning/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/paper-reading/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/software-engineer/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/systems-design/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/systems-design/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/web-development/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/dash/</loc>
-    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/docker/</loc>
-    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/kubernetes/</loc>
-    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/python/</loc>
-    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/software-engineering/</loc>
-    <lastmod>2023-05-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/deep-learning/</loc>
     <lastmod>2023-05-08T00:00:00+00:00</lastmod>
@@ -103,6 +106,18 @@
   </url><url>
     <loc>https://mnguyen0226.github.io/series/my-experience/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/figma/</loc>
+    <lastmod>2023-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/java/</loc>
+    <lastmod>2023-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/mysql/</loc>
+    <lastmod>2023-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/vue.js/</loc>
+    <lastmod>2023-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/archives/</loc>
   </url><url>
