@@ -12,18 +12,33 @@ weight: 5
 ---
 ## 👨‍💻 Experience
 
-<details><summary><strong>Software Engineer Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
-    <summary><em><strong>▪ Tech Stack:</strong></em> Javascript, React.js, MongoDB, Express, Node.js.</summary>
-    <summary>▪ Date: 06/2023 - Present.</summary>
-    <summary>▪ Location: Singapore (Remote).</summary>
+<details><summary><strong>Data Engineer Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
+    <summary><em><strong>▪ Tech Stack:</strong></em> Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS.</summary>
+    <summary>▪ Date: 06/2023 - 9/2023.</summary>
+    <summary>▪ Location: Ho Chi Minh City, Vietnam (Remote).</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
-        <summary>▪ Designed and built the property listing website with JavaScript, PostgreSQL, Strapi CMS, and Next.js to save 40% development costs.</summary>
-        <summary>▪ Established CI/CD and AWS infrastructure utilizing Amplify, S3, RDS, and EC2.</summary>
-        <summary>▪ Engaged in the full Agile cycle including daily stand‑ups, sprint reviews, sprint plannings, and retrospectives.</summary>
+        <summary>▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%.</summary>
+        <summary>▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</summary>
+        <summary>▪ Built a WordPress blog website using AWS EC2, boosting traffic organically from search engines.</summary>
     </blockquote></details>
 </blockquote></details>
 
-<details><summary><strong>Graduate Research Assistant</strong> @ Deloitte Touches x Commonwealth Cyber Initiatives </summary><blockquote>
+<details><summary><strong>Graduate Research Assistant</strong> @ CS Department (Virginia Tech)</summary><blockquote>
+    <summary><em><strong>▪ Tech Stack:</strong></em> Python (Dash, Plotly), Docker, Kubernetes.</summary>
+        <summary style="display: flex">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/mathbridge/mathbridge2.png" alt="" style="height:150px;">
+        &nbsp;
+        &nbsp;
+    </summary>
+    <summary>▪ Date: 04/2023 - Present.</summary>
+    <summary>▪ Location: Falls Church, Virginia.</summary>
+    <details><summary><strong>Responsibilities</strong></summary><blockquote>
+        <summary>▪ Designed and built an interactive website for statistics and ML algorithms visualization with Python (Dash, Plotly) and Docker.</summary>
+        <summary>▪ Deployed the website on Kubernetes cluster, ensuring scalability and reliability.</summary>
+    </blockquote></details>
+</blockquote></details>
+
+<details><summary><strong>Graduate Research Assistant</strong> @ Commonwealth Cyber Initiatives (Virginia Tech) </summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Tensorflow, Matplotlib, Pandas, Seaborn.</summary>
     <summary>▪ Date: 05/2022 - 08/2022.</summary>
     <summary>▪ Location: Arlington, Virginia.</summary>
@@ -131,7 +146,7 @@ weight: 5
 ## 🔧 Skills 
 
 - **Frontend:** JavaScript, TypeScript, HTML5, CSS, SCSS | React.js, Next.js, Vue.js.
-- **Backend:** Python, Java, SQL | Flask, Dash, Node.js, RESTful API | MySQL, SQLite, PostgreSQL.
+- **Backend:** Python, Java, SQL, C++, C | Flask, Dash, Node.js, RESTful API | MySQL, SQLite, PostgreSQL.
 - **Data Science Tools:** Tensorflow, PyTorch, Scikit-learn, NumPy, Matplotlib, Pandas, Seaborn, Plotly, BeautifulSoup, OpenCV.
 - **Others:** Docker, Kubernetes, AWS, Git, Linux.
 
