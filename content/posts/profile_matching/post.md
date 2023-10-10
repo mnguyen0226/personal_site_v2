@@ -13,7 +13,7 @@ draft: false
 weight: 5
 ---
 
-<p style="color: #286EE0"><strong>Status:</strong> [v.1.0]</p>
+<p style="color: #286EE0"><strong>[v.1.0] (06/15/2023):</strong> Post published!</p>
 
 During a recent interview for a software engineer intern position, I had an intriguing conversation with a start-up CEO. We discussed a software-system problem that presented an opportunity to gradually integrate a machine learning (ML) solution. The challenge involved a Software-as-a-Service (SaaS) platform that aimed to **match buyers or customers with suitable sellers or agents**. This blog chronicles my research into the fascinating profile-matching problem, with a specific focus on the matching algorithms employed.
 

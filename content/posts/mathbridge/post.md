@@ -12,9 +12,12 @@ TocOpen: false
 draft: false
 weight: 5
 ---
-<p style="color: #286EE0"><strong>Status:</strong> [v.1.0]</p>
+<p style="color: #286EE0"><strong>[v.1.1] (08/15/2023):</strong> Source code published!</p>
+<p style="color: #286EE0"><strong>[v.1.0] (05/27/2023):</strong> Post published!</p>
 
 Recently, I had an opportunity of joining the Mathbridge project, led by Virginia Tech's Computer Science Department. Our goal was to develop a data visualization web application that serves as an interactive playground for students to explore and visualize concepts related to linear algebra and machine learning algorithms. This project holds particular significance for my university, which has a strong focus on machine learning and regularly produces groundbreaking research in the field. By creating this [website](https://mathbridge.discovery.cs.vt.edu/), we aim to attract students and provide them with a valuable resource for their ML-focused programs. I'm delighted to announce that we have successfully deployed the prototype of the website, and we are continuously working on adding additional stylings, ML algorithms, and expanding the tech stack to enhance the user experience. Stay tuned for regular updates as we evolve and improve this exciting project.
+
+Starter code can be found [here](https://github.com/mnguyen0226/mathbridge_official).
 
 <center>
     <img style="width: 65%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/feature_imp.png" />

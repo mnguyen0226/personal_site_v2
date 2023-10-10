@@ -12,7 +12,7 @@ TocOpen: false
 draft: false
 weight: 5
 ---
-<p style="color: #286EE0"><strong>Status:</strong> [v.1.0]</p>
+<p style="color: #286EE0"><strong>[v.1.0] (05/08/2023):</strong> Post published!</p>
 
 Chip Huyen, a Vietnamese writer, computer scientist, and co-founder of Claypot AI, has an impressive background as a lecturer at Stanford and as a machine learning engineer at NVIDIA, Snorkel AI, Netflix, and Primer. I have been an avid reader of Chip's books since her best-selling works in Vietnam, which inspired me to pursue my study-abroad journey in the U.S. Her latest book, published in June 2022, offers invaluable insights and practical advice on building reliable machine learning systems. After reading it for the first time, I was captivated by the depth of knowledge shared, prompting me to revisit the book multiple times to fully absorb its ideas. In this blog post, I will share my reflections and takeaways from Chip Huyen's book after the **first-read**, which has greatly influenced my understanding and approach to machine learning.
 
