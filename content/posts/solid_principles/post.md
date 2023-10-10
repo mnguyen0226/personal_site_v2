@@ -12,7 +12,7 @@ TocOpen: false
 draft: false
 weight: 5
 ---
-<p style="color: #286EE0"><strong>Status:</strong> [Latest]</p>
+<p style="color: #286EE0"><strong>Status:</strong> [v.1.0]</p>
 
 I recently finished an excellent graduate course, Software Engineering (CS5704), and learned about different aspects of software projects and how different-size companies handle their technical/business changes to deliver successful products to their customer. Some important topics are Process Models (Waterfall, V-Model, Spiral, Agile), Requirements Definition, and Architecture Design Patterns. Especially, S.O.L.I.D principles have struck me as must-known concepts for writing better and cleaner code.
 

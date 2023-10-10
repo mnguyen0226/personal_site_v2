@@ -12,7 +12,7 @@ TocOpen: false
 draft: false
 weight: 5
 ---
-<p style="color: #286EE0"><strong>Status:</strong> [Latest]</p>
+<p style="color: #286EE0"><strong>Status:</strong> [v.1.0]</p>
 
 Recently, I had an opportunity of joining the Mathbridge project, led by Virginia Tech's Computer Science Department. Our goal was to develop a data visualization web application that serves as an interactive playground for students to explore and visualize concepts related to linear algebra and machine learning algorithms. This project holds particular significance for my university, which has a strong focus on machine learning and regularly produces groundbreaking research in the field. By creating this [website](https://mathbridge.discovery.cs.vt.edu/), we aim to attract students and provide them with a valuable resource for their ML-focused programs. I'm delighted to announce that we have successfully deployed the prototype of the website, and we are continuously working on adding additional stylings, ML algorithms, and expanding the tech stack to enhance the user experience. Stay tuned for regular updates as we evolve and improve this exciting project.
 

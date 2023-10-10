@@ -12,7 +12,7 @@ TocOpen: false
 draft: false
 weight: 5
 ---
-<p style="color: #286EE0"><strong>Status:</strong> [Latest]</p>
+<p style="color: #286EE0"><strong>Status:</strong> [v.1.0]</p>
 
 During a recent interview with a Data Science Lead at a digital agriculture tech company, I had the opportunity to delve into the machine learning team's exciting project. The team was utilizing multi-task learning (MTL) to deploy models to farming hardware, which piqued my interest and prompted me to explore this approach combined with deep learning. In particular, I wanted to investigate the effectiveness of MTL on vision transformers (ViT) and deep residual networks (ResNet-152).
 
