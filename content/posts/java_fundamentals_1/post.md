@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 1)"
 date: "2023-08-21"
-description: "sdsd"
+description: "Object-oriented concepts, classes, objects, methods in Java programming."
 tags: ["java", "oop"]
 categories: ["software engineer"]
 series: ["Software Engineering"]
@@ -14,8 +14,6 @@ weight: 3
 ---
 
 <p style="color: #286EE0"><strong>[v.0.1] (08/15/2023):</strong> Post started!</p>
-
-TODO: Introduction Paragraph
 
 ## Object-Oriented Concepts
 
@@ -42,14 +40,17 @@ TODO: Introduction Paragraph
 
 **Java Programming:** Is simple, safe, platform independent, rich library, designed for internet. Here is the comparison between C/C++ vs Java programming.
 
+</br>
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamental_1/imgs/c_program.png" />
-      <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamental_1/imgs/java_program.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/c_program.png" />
+      <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/java_program.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 1: C/C++ vs Java programming.
 </figcaption>
+</br>
 
+**Downside to JVM:** As you have something in between your bytecode and CPU, the application is slower and less efficient (the disadvantage is mostly not notificable)
 
 ### Operating Systems (OS)
 
@@ -88,7 +89,7 @@ Or
 [2] Horstmann, Cay S. Big Java: Early Objects. John Wiley & Sons, 2020.
 
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamental_1/imgs/arizona_grand_canyon.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/arizona_grand_canyon.png" />
 </center>
 <figcaption class="img_footer">
     Fig. X: Grand Canyon National Park, Arizona, U.S.A </br>(Image Source: 
