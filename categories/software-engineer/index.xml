@@ -10,14 +10,23 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/software-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/software-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Fundamentals (Part 2)</title>
+      <link>https://mnguyen0226.github.io/posts/java_fundamentals_2/note/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_2/note/</guid>
+      <description>Notes on static modifier, final modifier, array, array-list, interface, and implementation.</description>
+    </item>
+    
     <item>
       <title>Java Fundamentals (Part 1)</title>
       <link>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</guid>
-      <description>Object-oriented concepts, classes, objects, methods in Java programming.</description>
+      <description>Notes on object-oriented concepts, classes, objects, methods in Java programming.</description>
     </item>
     
     <item>
