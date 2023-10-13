@@ -40,7 +40,7 @@ In software development, there are different ways to test softwares:
 Here, we focus on testing individual units of our code! We test our code as we write it, and we write code to automate the testing of our code.
 
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_3/imgs/paradox_of_test.png" />
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_3/imgs/paradox_of_test.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 1: Paradox of (test) choices. Which tests to select to capture bugs?
