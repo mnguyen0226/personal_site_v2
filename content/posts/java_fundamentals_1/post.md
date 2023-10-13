@@ -1,7 +1,7 @@
 ---
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 1)"
-date: "2023-08-21"
+date: "2023-08-11"
 description: "Notes on object-oriented concepts, classes, objects, methods in Java programming."
 tags: ["java", "oop"]
 categories: ["software engineer"]
@@ -10,10 +10,10 @@ aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
 draft: false
-weight: 3
+weight: 5
 ---
 
-<p style="color: #286EE0"><strong>[v.1.0] (08/15/2023):</strong> Post published!</p>
+<p style="color: #286EE0"><strong>[v.1.0] (08/11/2023):</strong> Post published!</p>
 
 ## Object-Oriented Concepts
 

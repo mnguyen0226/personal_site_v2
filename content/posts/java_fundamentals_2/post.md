@@ -10,7 +10,7 @@ aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
 draft: false
-weight: 3
+weight: 5
 ---
 
 <p style="color: #286EE0"><strong>[v.1.0] (09/11/2023):</strong> Post published!</p>
@@ -209,7 +209,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_2/imgs/alaska.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2: Birch Lake, Alaska, U.S.A </br>(Image Source: 
+    Fig. 1: Birch Lake, Alaska, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/APhlh308DqU" class="img_footer">Alain Bonnardeaux @ Unsplash</a>).
 </figcaption>
 
