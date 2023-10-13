@@ -250,7 +250,7 @@ Or
 ```
 
 ## References
-[1] P.Deitel, Java: How To Program, Early Objects: Pearson, 2017
+[1] P. Deitel, Java: How To Program, Early Objects: Pearson, 2017
 
 [2] Horstmann, Cay S. Big Java: Early Objects. John Wiley & Sons, 2020.
 
