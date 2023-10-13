@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 25 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/software-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/software-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Fundamentals (Part 4)</title>
+      <link>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</guid>
+      <description>Notes on linked lists.</description>
+    </item>
+    
     <item>
       <title>Java Fundamentals (Part 3)</title>
       <link>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</link>
