@@ -243,10 +243,10 @@ Or
 [2] Horstmann, Cay S. Big Java: Early Objects. John Wiley & Sons, 2020.
 
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_4/imgs/alabama.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_4/imgs/arkansas.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 3: Pinnacle Mountain State Park, Big Rock Township, Arkansas, U.S.A </br>(Image Source: 
+    Fig. 2: Pinnacle Mountain State Park, Big Rock Township, Arkansas, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/hET8qSGlQg0" class="img_footer">Joshua J. Cotten @ Unsplash</a>).
 </figcaption>
 
