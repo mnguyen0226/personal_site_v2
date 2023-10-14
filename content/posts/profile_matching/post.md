@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Machine Learning for Profile-Matching System"
 date: "2023-06-15"
-description: "Discover the potential of machine learning for precise and efficient profile matching.."
+description: "Explore machine learning solutions for optimized buyer-seller matchmaking in a SaaS platform."
 tags: ["web development", "long-read", "paper-reading", "data science"]
 categories: ["software engineer", "machine learning", "systems design"]
 series: ["Systems Design"]
