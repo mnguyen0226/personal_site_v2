@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 2)"
 date: "2023-09-11"
-description: "Notes on static modifier, final modifier, array, array-list, interface, and implementation."
+description: "Dive into the distinctions and practical uses of static and final modifiers in Java. Discover the intricacies of arrays versus lists, and understand the fundamental differences between interfaces and their implementations."
 tags: ["java"]
 categories: ["software engineer"]
 series: ["Software Engineering"]

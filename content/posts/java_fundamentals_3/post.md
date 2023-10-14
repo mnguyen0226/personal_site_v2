@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 3)"
 date: "2023-09-25"
-description: "Notes on test-driven development (TDD)."
+description: "A brief introduction on test-driven development (TDD)."
 tags: ["java", "tdd"]
 categories: ["software engineer"]
 series: ["Software Engineering"]
@@ -16,7 +16,7 @@ weight: 5
 <p style="color: #286EE0"><strong>[v.1.0] (09/25/2023):</strong> Post published!</p>
 
 ## Test-Driven Development
-### Types of tests
+### Types Of Tests
 In software development, there are different ways to test softwares:
 - **Beta testing:** Provides a finished or near-finished application to a group of users and sees what problems they come up with.
 - **Performance testing:** Uses profiling tools to measure if we are getting acceptable response time. Is this application running as fast as it should be or it need to be?
@@ -47,7 +47,7 @@ Here, we focus on testing individual units of our code! We test our code as we w
 </figcaption>
 <br/>
 
-### TDD in a nutshell
+### TDD In A Nutshell
 
 **TDD is about writing the test prior to writing the application logic.**
 
@@ -79,7 +79,7 @@ Question 2: "Am I supposed to write all my tests first?"
 ## Unit Testing Frameworks
 There are some unit-testing frameworks, such as: JUnit (Java), NUnit (.NET), PyUnit (Python), CppUnit (C++) or OCUnit (Objective-C). Although there are different frameworks, they all have the same idea.
 
-### JUnit for unit testing and test-driven development
+### JUnit For Unit Testing & Test-Driven Development
 Unit tests are ultimately the best way to capture class-level and method-level requirements. Once the tests match the requirements, code can be developed to pass the tests. Unit tests aren't the only kinds of tests; many other kinds are generally required as well
 
 JUnit is by far the most common way to formally write unit tests for Java code. There are many advantages to the formal approach of JUnit:

@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 4)"
 date: "2023-10-02"
-description: "Notes on linked lists."
+description: "Explore the key differences between ArrayLists and LinkedLists."
 tags: ["java"]
 categories: ["software engineer"]
 series: ["Software Engineering"]

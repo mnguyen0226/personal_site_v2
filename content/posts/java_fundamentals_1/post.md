@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 1)"
 date: "2023-08-11"
-description: "Notes on object-oriented concepts, classes, objects, methods in Java programming."
+description: "Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. "
 tags: ["java", "oop"]
 categories: ["software engineer"]
 series: ["Software Engineering"]
