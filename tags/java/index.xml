@@ -17,7 +17,7 @@
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</guid>
-      <description>Notes on linked lists.</description>
+      <description>Explore the key differences between ArrayLists and LinkedLists.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</guid>
-      <description>Notes on test-driven development (TDD).</description>
+      <description>A brief introduction on test-driven development (TDD).</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</guid>
-      <description>Notes on static modifier, final modifier, array, array-list, interface, and implementation.</description>
+      <description>Dive into the distinctions and practical uses of static and final modifiers in Java. Discover the intricacies of arrays versus lists, and understand the fundamental differences between interfaces and their implementations.</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</guid>
-      <description>Notes on object-oriented concepts, classes, objects, methods in Java programming.</description>
+      <description>Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. </description>
     </item>
     
   </channel>
