@@ -15,7 +15,7 @@ weight: 5
 
 <p style="color: #286EE0"><strong>[v.1.0] (01/20/2023):</strong> Post started!</p>
 
-## Computer Memory & Storage
+## [Computer Memory & Storage](https://www.youtube.com/watch?v=lX4CrbXMsNQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=1)
 - **Storage**
   - **HDD** (hard disk drive): it works by spinning magnetics disk.
   - **SSD** (solid state drive): it uses NAND-based flash memory, providing fast data access, reduces power consumption, and increases durability. It is more expensive.
@@ -32,12 +32,51 @@ weight: 5
     - **Firmware**: is a type of software stored in ROM that determines how hardware devices communicate with each others
     - **BIOS** (basic input-output systems): first run when you booth up the computer. It is responsible for starting your computer, initializes hardware components, and hands over controls to the OS.
 
+## [Domain Name System (DNS)](https://youtu.be/27r4Bzuj5NQ?si=t1Zb0_2fB1yiGKTs)
+It is the backbone of the internet. 
+
+***But how does it work?***
+
+DNS is a directory: it translates human-readable domain names (i.e, www.google.com) to machine-readable IP-addresses.
+
+There are different DNS servers with different purposes. The DNS Resolver can be provided by Cloudflare (1.1.1.1) or Google (8.8.8.8). 
+
+***How does the DNS Resolver find the authoritative nameservers?*** 
+
+There are 3 levels of DNS: 
+- **Root Nameservers**: stores the IP-addresses of the TLD nameservers. There are 13 logical Root Nameservers. Ex: .com, .org, .edu
+- **Top Level Domain (TLD) Nameservers**: stores the IP-addresses of the Authoritative Nameservers. Ex: google.com, wikipedia.org, mit.edu. 
+- **Authoritative Nameservers**: stores authoritative answers to queries
+
+Such design above make DNS decentralized and robust.
+
+***How does the workflow look like?***
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/2_dns.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 1: DNS workflow (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+- The user types "google.com" to browser.
+- The browser first checks its cache, if there is no answer, it makes the OS call to get the answer.
+- The OS then reachs out to DNS Resolver.
+- The DNS Resolver first checks its cache, if it is not there or if the answer is expired, it will ask the Root Nameservers.
+- The Rootname Servers responses with the root name TLD Nameservers. Here, if the RootName Servers found the root name TLD Nameservers (i.e. .com as it is common) in its cache, it will return.
+- The DNS Resolver then reachout to the TLD Nameservers, which return the Authoritative Nameservers for "google.com".
+- The DNS Resolver then reachout to the Authoritative Nameservers and get the IP-address of "google.com".
+- The DNS Resolver then returns the address of the IP system to the OS, and the OS returns it to the browswer.
+
+
+ 
 ## Citation
 Cited as:
 
 <blockquote>
     <summary>Scale From Zero To Millions Of Users: An Understanding.</summary>
-    <summary>https://mnguyen0226.github.io/posts/scale_from_zero_to_millions_of_users/post/.</summary>
+    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/.</summary>
 </blockquote>
 
 Or 
