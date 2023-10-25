@@ -72,7 +72,7 @@ Such design above make DNS decentralized and robust.
 ## [Common Latency Numbers](https://youtu.be/FqR5vESuKe0?si=o4TviuBEP_tAExaY)
 
 <center>
-    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/3_latency.png" />
+    <img style="width: 35%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/3_latency.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 2: Latency number hierachy (Image source: 
