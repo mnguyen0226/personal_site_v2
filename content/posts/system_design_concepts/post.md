@@ -52,7 +52,7 @@ Such design above make DNS decentralized and robust.
 
 ***How does the workflow look like?***
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/2_dns.png" />
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/2_dns.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 1: DNS workflow (Image source: 
@@ -69,7 +69,28 @@ Such design above make DNS decentralized and robust.
 - The DNS Resolver then reachout to the Authoritative Nameservers and get the IP-address of "google.com".
 - The DNS Resolver then returns the address of the IP system to the OS, and the OS returns it to the browswer.
 
+## [Common Latency Numbers](https://youtu.be/FqR5vESuKe0?si=o4TviuBEP_tAExaY)
 
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/3_latency.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 2: Latency number hierachy (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+- **1 ns**: Accessing CPU registers, CPU clock cycle.
+- **1-10 ns**: L1/L2 cache, Branch mispredict.
+- **10-100 ns**: L3 cache.
+- **100-1000 ns**: System call, MD5 hash.
+- **1-10 µs**: Context switches between threads. 
+- **10-100 µs**: Higher level operations such as process a http request, sequential read, read a 8K page.
+- **100-1000 µs**: SSD write latency, intra-zone networking round trip, memcache/redis get operation.
+- **1-10 ms**: Intra-zone network latency, seek time of HDD.
+- **10-100 ms**: Network round-trip from US West-East.
+- **100-1000 ms**: Bcrypt a password, TLS handshake, reading sequentially 1GB of SSD.
+- **1 s**: Tranfer 1GB over the network within the same cloud region.
  
 ## Citation
 Cited as:
