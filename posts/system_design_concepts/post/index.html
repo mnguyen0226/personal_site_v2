@@ -101,8 +101,8 @@
   "keywords": [
     "long-read"
   ],
-  "articleBody": "[v.1.0] (01/20/2023): Post started!\nComputer Memory \u0026 Storage Storage HDD (hard disk drive): it works by spinning magnetics disk. SSD (solid state drive): it uses NAND-based flash memory, providing fast data access, reduces power consumption, and increases durability. It is more expensive. USB Drive: is a small plug-and-play device for convenient data transfer between computers. SD Card is commonly found in camera and smartphone. There is SD Card, Mini Card, and Micro Card. Memory RAM (random access memory): is a type of memory that store data temperarily while the computer is running. It’s fast and flexible. However, all the data is lost after the power is off. SRAM (static random access memory): is a fast and expensive DRAM used in high speed application like CPU caches, where quick access time is crucial. DRAM (dynamic random access memory): is slower and cheaper than SRAM. It needs to be constantly refreshed to maintain data. SDRAM DDR SDRAM: with examples like DDR4, DDR5. GGDDR SDRAM: is a specialized of DRAM with faster data transfer rates for parallel processing. ROM (read only memory): is a type of memory that retains data, even when the memory is off. It is used to store essential information like firmware and BIOS. Firmware: is a type of software stored in ROM that determines how hardware devices communicate with each others BIOS (basic input-output systems): first run when you booth up the computer. It is responsible for starting your computer, initializes hardware components, and hands over controls to the OS. Citation Cited as:\nScale From Zero To Millions Of Users: An Understanding. https://mnguyen0226.github.io/posts/scale_from_zero_to_millions_of_users/post/. Or\n@article{nguyen2023mtl, title = \"System Design Fundamentals Note\", author = \"Nguyen, Minh\", journal = \"mnguyen0226.github.io\", year = \"2023\", month = \"January\", url = \"https://mnguyen0226.github.io/posts/system_design_concepts/post/\" } References [1] A. Xu, System Design Interview - An Insider’s Guide. Independently Published, 2020. ‌\n[2] ByteByteGo, “10+ Key Memory \u0026 Storage Systems: Crash Course System Design #5,” YouTube. Mar. 28, 2023. Accessed: Oct. 25, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=lX4CrbXMsNQ\u0026list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf ‌\nFig. 2: Golden Gate Bridge, San Francisco, U.S.A (Image Source: Maarten van den Heuvel @ Unsplash). ",
-  "wordCount" : "346",
+  "articleBody": "[v.1.0] (01/20/2023): Post started!\nComputer Memory \u0026 Storage Storage HDD (hard disk drive): it works by spinning magnetics disk. SSD (solid state drive): it uses NAND-based flash memory, providing fast data access, reduces power consumption, and increases durability. It is more expensive. USB Drive: is a small plug-and-play device for convenient data transfer between computers. SD Card is commonly found in camera and smartphone. There is SD Card, Mini Card, and Micro Card. Memory RAM (random access memory): is a type of memory that store data temperarily while the computer is running. It’s fast and flexible. However, all the data is lost after the power is off. SRAM (static random access memory): is a fast and expensive DRAM used in high speed application like CPU caches, where quick access time is crucial. DRAM (dynamic random access memory): is slower and cheaper than SRAM. It needs to be constantly refreshed to maintain data. SDRAM DDR SDRAM: with examples like DDR4, DDR5. GGDDR SDRAM: is a specialized of DRAM with faster data transfer rates for parallel processing. ROM (read only memory): is a type of memory that retains data, even when the memory is off. It is used to store essential information like firmware and BIOS. Firmware: is a type of software stored in ROM that determines how hardware devices communicate with each others BIOS (basic input-output systems): first run when you booth up the computer. It is responsible for starting your computer, initializes hardware components, and hands over controls to the OS. Domain Name System (DNS) It is the backbone of the internet.\nBut how does it work?\nDNS is a directory: it translates human-readable domain names (i.e, www.google.com) to machine-readable IP-addresses.\nThere are different DNS servers with different purposes. The DNS Resolver can be provided by Cloudflare (1.1.1.1) or Google (8.8.8.8).\nHow does the DNS Resolver find the authoritative nameservers?\nThere are 3 levels of DNS:\nRoot Nameservers: stores the IP-addresses of the TLD nameservers. There are 13 logical Root Nameservers. Ex: .com, .org, .edu Top Level Domain (TLD) Nameservers: stores the IP-addresses of the Authoritative Nameservers. Ex: google.com, wikipedia.org, mit.edu. Authoritative Nameservers: stores authoritative answers to queries Such design above make DNS decentralized and robust.\nHow does the workflow look like?\nFig. 1: DNS workflow (Image source: ByteByteGo.com). The user types “google.com” to browser. The browser first checks its cache, if there is no answer, it makes the OS call to get the answer. The OS then reachs out to DNS Resolver. The DNS Resolver first checks its cache, if it is not there or if the answer is expired, it will ask the Root Nameservers. The Rootname Servers responses with the root name TLD Nameservers. Here, if the RootName Servers found the root name TLD Nameservers (i.e. .com as it is common) in its cache, it will return. The DNS Resolver then reachout to the TLD Nameservers, which return the Authoritative Nameservers for “google.com”. The DNS Resolver then reachout to the Authoritative Nameservers and get the IP-address of “google.com”. The DNS Resolver then returns the address of the IP system to the OS, and the OS returns it to the browswer. Citation Cited as:\nScale From Zero To Millions Of Users: An Understanding. https://mnguyen0226.github.io/posts/system_design_concepts/post/. Or\n@article{nguyen2023mtl, title = \"System Design Fundamentals Note\", author = \"Nguyen, Minh\", journal = \"mnguyen0226.github.io\", year = \"2023\", month = \"January\", url = \"https://mnguyen0226.github.io/posts/system_design_concepts/post/\" } References [1] A. Xu, System Design Interview - An Insider’s Guide. Independently Published, 2020. ‌\n[2] ByteByteGo, “10+ Key Memory \u0026 Storage Systems: Crash Course System Design #5,” YouTube. Mar. 28, 2023. Accessed: Oct. 25, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=lX4CrbXMsNQ\u0026list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf ‌\nFig. 2: Golden Gate Bridge, San Francisco, U.S.A (Image Source: Maarten van den Heuvel @ Unsplash). ",
+  "wordCount" : "618",
   "inLanguage": "en",
   "datePublished": "2023-01-20T00:00:00Z",
   "dateModified": "2023-01-20T00:00:00Z",
@@ -210,7 +210,7 @@
     <div class="post-description">
       Notes on fundamentals system design concepts, collected from Sahn Lam&#39;s lecture series
     </div>
-    <div class="post-meta"><span title='2023-01-20 00:00:00 +0000 UTC'>January 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Minh T. Nguyen
+    <div class="post-meta"><span title='2023-01-20 00:00:00 +0000 UTC'>January 20, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Minh T. Nguyen
 
 </div>
   </header> <div class="toc">
@@ -221,7 +221,9 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#computer-memory--storage" aria-label="Computer Memory &amp;amp; Storage">Computer Memory &amp; Storage</a></li>
+                    <a href="#computer-memory--storagehttpswwwyoutubecomwatchvlx4crbxmsnqlistplcrmie5fdpsd0gvs500xeoewfystsmejfindex1" aria-label="Computer Memory &amp;amp; Storage"><a href="https://www.youtube.com/watch?v=lX4CrbXMsNQ&amp;list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&amp;index=1">Computer Memory &amp; Storage</a></a></li>
+                <li>
+                    <a href="#domain-name-system-dnshttpsyoutube27r4bzuj5nqsit1zb0_2fb1yigkts" aria-label="Domain Name System (DNS)"><a href="https://youtu.be/27r4Bzuj5NQ?si=t1Zb0_2fB1yiGKTs">Domain Name System (DNS)</a></a></li>
                 <li>
                     <a href="#citation" aria-label="Citation">Citation</a></li>
                 <li>
@@ -233,7 +235,7 @@
 </div>
 
   <div class="post-content"><p style="color: #286EE0"><strong>[v.1.0] (01/20/2023):</strong> Post started!</p>
-<h2 id="computer-memory--storage">Computer Memory &amp; Storage<a hidden class="anchor" aria-hidden="true" href="#computer-memory--storage">#</a></h2>
+<h2 id="computer-memory--storagehttpswwwyoutubecomwatchvlx4crbxmsnqlistplcrmie5fdpsd0gvs500xeoewfystsmejfindex1"><a href="https://www.youtube.com/watch?v=lX4CrbXMsNQ&amp;list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&amp;index=1">Computer Memory &amp; Storage</a><a hidden class="anchor" aria-hidden="true" href="#computer-memory--storagehttpswwwyoutubecomwatchvlx4crbxmsnqlistplcrmie5fdpsd0gvs500xeoewfystsmejfindex1">#</a></h2>
 <ul>
 <li><strong>Storage</strong>
 <ul>
@@ -266,11 +268,43 @@
 </ul>
 </li>
 </ul>
+<h2 id="domain-name-system-dnshttpsyoutube27r4bzuj5nqsit1zb0_2fb1yigkts"><a href="https://youtu.be/27r4Bzuj5NQ?si=t1Zb0_2fB1yiGKTs">Domain Name System (DNS)</a><a hidden class="anchor" aria-hidden="true" href="#domain-name-system-dnshttpsyoutube27r4bzuj5nqsit1zb0_2fb1yigkts">#</a></h2>
+<p>It is the backbone of the internet.</p>
+<p><em><strong>But how does it work?</strong></em></p>
+<p>DNS is a directory: it translates human-readable domain names (i.e, <a href="https://www.google.com">www.google.com</a>) to machine-readable IP-addresses.</p>
+<p>There are different DNS servers with different purposes. The DNS Resolver can be provided by Cloudflare (1.1.1.1) or Google (8.8.8.8).</p>
+<p><em><strong>How does the DNS Resolver find the authoritative nameservers?</strong></em></p>
+<p>There are 3 levels of DNS:</p>
+<ul>
+<li><strong>Root Nameservers</strong>: stores the IP-addresses of the TLD nameservers. There are 13 logical Root Nameservers. Ex: .com, .org, .edu</li>
+<li><strong>Top Level Domain (TLD) Nameservers</strong>: stores the IP-addresses of the Authoritative Nameservers. Ex: google.com, wikipedia.org, mit.edu.</li>
+<li><strong>Authoritative Nameservers</strong>: stores authoritative answers to queries</li>
+</ul>
+<p>Such design above make DNS decentralized and robust.</p>
+<p><em><strong>How does the workflow look like?</strong></em></p>
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/2_dns.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 1: DNS workflow (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+<ul>
+<li>The user types &ldquo;google.com&rdquo; to browser.</li>
+<li>The browser first checks its cache, if there is no answer, it makes the OS call to get the answer.</li>
+<li>The OS then reachs out to DNS Resolver.</li>
+<li>The DNS Resolver first checks its cache, if it is not there or if the answer is expired, it will ask the Root Nameservers.</li>
+<li>The Rootname Servers responses with the root name TLD Nameservers. Here, if the RootName Servers found the root name TLD Nameservers (i.e. .com as it is common) in its cache, it will return.</li>
+<li>The DNS Resolver then reachout to the TLD Nameservers, which return the Authoritative Nameservers for &ldquo;google.com&rdquo;.</li>
+<li>The DNS Resolver then reachout to the Authoritative Nameservers and get the IP-address of &ldquo;google.com&rdquo;.</li>
+<li>The DNS Resolver then returns the address of the IP system to the OS, and the OS returns it to the browswer.</li>
+</ul>
 <h2 id="citation">Citation<a hidden class="anchor" aria-hidden="true" href="#citation">#</a></h2>
 <p>Cited as:</p>
 <blockquote>
     <summary>Scale From Zero To Millions Of Users: An Understanding.</summary>
-    <summary>https://mnguyen0226.github.io/posts/scale_from_zero_to_millions_of_users/post/.</summary>
+    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/.</summary>
 </blockquote>
 <p>Or</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">@article<span class="o">{</span>nguyen2023mtl,
