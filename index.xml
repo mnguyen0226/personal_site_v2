@@ -101,6 +101,15 @@
       <description>👨‍💻 Experience Data Engineer Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS. ▪ Date: 06/2023 - 9/2023. ▪ Location: Ho Chi Minh City, Vietnam (Remote). Responsibilities ▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%. ▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</description>
     </item>
     
+    <item>
+      <title>System Design Fundamentals Note</title>
+      <link>https://mnguyen0226.github.io/posts/system_design_concepts/post/</link>
+      <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/system_design_concepts/post/</guid>
+      <description>Notes on fundamentals system design concepts, collected from Sahn Lam&amp;#39;s lecture series</description>
+    </item>
+    
     
     
   </channel>

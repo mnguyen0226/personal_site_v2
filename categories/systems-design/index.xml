@@ -38,5 +38,14 @@
       <description>Delve into an in-depth review of Chip Huyen&amp;#39;s insights on building robust machine learning systems, inspired by her best-selling book on MLOps.</description>
     </item>
     
+    <item>
+      <title>System Design Fundamentals Note</title>
+      <link>https://mnguyen0226.github.io/posts/system_design_concepts/post/</link>
+      <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/system_design_concepts/post/</guid>
+      <description>Notes on fundamentals system design concepts, collected from Sahn Lam&amp;#39;s lecture series</description>
+    </item>
+    
   </channel>
 </rss>
