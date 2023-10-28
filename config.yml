@@ -1,7 +1,7 @@
 baseURL: "https://mnguyen0226.github.io/"
 title: Minh T. Nguyen
 theme: PaperMod
-paginate: 5
+paginate: 8
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
