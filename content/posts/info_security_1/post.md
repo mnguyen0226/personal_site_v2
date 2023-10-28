@@ -3,7 +3,7 @@ author: "Minh T. Nguyen"
 title: "Information and Network Security Concepts"
 date: "2023-08-21"
 description: "An exploration of computer security, delving into the OSI security architecture, various security attacks, and models for network protection. This guide also covers essential security services, mechanisms, potential attack surfaces, and principles"
-tags: ["cybersecurity", "long-read"]
+tags: ["cybersecurity"]
 categories: ["information security"]
 series: ["Information Security"]
 aliases: ["migrate-from-jekyl"]
