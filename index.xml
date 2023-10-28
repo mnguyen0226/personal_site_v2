@@ -39,6 +39,27 @@
     </item>
     
     <item>
+      <title>Number Theory</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_2/post/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_2/post/</guid>
+      <description>[v.1.0] (08/21/2023): Post started!
+Divibility and Division Algorithm The Euclidean Algorithm Modular Arithmetic Prime Numbers Fermat&amp;rsquo;s and Euler&amp;rsquo;s Theorems Testing For Primality The Chinese Remainder Theorem Discreate Logarithms Citation Cited as:
+Number Theory https://mnguyen0226.github.io/posts/info_security_2/post/ Or
+@article{nguyen2023mtl, title = &amp;#34;Number Theory&amp;#34;, author = &amp;#34;Nguyen, Minh&amp;#34;, journal = &amp;#34;mnguyen0226.github.io&amp;#34;, year = &amp;#34;2023&amp;#34;, month = &amp;#34;August&amp;#34;, url = &amp;#34;https://mnguyen0226.github.io/posts/info_security_2/post/&amp;#34; } References Fig. 2: Bulls Bridge, Kent, Connecticut U.S.A (Image Source: Johnell Pannell @ Unsplash).</description>
+    </item>
+    
+    <item>
+      <title>Java Fundamentals (Part 1)</title>
+      <link>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</guid>
+      <description>Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. </description>
+    </item>
+    
+    <item>
       <title>Information and Network Security Concepts</title>
       <link>https://mnguyen0226.github.io/posts/info_security_1/post/</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
@@ -54,15 +75,6 @@
       
       <guid>https://mnguyen0226.github.io/posts/mathbridge/post/</guid>
       <description>Journey with the Mathbridge project at Virginia Tech: Delve into the creation of an interactive web application for linear algebra and machine learning visualization.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 1)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</link>
-      <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</guid>
-      <description>Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. </description>
     </item>
     
     <item>
