@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Information and Network Security Concepts</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_1/post/</link>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_1/post/</guid>
+      <description>An exploration of computer security, delving into the OSI security architecture, various security attacks, and models for network protection. This guide also covers essential security services, mechanisms, potential attack surfaces, and principles</description>
+    </item>
+    
+    <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
