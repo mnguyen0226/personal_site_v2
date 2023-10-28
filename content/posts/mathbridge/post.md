@@ -93,15 +93,15 @@ One aspect we will focus on is improving the user interface and overall user exp
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (May 2023). Building a Data Visualization Web App with Dash.</summary>
-    <summary>https://mnguyen0226.github.io/posts/mathbridge/post/.</summary>
+    <summary>Nguyen, Minh. (May 2023). Building a Data Visualization Web App with Dash</summary>
+    <summary>https://mnguyen0226.github.io/posts/mathbridge/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023webdash,
-  title   = "Building a Data Visualization Web App with Dash.",
+  title   = "Building a Data Visualization Web App with Dash",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

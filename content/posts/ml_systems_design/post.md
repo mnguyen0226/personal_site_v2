@@ -192,15 +192,15 @@ This team structure at Netflix allows for a seamless collaboration where special
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (May 2023). Designing Machine Learning Systems: A Summary.</summary>
-    <summary>https://mnguyen0226.github.io/posts/ml_systems_design/post/.</summary>
+    <summary>Nguyen, Minh. (May 2023). Designing Machine Learning Systems: A Summary</summary>
+    <summary>https://mnguyen0226.github.io/posts/ml_systems_design/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mlsys,
-  title   = "Designing Machine Learning Systems: A Summary.",
+  title   = "Designing Machine Learning Systems: A Summary",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

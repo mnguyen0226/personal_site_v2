@@ -133,15 +133,15 @@ Question 4: "How do I control the order of tests?"
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (September 2023). Java Fundamentals (Part 3).</summary>
-    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/.</summary>
+    <summary>Nguyen, Minh. (September 2023). Java Fundamentals (Part 3)</summary>
+    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mtl,
-  title   = "Java Fundamentals (Part 3).",
+  title   = "Java Fundamentals (Part 3)",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

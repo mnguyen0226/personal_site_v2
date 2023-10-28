@@ -1,7 +1,7 @@
 ---
 author: "Minh T. Nguyen"
 title: "Java Fundamentals (Part 1)"
-date: "2023-08-11"
+date: "2023-08-23"
 description: "Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. "
 tags: ["java", "oop"]
 categories: ["software engineer"]
@@ -232,15 +232,15 @@ public class Rectangle {
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (August 2023). Java Fundamentals (Part 1).</summary>
-    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/.</summary>
+    <summary>Nguyen, Minh. (August 2023). Java Fundamentals (Part 1)</summary>
+    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mtl,
-  title   = "Java Fundamentals (Part 1).",
+  title   = "Java Fundamentals (Part 1)",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

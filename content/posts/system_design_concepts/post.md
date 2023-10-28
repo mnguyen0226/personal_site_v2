@@ -96,8 +96,8 @@ Such design above make DNS decentralized and robust.
 Cited as:
 
 <blockquote>
-    <summary>Scale From Zero To Millions Of Users: An Understanding.</summary>
-    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/.</summary>
+    <summary>System Design Fundamentals Note</summary>
+    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary>
 </blockquote>
 
 Or 

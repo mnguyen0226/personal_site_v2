@@ -183,15 +183,15 @@ public class ArrayList<E> implements List<E> {
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (September 2023). Java Fundamentals (Part 2).</summary>
-    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/.</summary>
+    <summary>Nguyen, Minh. (September 2023). Java Fundamentals (Part 2)</summary>
+    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mtl,
-  title   = "Java Fundamentals (Part 2).",
+  title   = "Java Fundamentals (Part 2)",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

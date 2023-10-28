@@ -169,7 +169,7 @@ Cited as:
 
 <blockquote>
     <summary>Information and Network Security Concepts</summary>
-    <summary>https://mnguyen0226.github.io/posts/info_security/post/.</summary>
+    <summary>https://mnguyen0226.github.io/posts/info_security/post/</summary>
 </blockquote>
 
 Or 

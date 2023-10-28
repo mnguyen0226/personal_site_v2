@@ -471,15 +471,15 @@ Potential misinterpretation of intent.
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (May 2023). Machine Learning for Profile-Matching System.</summary>
-    <summary>https://mnguyen0226.github.io/posts/profile_matching/post/.</summary>
+    <summary>Nguyen, Minh. (May 2023). Machine Learning for Profile-Matching System</summary>
+    <summary>https://mnguyen0226.github.io/posts/profile_matching/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mlpm,
-  title   = "Machine Learning for Profile-Matching System.",
+  title   = "Machine Learning for Profile-Matching System",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

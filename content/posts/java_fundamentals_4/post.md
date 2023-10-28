@@ -220,15 +220,15 @@ public class LinkedList<E>{
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (October 2023). Java Fundamentals (Part 4).</summary>
-    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/.</summary>
+    <summary>Nguyen, Minh. (October 2023). Java Fundamentals (Part 4)</summary>
+    <summary>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mtl,
-  title   = "Java Fundamentals (Part 4).",
+  title   = "Java Fundamentals (Part 4)",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",
