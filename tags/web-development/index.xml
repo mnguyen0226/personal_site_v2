@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 15 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Full-stack Web Development: The Odin Project</title>
+      <link>https://mnguyen0226.github.io/posts/web_dev_odin/post/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/web_dev_odin/post/</guid>
+      <description>Learning notes on the Odin project.</description>
+    </item>
+    
     <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
