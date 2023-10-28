@@ -190,11 +190,11 @@ Or
 
 
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/scale_from_zero_to_millions_of_users/imgs/golden_bridge.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_1/imgs/colorado.avif" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
-    <a href="https://unsplash.com/photos/gZXx8lKAb7Y" class="img_footer">Maarten van den Heuvel @ Unsplash</a>).
+    Fig. 4: Lone Eagle Peak, Colorado, U.S.A </br>(Image Source: 
+    <a href="https://unsplash.com/photos/green-pine-trees-near-lake-during-daytime-8jnMX1EtFE4" class="img_footer">Alyssa Teboda @ Unsplash</a>).
 </figcaption>
 
 <!-- CSS Styling -->
