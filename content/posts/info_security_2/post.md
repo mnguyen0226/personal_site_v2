@@ -42,7 +42,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023mtl,
+@article{nguyen2023nbt,
   title   = "Number Theory",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",

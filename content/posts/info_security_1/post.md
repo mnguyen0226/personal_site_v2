@@ -175,7 +175,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023mtl,
+@article{nguyen2023insc,
   title   = "Information and Network Security Concepts",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",

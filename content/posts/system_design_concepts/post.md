@@ -103,7 +103,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023mtl,
+@article{nguyen2023sdfund,
   title   = "System Design Fundamentals Note",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",

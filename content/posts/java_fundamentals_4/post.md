@@ -227,7 +227,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023mtl,
+@article{nguyen2023java4,
   title   = "Java Fundamentals (Part 4)",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",

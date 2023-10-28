@@ -9,7 +9,7 @@ series: ["Systems Design"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
-draft: true
+draft: false
 weight: 5
 ---
 
@@ -38,7 +38,7 @@ Cited as:
 Or 
 
 ```sh
-@article{nguyen2023mtl,
+@article{nguyen2023odin,
   title   = "Full-stack Web Development: The Odin Project",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",

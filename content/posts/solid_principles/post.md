@@ -820,15 +820,15 @@ Here, the `BusinessInsight` class depends on the `Plotter` abstraction through i
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (April 2023). S.O.L.I.D Principles Explained.</summary>
-    <summary>https://mnguyen0226.github.io/posts/solid_principles/post/.</summary>
+    <summary>Nguyen, Minh. (April 2023). S.O.L.I.D Principles Explained</summary>
+    <summary>https://mnguyen0226.github.io/posts/solid_principles/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023solid,
-  title   = "S.O.L.I.D Principles Explained.",
+  title   = "S.O.L.I.D Principles Explained",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",
