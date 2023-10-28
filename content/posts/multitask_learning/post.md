@@ -193,15 +193,15 @@ For this question, there is no clear answer. If we use a more complex dataset or
 Cited as:
 
 <blockquote>
-    <summary>Nguyen, Minh. (March 2023). Multi-Task Learning for Image Classification.</summary>
-    <summary>https://mnguyen0226.github.io/posts/multitask_learning/post/.</summary>
+    <summary>Nguyen, Minh. (March 2023). Multi-Task Learning for Image Classification</summary>
+    <summary>https://mnguyen0226.github.io/posts/multitask_learning/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
 @article{nguyen2023mtl,
-  title   = "Multi-Task Learning for Image Classification.",
+  title   = "Multi-Task Learning for Image Classification",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",
