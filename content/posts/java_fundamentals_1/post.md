@@ -42,8 +42,8 @@ weight: 5
 
 </br>
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/c_program.png" />
-      <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/java_program.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/c_program_.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/java_fundamentals_1/imgs/java_program_.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 1: C/C++ vs Java programming.
