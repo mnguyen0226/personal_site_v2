@@ -108,25 +108,25 @@ following	Z	is	A
 ### Caesar Cipher	
 This is the simplest	and	earliest	known	use	of	a	substitution	cipher and was used by Julius	Caesar. It involves	replacing	each	letter	of	the	alphabet	with	the	letter	standing	three	places	further	down	the	alphabet.
 
-**Can define transformation as:**  
+**Can define transformation as**:
 
   `a b c d e f g h i j k l m n o p q r s t u v w x y z`  
   `D E F G H I J K L M N O P Q R S T U V W X Y Z A B C`
   
-**Mathematically give each letter a number:**
+**Mathematically give each letter a number**:
 
   `a b c d e f g h i j k l m n o p q r s t u v w x y z`  
   `0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25`
   
-**Algorithm can be expressed as:**    
+**Algorithm can be expressed as**:    
 
   `c = E(3, p) = (p + 3) mod 26`
   
-**A shift may be of any amount, so that the general Caesar algorithm is:**  
+**A shift may be of any amount, so that the general Caesar algorithm is**:
 
   `C = E(k, p) = (p + k) mod 26`
   
-**Where k takes on a value in the range 1 to 25; the decryption algorithm is simply:**
+**Where k takes on a value in the range 1 to 25; the decryption algorithm is simply**:
 
   `p = D(k, C) = (C - k) mod 26`
 
@@ -171,7 +171,7 @@ The algorithm was developed	by	the	mathematician	Lester	Hill	in	1929. The streng
 ### Polyalphabetic	Ciphers	
 Improves	on	the	simple	monoalphabetic	technique	by	using	different	monoalphabetic	substitutions	as one	proceeds	through	the	plaintext	message.
 
-**Vigenère	Cipher**: 
+**Vigenère	Cipher**
 - It is best	known	and	one	of	the	simplest	polyalphabetic	substitution	ciphers. In	this	scheme	the	set	of	related	monoalphabetic	substitution	rules	consists	of	the	26	Caesar ciphers	with	shifts	of	0	through	25. Each	cipher	is	denoted	by	a	key	letter	which	is	the ciphertext	letter	that	substitutes	for	the	plaintext	letter	“a”.
 - To encrypt a message, a key is needed that is as long as the message. Usually, the key is a repeating keyword. For example, if the keyword is *deceptive*, the message “we are discovered save yourself” is encrypted as:
   - `key`: `deceptivedeceptivedeceptive`	
@@ -179,6 +179,23 @@ Improves	on	the	simple	monoalphabetic	technique	by	using	different	monoalphabeti
   - `ciphertext`:	`ZICVTWQNGRZGVTWAVZHCQYGLMGJ`
 - Even	this	scheme	is	vulnerable	to	cryptanalysis because	the	key	and	the	plaintext	share	the	same frequency	distribution	of	letters,	a	statistical	
 technique	can	be	applied.		
+
+**One-Time	Pad** 
+- It's an improvement to the Vernam cipher and was proposed by Army Signal Corp officer, Joseph Mauborgne.
+- Key Features:
+  - The key used for encryption and decryption is random and as long as the message itself. This ensures that it's not repeated.
+  - After using the key for a single message, it's discarded.
+  - Each new message requires a new key of the same length as that message.
+- Security:
+  - The scheme is deemed unbreakable.
+  - The ciphertext output appears random and bears no statistical relationship to the plaintext, making it nearly impossible to infer the original message.
+  - Since the ciphertext provides no information about the plaintext, there's no way to crack the code.
+- Challenges:
+  - Creating large quantities of truly random keys poses a practical challenge, especially for heavily used systems that might require millions of such characters.
+  - The distribution of these mammoth keys is problematic because both the sender and the receiver need to possess the same key for every message.
+- Utility Limitations:
+  - Due to the mentioned challenges, the one-time pad is of limited utility. It's mostly used for low-bandwidth channels where very high security is paramount.
+- Uniqueness: The one-time pad is the only cryptosystem that offers perfect secrecy.
 
 ## Transposition Techniques
 
