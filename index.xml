@@ -35,11 +35,7 @@
       <pubDate>Mon, 18 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/info_security_4/post/</guid>
-      <description>[v.1.0] (09/18/2023): Post started!
-Traditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.
-Examples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.
-Ideal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.
-Security Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream.</description>
+      <description>In the domain of digital encryption, block ciphers play a pivotal role in securing data by converting it into ciphertexts. This article explores the mechanics of block ciphers, emphasizing the widely recognized Data Encryption Standard (DES), its structures, functions, and inherent strengths.</description>
     </item>
     
     <item>
