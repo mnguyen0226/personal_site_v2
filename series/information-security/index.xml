@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Classical Encryption Techniques</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_3/post/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_3/post/</guid>
+      <description>Let&amp;#39;s dive into classical encryption techniques: from Caesar&amp;#39;s simple shifts to more complex methods like the Playfair and Vigenère Ciphers, we&amp;#39;ll see how each technique works and why they matter.</description>
+    </item>
+    
     <item>
       <title>Number Theory</title>
       <link>https://mnguyen0226.github.io/posts/info_security_2/post/</link>
