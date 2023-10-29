@@ -53,10 +53,7 @@
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/info_security_2/post/</guid>
-      <description>[v.1.0] (08/21/2023): Post started!
-Divibility and Division Algorithm The Euclidean Algorithm Modular Arithmetic Prime Numbers Fermat&amp;rsquo;s and Euler&amp;rsquo;s Theorems Testing For Primality The Chinese Remainder Theorem Discreate Logarithms Citation Cited as:
-Number Theory https://mnguyen0226.github.io/posts/info_security_2/post/ Or
-@article{nguyen2023nbt, title = &amp;#34;Number Theory&amp;#34;, author = &amp;#34;Nguyen, Minh&amp;#34;, journal = &amp;#34;mnguyen0226.github.io&amp;#34;, year = &amp;#34;2023&amp;#34;, month = &amp;#34;August&amp;#34;, url = &amp;#34;https://mnguyen0226.github.io/posts/info_security_2/post/&amp;#34; } References Fig. 2: Bulls Bridge, Kent, Connecticut U.S.A (Image Source: Johnell Pannell @ Unsplash).</description>
+      <description>Number theory is about integers and their properties. This blog post covers everything from the basics of divisibility and the Division Algorithm to advanced concepts like modular arithmetic, prime numbers, the renowned theorems of Fermat and Euler, Miller-Rabin algorithm, and the Chinese Remainder Theorem.</description>
     </item>
     
     <item>
