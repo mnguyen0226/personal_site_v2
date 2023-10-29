@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Block Ciphers and the Data Encryption Standard | Minh T. Nguyen</title>
+<meta name="keywords" content="cybersecurity">
+<meta name="description" content="[v.1.0] (09/18/2023): Post started!
+Traditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.
+Examples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.
+Ideal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.
+Security Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream.">
+<meta name="author" content="Minh T. Nguyen">
+<link rel="canonical" href="https://mnguyen0226.github.io/posts/info_security_4/post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="apple-touch-icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="mask-icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Block Ciphers and the Data Encryption Standard" />
+<meta property="og:description" content="[v.1.0] (09/18/2023): Post started!
+Traditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.
+Examples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.
+Ideal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.
+Security Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mnguyen0226.github.io/posts/info_security_4/post/" /><meta property="og:image" content="https://mnguyen0226.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-18T00:00:00+00:00" />
+<meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_3/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_2/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_1/post/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mnguyen0226.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="Block Ciphers and the Data Encryption Standard"/>
+<meta name="twitter:description" content="[v.1.0] (09/18/2023): Post started!
+Traditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.
+Examples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.
+Ideal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.
+Security Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://mnguyen0226.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Block Ciphers and the Data Encryption Standard",
+      "item": "https://mnguyen0226.github.io/posts/info_security_4/post/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Block Ciphers and the Data Encryption Standard",
+  "name": "Block Ciphers and the Data Encryption Standard",
+  "description": "[v.1.0] (09/18/2023): Post started!\nTraditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.\nExamples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.\nIdeal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.\nSecurity Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream.",
+  "keywords": [
+    "cybersecurity"
+  ],
+  "articleBody": "[v.1.0] (09/18/2023): Post started!\nTraditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.\nExamples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.\nIdeal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.\nSecurity Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream. To facilitate secure communication, the keystream must be shared with both users in advance using a safe and distinct channel. However, this setup can pose substantial logistical challenges, particularly when dealing with vast amounts of intended data traffic.\nPractical Implications: The bit-stream generator should be devised using an algorithmic approach. This ensures that every involved user can reproduce the cryptographic bit stream. Predicting future parts of the bit stream based on its preceding segments should be computationally challenging.\nUser Collaboration: Both users only need to have access to the bit-stream generating method. This allows each individual to independently produce the necessary keystream.\nBlock Cipher Functionality of Block Cipher: A block of plaintext is processed as a unit and is converted into a ciphertext block of identical size.\nCommon Block Sizes: The typical block sizes used in block ciphers are 64 bits or 128 bits.\nKey Sharing: Similar to the process in a stream cipher, both users involved share a symmetric encryption key.\nPrevalence in Networks: Block ciphers dominate in network-based applications that utilize symmetric cryptographic methods.\nFeistel\tCipher Feistel proposed the use of a cipher that alternates substitutions and permutations.\nSubstitutions: Each plaintext element or group of elements is uniquely replaced by a corresponding ciphertext element or group of elements.\nPermutation: No elements are added or deleted or replaced in the sequence, rather the order in which the elements appear in the sequence is changed. It’s a practical application of a proposal by Claude Shannon to develop a product cipher that alternates substitution and permutation functions. It’s the structure used by many significant symmetric block ciphers currently in use.\nFeistel Cipher Structure partitions the input block into two halves.\nProcesses through multiple rounds. Performs a substitution on the left data half. This is based on the round function of the right half \u0026 subkey. Then has a permutation swapping the halves. Feistel Cipher implements Shannon’s substitution-permutation (S-P) network concept.\nDiffusion and Confusion was introduced by Claude Shannon to counter cryptanalysis techniques based on statistical analysis.\nDiffusion: The plaintext’s statistical structure is spread into the long-range statistics of the ciphertext. Achieved by ensuring each plaintext digit impacts the value of many ciphertext digits. Confusion: The aim is to make the relationship between the statistics of the ciphertext and the value of the encryption key as intricate as possible. Even if an attacker can somewhat understand the ciphertext’s statistics, the method by which the key generated the ciphertext is so complicated that deducing the key becomes challenging. Feistel Cipher Design Features:\nBlock size: Bigger block sizes yield more security but might decrease encryption/decryption speeds for a particular algorithm. Key size: A more significant key size offers higher security but can reduce encryption/decryption speeds. Number of rounds: The Feistel cipher’s core idea is that one round provides inadequate security, but multiple rounds enhance security. Subkey generation algorithm: A more complex algorithm should result in increased difficulty for cryptanalysis. Round function F: Higher complexity typically indicates a higher resistance to cryptanalysis. Fast software encryption/decryption: In numerous scenarios, encryption is integrated into apps or utility functions in such a way that it prevents a hardware implementation; thus, the algorithm’s execution speed becomes a concern. Ease of analysis: If an algorithm can be succinctly and clearly described, it becomes simpler to identify its cryptographic vulnerabilities and thus determine its strength with higher confidence. Data Encryption Standard (DES) DES was issued\tin\t1977\tby\tthe\tNational\tBureau\tof\tStandards\t(now\tNIST)\tas\tFederal\tInformation\tProcessing\tStandard\t46. It was\tthe\tmost\twidely\tused\tencryption\tscheme\tuntil\tthe\tintroduction\tof\tthe\tAdvanced\tEncryption\tStandard (AES)\tin\t2001.\nThe algorithm\titself\tis\treferred\tto\tas\tthe\tData\tEncryption\tAlgorithm\t(DEA):\nData\tare\tencrypted\tin\t64-bit\tblocks\tusing\ta\t56-bit\tkey. The\talgorithm\ttransforms\t64-bit\tinput\tin\ta\tseries\tof\tsteps\tinto\ta\t64-bit\toutput. The\tsame\tsteps,\twith\tthe\tsame\tkey,\tare\tused\tto\treverse\tthe\tencryption. DES\tRound\tStructure DES round structure uses two 32-bit L \u0026 R halves.\nAs for any Feistel cipher can describe as:\nL_i = R_(i-1) R_i = L_(i-1) xor F(R_(i-1), K) It takes 32-bit R half and 48-bit subkey and:\nExpands R to 48-bits using perm E. Adds to subkey. Passes through 8 S-boxes to get 32-bit result. Finally permutes this using 32-bit perm P. DES\tKey\tSchedule DES key schedule forms\tsubkeys\tused\tin\teach\tround.\nIt consists\tof:\ninitial\tpermutation\tof\tthe\tkey\t(PC1)\twhich\tselects\t56-bits\tin\ttwo\t28-bit\thalves. 16\tstages\tconsisting\tof: rotating\teach\thalf\tseparately\teither\t1\tor\t2\tplaces depending\ton\tthe\tkey\trotation\tschedule\tK. permuting\tthem\tby\tPC2\tfor\tuse\tin\tfunction\tf. selecting\t24-bits\tfrom\teach\thalf. DES\tDecryption DES decrypt\tmust\tunwind\tsteps\tof\tdata\tcomputation, using\tsubkeys\tin\treverse\torder\t(SK16\t…\tSK1). Note\tthat\tIP\tundoes\tfinal\tFP\tstep\tof\tencryption.\n1st\tround\twith\tSK16\tundoes\t16th\tencrypt\tround. …. 16th\tround\twith\tSK1\tundoes\t1st\tencrypt\tround. Then\tfinal\tFP\tundoes\tinitial\tpermutation\tIP, thus\trecovering\toriginal\tdata\tvalue.\nAvalanche\tEffect The avalanche effect is the key\tdesirable\tproperty\tof\tencryption\talgorithms, where\ta\tchange\tof\tone\tinput\tor\tkey\tbit\tresults\tin\tchanging\tapprox \u0026\u0026\toutput bits. This effect make attempts\tto\t“home-in”\tby guessing\tkeys\timpossible. Note, DES\texhibits\tstrong\tavalanche. Strengths of DES: Timing\tattacks One\tin\twhich\tinformation\tabout\tthe\tkey\tor\tthe\tplaintext\tis\tobtained\tby\tobserving\thow\tlong\tit\ttakes\ta\tgiven\timplementation\tto\tperform\tdecryptions\ton\tvarious\tciphertexts.\nDES exploits\tthe\tfact\tthat\tan\tencryption\tor\tdecryption\talgorithm\toften\ttakes\tslightly\tdifferent\tamounts\tof\ttime\ton\tdifferent\tinputs.\nSo\tfar\tit\tappears\tunlikely\tthat\tthis\ttechnique\twill\tever\tbe\tsuccessful\tagainst\tDES\tor\tmore\tpowerful\tsymmetric\tciphers\tsuch\tas\ttriple\tDES\tand\tAES.\nFig. 1: Strength of DES with different key size. Block Cipher Design Principles Number of Rounds The greater the number of rounds, the more difficult it is to perform cryptanalysis. In general, the criterion should be that the number of rounds is chosen so that known cryptanalytic efforts require greater effort than a simple brute-force key search attack. If DES had 15 or fewer rounds, differential cryptanalysis would require less effort than a brute-force key search. Design\tof\tFunction\tF The heart of a Feistel block cipher is the function F. The more nonlinear F, the more difficult any type of cryptanalysis will be.\nThe SAC (Strict avalanche criterion) and BIC (Bit independence criterion) criteria appear to strengthen the effectiveness of the confusion function. The algorithm should have good avalanche properties:\nStrict avalanche criterion (SAC): states that any output bit j of an S-box should change with probability 1/2 when any single input bit i is inverted for all i, j. Bit independence criterion (BIC): states that output bits j and k should change independently when any single input bit i is inverted for all i, j, and k. Key\tSchedule\tAlgorithm With\tany\tFeistel\tblock\tcipher,\tthe\tkey\tis\tused\tto\tgenerate\tone\tsubkey\tfor\teach\tround. In\tgeneral,\twe\twould\tlike\tto\tselect\tsubkeys\tto\tmaximize\tthe\tdifficulty\tof\tdeducing\tindividual\tsubkeys\tand\tthe\tdifficulty\tof\tworking\tback\tto\tthe\tmain\tkey. It\tis\tsuggested\tthat,\tat\ta\tminimum,\tthe\tkey\tschedule\tshould\tguarantee\tkey/ciphertext\tStrict\tAvalanche\tCriterion\tand\tBit\tIndependence\tCriterion.\nCitation Cited as:\nBlock Ciphers and the Data Encryption Standard https://mnguyen0226.github.io/posts/info_security_4/post/ Or\n@article{nguyen2023des, title = \"Block Ciphers and the Data Encryption Standard\", author = \"Nguyen, Minh\", journal = \"mnguyen0226.github.io\", year = \"2023\", month = \"September\", url = \"https://mnguyen0226.github.io/posts/info_security_4/post/\" } References Fig. 2: Ginnie Spring, Florida, U.S.A (Image Source: Autumn Kuney @ Unsplash). ",
+  "wordCount" : "1341",
+  "inLanguage": "en",
+  "datePublished": "2023-09-18T00:00:00Z",
+  "dateModified": "2023-09-18T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Minh T. Nguyen"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mnguyen0226.github.io/posts/info_security_4/post/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Minh T. Nguyen",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mnguyen0226.github.io/favicon/android-chrome-192x192.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://mnguyen0226.github.io/" accesskey="h" title="Minh T. Nguyen (Alt + H)">Minh T. Nguyen</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://mnguyen0226.github.io/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://mnguyen0226.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://mnguyen0226.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Block Ciphers and the Data Encryption Standard
+    </h1>
+    <div class="post-meta"><span title='2023-09-18 00:00:00 +0000 UTC'>September 18, 2023</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Minh T. Nguyen
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#traditional-block-cipher-structure" aria-label="Traditional Block Cipher Structure">Traditional Block Cipher Structure</a><ul>
+                        
+                <li>
+                    <a href="#stream-cipher" aria-label="Stream Cipher">Stream Cipher</a></li>
+                <li>
+                    <a href="#block-cipher" aria-label="Block Cipher">Block Cipher</a></li>
+                <li>
+                    <a href="#feistelcipher" aria-label="Feistel	Cipher">Feistel	Cipher</a></li></ul>
+                </li>
+                <li>
+                    <a href="#data-encryption-standard-des" aria-label="Data Encryption Standard (DES)">Data Encryption Standard (DES)</a><ul>
+                        
+                <li>
+                    <a href="#desroundstructure" aria-label="DES	Round	Structure">DES	Round	Structure</a></li>
+                <li>
+                    <a href="#deskeyschedule" aria-label="DES	Key	Schedule">DES	Key	Schedule</a></li>
+                <li>
+                    <a href="#desdecryption" aria-label="DES	Decryption">DES	Decryption</a></li>
+                <li>
+                    <a href="#avalancheeffect" aria-label="Avalanche	Effect">Avalanche	Effect</a></li></ul>
+                </li>
+                <li>
+                    <a href="#strengths-of-des-timingattacks" aria-label="Strengths of DES: Timing	attacks">Strengths of DES: Timing	attacks</a></li>
+                <li>
+                    <a href="#block-cipher-design-principles" aria-label="Block Cipher Design Principles">Block Cipher Design Principles</a><ul>
+                        
+                <li>
+                    <a href="#number-of-rounds" aria-label="Number of Rounds">Number of Rounds</a></li>
+                <li>
+                    <a href="#designoffunctionf" aria-label="Design	of	Function	F">Design	of	Function	F</a></li>
+                <li>
+                    <a href="#keyschedulealgorithm" aria-label="Key	Schedule	Algorithm">Key	Schedule	Algorithm</a></li></ul>
+                </li>
+                <li>
+                    <a href="#citation" aria-label="Citation">Citation</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p style="color: #286EE0"><strong>[v.1.0] (09/18/2023):</strong> Post started!</p>
+<h2 id="traditional-block-cipher-structure">Traditional Block Cipher Structure<a hidden class="anchor" aria-hidden="true" href="#traditional-block-cipher-structure">#</a></h2>
+<h3 id="stream-cipher">Stream Cipher<a hidden class="anchor" aria-hidden="true" href="#stream-cipher">#</a></h3>
+<p><strong>Primary Function</strong>: Stream Cipher encrypts a digital data stream one bit or one byte at a time.</p>
+<p><strong>Examples of Stream Ciphers</strong>: Autokeyed Vigenère cipher, Vernam cipher.</p>
+<p><strong>Ideal Use-case</strong>: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.</p>
+<p><strong>Security Consideration</strong>: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream. To facilitate secure communication, the keystream must be shared with both users in advance using a safe and distinct channel. However, this setup can pose substantial logistical challenges, particularly when dealing with vast amounts of intended data traffic.</p>
+<p><strong>Practical Implications</strong>: The bit-stream generator should be devised using an algorithmic approach. This ensures that every involved user can reproduce the cryptographic bit stream. Predicting future parts of the bit stream based on its preceding segments should be computationally challenging.</p>
+<p><strong>User Collaboration</strong>: Both users only need to have access to the bit-stream generating method. This allows each individual to independently produce the necessary keystream.</p>
+<h3 id="block-cipher">Block Cipher<a hidden class="anchor" aria-hidden="true" href="#block-cipher">#</a></h3>
+<p><strong>Functionality of Block Cipher</strong>: A block of plaintext is processed as a unit and is converted into a ciphertext block of identical size.</p>
+<p><strong>Common Block Sizes</strong>: The typical block sizes used in block ciphers are 64 bits or 128 bits.</p>
+<p><strong>Key Sharing</strong>: Similar to the process in a stream cipher, both users involved share a symmetric encryption key.</p>
+<p><strong>Prevalence in Networks</strong>: Block ciphers dominate in network-based applications that utilize symmetric cryptographic methods.</p>
+<h3 id="feistelcipher">Feistel	Cipher<a hidden class="anchor" aria-hidden="true" href="#feistelcipher">#</a></h3>
+<p>Feistel proposed the use of a cipher that alternates substitutions and permutations.</p>
+<p><strong>Substitutions</strong>: Each plaintext element or group of elements is uniquely replaced by a corresponding ciphertext element or group of elements.</p>
+<p><strong>Permutation</strong>: No elements are added or deleted or replaced in the sequence, rather the order in which the elements appear in the sequence is changed. It&rsquo;s a practical application of a proposal by Claude Shannon to develop a product cipher that alternates substitution and permutation functions. It&rsquo;s the structure used by many significant symmetric block ciphers currently in use.</p>
+<p><strong>Feistel Cipher Structure</strong> partitions the input block into two halves.</p>
+<ul>
+<li>Processes through multiple rounds.</li>
+<li>Performs a substitution on the left data half.</li>
+<li>This is based on the round function of the right half &amp; subkey.</li>
+<li>Then has a permutation swapping the halves.</li>
+</ul>
+<p>Feistel Cipher implements Shannon’s substitution-permutation (S-P) network concept.</p>
+<p><strong>Diffusion and Confusion</strong> was introduced by Claude Shannon to counter cryptanalysis techniques based on statistical analysis.</p>
+<ul>
+<li>Diffusion: The plaintext&rsquo;s statistical structure is spread into the long-range statistics of the ciphertext. Achieved by ensuring each plaintext digit impacts the value of many ciphertext digits.</li>
+<li>Confusion: The aim is to make the relationship between the statistics of the ciphertext and the value of the encryption key as intricate as possible. Even if an attacker can somewhat understand the ciphertext&rsquo;s statistics, the method by which the key generated the ciphertext is so complicated that deducing the key becomes challenging.</li>
+</ul>
+<p><strong>Feistel Cipher Design Features</strong>:</p>
+<ul>
+<li>Block size: Bigger block sizes yield more security but might decrease encryption/decryption speeds for a particular algorithm.</li>
+<li>Key size: A more significant key size offers higher security but can reduce encryption/decryption speeds.</li>
+<li>Number of rounds: The Feistel cipher&rsquo;s core idea is that one round provides inadequate security, but multiple rounds enhance security.</li>
+<li>Subkey generation algorithm: A more complex algorithm should result in increased difficulty for cryptanalysis.</li>
+<li>Round function F: Higher complexity typically indicates a higher resistance to cryptanalysis.</li>
+<li>Fast software encryption/decryption: In numerous scenarios, encryption is integrated into apps or utility functions in such a way that it prevents a hardware implementation; thus, the algorithm&rsquo;s execution speed becomes a concern.</li>
+<li>Ease of analysis: If an algorithm can be succinctly and clearly described, it becomes simpler to identify its cryptographic vulnerabilities and thus determine its strength with higher confidence.</li>
+</ul>
+<h2 id="data-encryption-standard-des">Data Encryption Standard (DES)<a hidden class="anchor" aria-hidden="true" href="#data-encryption-standard-des">#</a></h2>
+<p>DES was issued	in	1977	by	the	National	Bureau	of	Standards	(now	NIST)	as	Federal	Information	Processing	Standard	46. It was	the	most	widely	used	encryption	scheme	until	the	introduction	of	the	Advanced	Encryption	Standard
+(AES)	in	2001.</p>
+<p>The algorithm	itself	is	referred	to	as	the	Data	Encryption	Algorithm	(DEA):</p>
+<ul>
+<li>Data	are	encrypted	in	<strong>64-bit</strong>	blocks	using	a	<strong>56-bit</strong>	key.</li>
+<li>The	algorithm	transforms	<strong>64-bit</strong>	input	in	a	series	of	steps	into	a	<strong>64-bit</strong>	output.</li>
+<li>The	same	steps,	with	the	same	key,	are	used	to	reverse	the	encryption.</li>
+</ul>
+<h3 id="desroundstructure">DES	Round	Structure<a hidden class="anchor" aria-hidden="true" href="#desroundstructure">#</a></h3>
+<p>DES round structure uses two 32-bit <strong>L &amp; R halves</strong>.</p>
+<p>As for any <strong>Feistel cipher</strong> can describe as:</p>
+<ul>
+<li><code>L_i = R_(i-1)</code></li>
+<li><code>R_i = L_(i-1) xor F(R_(i-1), K)</code></li>
+</ul>
+<p>It takes 32-bit <strong>R half</strong> and 48-bit <strong>subkey</strong> and:</p>
+<ul>
+<li>Expands <strong>R</strong> to 48-bits using <strong>perm E</strong>.</li>
+<li>Adds to <strong>subkey</strong>.</li>
+<li>Passes through <strong>8 S-boxes</strong> to get 32-bit result.</li>
+<li>Finally permutes this using 32-bit <strong>perm P</strong>.</li>
+</ul>
+<h3 id="deskeyschedule">DES	Key	Schedule<a hidden class="anchor" aria-hidden="true" href="#deskeyschedule">#</a></h3>
+<p>DES key schedule forms	subkeys	used	in	each	round.</p>
+<p>It consists	of:</p>
+<ul>
+<li>initial	permutation	of	the	key	(PC1)	which	selects	56-bits	in	two	28-bit	halves.</li>
+<li>16	stages	consisting	of:
+<ul>
+<li>rotating	each	half	separately	either	1	or	2	places depending	on	the	key	rotation	schedule	K.</li>
+<li>permuting	them	by	PC2	for	use	in	function	f.</li>
+<li>selecting	24-bits	from	each	half.</li>
+</ul>
+</li>
+</ul>
+<h3 id="desdecryption">DES	Decryption<a hidden class="anchor" aria-hidden="true" href="#desdecryption">#</a></h3>
+<p>DES decrypt	must	unwind	steps	of	data	computation, using	subkeys	in	reverse	order	(SK16	…	SK1). Note	that	IP	undoes	final	FP	step	of	encryption.</p>
+<ul>
+<li>1st	round	with	SK16	undoes	16th	encrypt	round.</li>
+<li>….</li>
+<li>16th	round	with	SK1	undoes	1st	encrypt	round.</li>
+</ul>
+<p>Then	final	FP	undoes	initial	permutation	IP, thus	recovering	original	data	value.</p>
+<h3 id="avalancheeffect">Avalanche	Effect<a hidden class="anchor" aria-hidden="true" href="#avalancheeffect">#</a></h3>
+<ul>
+<li>The avalanche effect is the key	desirable	property	of	encryption	algorithms, where	a	change	of	<strong>one</strong>	input	or	key	bit	results	in	changing	approx &amp;&amp;	output bits. This effect make attempts	to	“home-in”	by guessing	keys	impossible. Note, DES	exhibits	strong	avalanche.</li>
+</ul>
+<h2 id="strengths-of-des-timingattacks">Strengths of DES: Timing	attacks<a hidden class="anchor" aria-hidden="true" href="#strengths-of-des-timingattacks">#</a></h2>
+<p>One	in	which	information	about	the	key	or	the	plaintext	is	obtained	by	observing	how	long	it	takes	a	given	implementation	to	perform	decryptions	on	various	ciphertexts.</p>
+<p>DES exploits	the	fact	that	an	encryption	or	decryption	algorithm	often	takes	slightly	different	amounts	of	time	on	different	inputs.</p>
+<p>So	far	it	appears	unlikely	that	this	technique	will	ever	be	successful	against	DES	or	more	powerful	symmetric	ciphers	such	as	triple	DES	and	AES.</p>
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_4/imgs/des.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 1: Strength of DES with different key size.
+</figcaption>
+<br/>
+<h2 id="block-cipher-design-principles">Block Cipher Design Principles<a hidden class="anchor" aria-hidden="true" href="#block-cipher-design-principles">#</a></h2>
+<h3 id="number-of-rounds">Number of Rounds<a hidden class="anchor" aria-hidden="true" href="#number-of-rounds">#</a></h3>
+<ul>
+<li>The greater the number of rounds, the more difficult it is to perform cryptanalysis.</li>
+<li>In general, the criterion should be that the number of rounds is chosen so that known cryptanalytic efforts require greater effort than a simple brute-force key search attack.</li>
+<li>If DES had 15 or fewer rounds, differential cryptanalysis would require less effort than a brute-force key search.</li>
+</ul>
+<h3 id="designoffunctionf">Design	of	Function	F<a hidden class="anchor" aria-hidden="true" href="#designoffunctionf">#</a></h3>
+<p>The heart of a Feistel block cipher is the function F. The more nonlinear F, the more difficult any type of cryptanalysis will be.</p>
+<p>The <em>SAC (Strict avalanche criterion)</em> and <em>BIC (Bit independence criterion)</em> criteria appear to strengthen the effectiveness of the confusion function. The algorithm should have good avalanche properties:</p>
+<ul>
+<li>Strict avalanche criterion (SAC): states that any output bit <code>j</code> of an S-box should change with probability 1/2 when any single input bit <code>i</code> is inverted for all <code>i</code>, <code>j</code>.</li>
+<li>Bit independence criterion (BIC): states that output bits <code>j</code> and <code>k</code> should change independently when any single input bit <code>i</code> is inverted for all <code>i</code>, <code>j</code>, and <code>k</code>.</li>
+</ul>
+<h3 id="keyschedulealgorithm">Key	Schedule	Algorithm<a hidden class="anchor" aria-hidden="true" href="#keyschedulealgorithm">#</a></h3>
+<p>With	any	Feistel	block	cipher,	the	key	is	used	to	generate	one	subkey	for	each	round. In	general,	we	would	like	to	select	subkeys	to	maximize	the	difficulty	of	deducing	individual	subkeys	and	the	difficulty	of	working	back	to	the	main	key. It	is	suggested	that,	at	a	minimum,	the	key	schedule	should	guarantee	key/ciphertext	Strict	Avalanche	Criterion	and	Bit	Independence	Criterion.</p>
+<h2 id="citation">Citation<a hidden class="anchor" aria-hidden="true" href="#citation">#</a></h2>
+<p>Cited as:</p>
+<blockquote>
+    <summary>Block Ciphers and the Data Encryption Standard</summary>
+    <summary>https://mnguyen0226.github.io/posts/info_security_4/post/</summary>
+</blockquote>
+<p>Or</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">@article<span class="o">{</span>nguyen2023des,
+</span></span><span class="line"><span class="cl">  <span class="nv">title</span>   <span class="o">=</span> <span class="s2">&#34;Block Ciphers and the Data Encryption Standard&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">author</span>  <span class="o">=</span> <span class="s2">&#34;Nguyen, Minh&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">journal</span> <span class="o">=</span> <span class="s2">&#34;mnguyen0226.github.io&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">year</span>    <span class="o">=</span> <span class="s2">&#34;2023&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">month</span>   <span class="o">=</span> <span class="s2">&#34;September&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">url</span>     <span class="o">=</span> <span class="s2">&#34;https://mnguyen0226.github.io/posts/info_security_4/post/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<center>
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_4/imgs/florida.avif" />
+</center>
+<figcaption class="img_footer">
+    Fig. 2: Ginnie Spring, Florida, U.S.A </br>(Image Source: 
+    <a href="https://unsplash.com/photos/green-trees-beside-body-of-water-during-daytime-jSi8CIx1XiI" class="img_footer">Autumn Kuney @ Unsplash</a>).
+</figcaption>
+<!-- CSS Styling -->
+<style>
+.img_size {
+  width: 100%;
+}
+
+.img_footer {
+    color: #888888;
+    text-align: center;
+}
+</style><blockquote>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://mnguyen0226.github.io/tags/cybersecurity/">cybersecurity</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://mnguyen0226.github.io/posts/java_fundamentals_3/post/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Java Fundamentals (Part 3)</span>
+  </a>
+  <a class="next" href="https://mnguyen0226.github.io/posts/web_dev_odin/post/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Full-stack Web Development: The Odin Project</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Block Ciphers and the Data Encryption Standard on twitter"
+        href="https://twitter.com/intent/tweet/?text=Block%20Ciphers%20and%20the%20Data%20Encryption%20Standard&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f&amp;hashtags=cybersecurity">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Block Ciphers and the Data Encryption Standard on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f&amp;title=Block%20Ciphers%20and%20the%20Data%20Encryption%20Standard&amp;summary=Block%20Ciphers%20and%20the%20Data%20Encryption%20Standard&amp;source=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Block Ciphers and the Data Encryption Standard on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f&title=Block%20Ciphers%20and%20the%20Data%20Encryption%20Standard">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Block Ciphers and the Data Encryption Standard on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Block Ciphers and the Data Encryption Standard on whatsapp"
+        href="https://api.whatsapp.com/send?text=Block%20Ciphers%20and%20the%20Data%20Encryption%20Standard%20-%20https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Block Ciphers and the Data Encryption Standard on telegram"
+        href="https://telegram.me/share/url?text=Block%20Ciphers%20and%20the%20Data%20Encryption%20Standard&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_4%2fpost%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://mnguyen0226.github.io/">Minh T. Nguyen</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
