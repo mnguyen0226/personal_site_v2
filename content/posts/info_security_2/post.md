@@ -185,7 +185,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_2/imgs/connecticut.avif" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2: Bulls Bridge, Kent, Connecticut U.S.A </br>(Image Source: 
+    Fig. 3: Bulls Bridge, Kent, Connecticut U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/people-standing-in-front-of-brown-wooden-house-during-night-time-XdCpvFP-RCc" class="img_footer">Johnell Pannell @ Unsplash</a>).
 </figcaption>
 
