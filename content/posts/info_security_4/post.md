@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Block Ciphers and the Data Encryption Standard"
 date: "2023-09-18"
-description: ""
+description: "In the domain of digital encryption, block ciphers play a pivotal role in securing data by converting it into ciphertexts. This article explores the mechanics of block ciphers, emphasizing the widely recognized Data Encryption Standard (DES), its structures, functions, and inherent strengths."
 tags: ["cybersecurity"]
 categories: ["information security"]
 series: ["Information Security"]
