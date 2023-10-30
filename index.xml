@@ -12,6 +12,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Block Cipher Operation</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_7/post/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_7/post/</guid>
+      <description>[v.1.0] (10/02/2023): Post started!
+Multiple Encryption and Triple DES Meet-in-the-Middle	Attack The	use	of	double	Data Encryption Standard (DES) results	in	a	mapping	that	is	not	equivalent	to	a	single	DES	encryption.
+The	meet-in-the-middle	attack	algorithm	will	attack	this	scheme	and	does	not	depend	on	any	particular	property	of	DES	but	will	work	against	any block	encryption	cipher.
+Triple	DES	with	Three	Keys Many	researchers	now	feel	that	three-key	3DES	is	the	preferred	alternative.</description>
+    </item>
+    
+    <item>
       <title>Java Fundamentals (Part 4)</title>
       <link>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
