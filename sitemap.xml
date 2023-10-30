@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mnguyen0226.github.io/posts/info_security_8/post/</loc>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/posts/info_security_7/post/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
   </url><url>
@@ -60,27 +63,33 @@
     <lastmod>2023-01-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/cybersecurity/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/information-security/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/information-security/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/java/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/</loc>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/</loc>
+    <lastmod>2023-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/java/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/software-engineer/</loc>
@@ -89,14 +98,8 @@
     <loc>https://mnguyen0226.github.io/series/software-engineering/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/tags/tdd/</loc>
     <lastmod>2023-09-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/series/systems-design/</loc>
     <lastmod>2023-09-15T00:00:00+00:00</lastmod>

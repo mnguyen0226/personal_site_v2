@@ -10,7 +10,19 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/long-read/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/long-read/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Random Bit Generation and Stream Ciphers</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_8/post/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_8/post/</guid>
+      <description>[v.1.0] (10/09/2023): Post started!
+Principles of Pseudorandom Number Generation Random Number A	number	of	network	security	algorithms	and	protocols based	on	cryptography	make	use	of	random	binary	numbers:
+Key	distribution	and	reciprocal	authentication	schemes. Session	key	generation. Generation	of	keys	for	the	RSA	public-key	encryption	algorithm.. Generation	of	a	bit	stream	for	symmetric	stream	encryption. There	are	two	distinct	requirements	for	a	sequence	of	random	numbers: Randomness	and Unpredictability.
+Randomness The	generation	of	a	sequence	of	allegedly	random	numbers	being	random	in	some	well-defined	statistical	sense	has	been	a	concern.</description>
+    </item>
+    
     <item>
       <title>Full-stack Web Development: The Odin Project</title>
       <link>https://mnguyen0226.github.io/posts/web_dev_odin/post/</link>
