@@ -10,7 +10,19 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/long-read/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/tags/long-read/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Public-Key Cryptography and RSA</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_9/post/</link>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_9/post/</guid>
+      <description>[v.1.0] (10/18/2023): Post started!
+Principles of Public-Key Cryptosystems Public-Key Cryptosystems About:
+Radically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A	public-key	encryption	scheme	has	six	ingredients:
+Plaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process.</description>
+    </item>
+    
     <item>
       <title>Random Bit Generation and Stream Ciphers</title>
       <link>https://mnguyen0226.github.io/posts/info_security_8/post/</link>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Public-Key Cryptography and RSA | Minh T. Nguyen</title>
+<meta name="keywords" content="cybersecurity, long-read">
+<meta name="description" content="[v.1.0] (10/18/2023): Post started!
+Principles of Public-Key Cryptosystems Public-Key Cryptosystems About:
+Radically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A	public-key	encryption	scheme	has	six	ingredients:
+Plaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process.">
+<meta name="author" content="Minh T. Nguyen">
+<link rel="canonical" href="https://mnguyen0226.github.io/posts/info_security_9/post/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.3613efbd0b1772781e8f49935e973cae632a7f61471c05b17be155505ccf87b5.css" integrity="sha256-NhPvvQsXcngej0mTXpc8rmMqf2FHHAWxe&#43;FVUFzPh7U=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="apple-touch-icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<link rel="mask-icon" href="https://mnguyen0226.github.io/favicon/android-chrome-192x192.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Public-Key Cryptography and RSA" />
+<meta property="og:description" content="[v.1.0] (10/18/2023): Post started!
+Principles of Public-Key Cryptosystems Public-Key Cryptosystems About:
+Radically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A	public-key	encryption	scheme	has	six	ingredients:
+Plaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mnguyen0226.github.io/posts/info_security_9/post/" /><meta property="og:image" content="https://mnguyen0226.github.io/papermod-cover.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-10-18T00:00:00+00:00" />
+<meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_8/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_7/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_6/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_5/post/" /><meta property="og:see_also" content="https://mnguyen0226.github.io/posts/info_security_4/post/" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mnguyen0226.github.io/papermod-cover.png"/>
+
+<meta name="twitter:title" content="Public-Key Cryptography and RSA"/>
+<meta name="twitter:description" content="[v.1.0] (10/18/2023): Post started!
+Principles of Public-Key Cryptosystems Public-Key Cryptosystems About:
+Radically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A	public-key	encryption	scheme	has	six	ingredients:
+Plaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://mnguyen0226.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Public-Key Cryptography and RSA",
+      "item": "https://mnguyen0226.github.io/posts/info_security_9/post/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Public-Key Cryptography and RSA",
+  "name": "Public-Key Cryptography and RSA",
+  "description": "[v.1.0] (10/18/2023): Post started!\nPrinciples of Public-Key Cryptosystems Public-Key Cryptosystems About:\nRadically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A\tpublic-key\tencryption\tscheme\thas\tsix\tingredients:\nPlaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process.",
+  "keywords": [
+    "cybersecurity", "long-read"
+  ],
+  "articleBody": "[v.1.0] (10/18/2023): Post started!\nPrinciples of Public-Key Cryptosystems Public-Key Cryptosystems About:\nRadically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A\tpublic-key\tencryption\tscheme\thas\tsix\tingredients:\nPlaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process. This key can be shared openly. Private Key: Used for either encryption or decryption. This key remains confidential. Ciphertext: The scrambled version of the original message, produced as output from the encryption process. Decryption Algorithm: Takes in the ciphertext and the appropriate key (either public or private) to reproduce the original plaintext. Terminology Related to Asymmetric Encryption Asymmetric Keys: Two related keys, a public key and a private key that are used to perform complementary operations, such as encryption and decryption or signature generation and signature verification. Public Key Certificate: A digital document issued and digitally signed by the private key of a Certification Authority that binds the name of a subscriber to a public key. The certificate indicates that the subscriber identified in the certificate has sole control and access to the corresponding private key. Public Key (Asymmetric) Cryptographic Algorithm: A cryptographic algorithm that uses two related keys, a public key and a private key. The two keys have the property that deriving the private key from the public key is computationally infeasible. Public Key Infrastructure (PKI): A set of policies, processes, server platforms, software and workstations used for the purpose of administering certificates and public-private key pairs, including the ability to issue, maintain, and revoke public key certificates. Misconceptions\tConcerning\tPublic-Key\tEncryption Public-key\tencryption\tis\tmore\tsecure\tfrom\tcryptanalysis\tthan\tsymmetric\tencryption. Public-key\tencryption\tis\ta\tgeneral-purpose\ttechnique\tthat\thas\tmade\tsymmetric encryption\tobsolete. There\tis\ta\tfeeling\tthat\tkey\tdistribution\tis\ttrivial\twhen\tusing\tpublic-key\tencryption,\tcompared\tto\tthe\tcumbersome\thandshaking\tinvolved\twith\tkey\tdistribution\tcenters\tfor\tsymmetric\tencryption. Principles\tof\tPublic-Key\tCryptosystems The\tconcept\tof\tpublic-key\tcryptography\tevolved\tfrom\tan\tattempt\tto\tattack\ttwo\tof\tthe\tmost\tdifficult\tproblems\tassociated\twith\tsymmetric\tencryption:\nKey\tdistribution: How\tto\thave\tsecure\tcommunications\tin\tgeneral\twithout\thaving\tto trust\ta\tKDC\twith\tyour\tkey. Digital\tsignatures: How\tto\tverify\tthat\ta\tmessage\tcomes\tintact\tfrom\tthe\tclaimed\tsender Whitfield\tDiffie\tand\tMartin\tHellman\tfrom\tStanford\tUniversity\tachieved\ta\tbreakthrough\tin\t1976\tby\tcoming\tup\twith\ta\tmethod\tthat\taddressed\tkey\tdistribution\tproblem\tand\twas\tradically\tdifferent\tfrom\tall\tprevious\tapproaches\tto\tcryptography.\nConventional vs Public-Key Encryption Conventional Encryption\nNeeded to Work:\nThe same algorithm with the same key is used for encryption and decryption. The sender and receiver must share the algorithm and the key. Needed for Security:\nThe key must be kept secret. It must be impossible or at least impractical to decipher a message if the key is kept secret. Knowledge of the algorithm plus samples of ciphertext must be insufficient to determine the key. Public-Key Encryption\nNeeded to Work: One algorithm is used for encryption and a related algorithm for decryption with a pair of keys, one for encryption and one for decryption. The sender and receiver must each have one of the matched pair of keys (not the same one). Needed for Security: One of the two keys must be kept secret. It must be impossible or at least impractical to decipher a message if one of the keys is kept secret. Knowledge of the algorithm plus one of the keys plus samples of ciphertext must be insufficient to determine the other key. Applications for Public-Key Cryptosystems Public-key\tcryptosystems\tcan\tbe\tclassified\tinto\tthree\tcategories:\nEncryption/decryption: The\tsender\tencrypts\ta\tmessage\twith\tthe\trecipient’s\tpublic\tkey. Digital signature: the\tsender\t“signs”\ta\tmessage\tDigital\tsignature\twith\tits\tprivate\tkey. Key exchange: Two sides cooperate to exchange a session key. Some\talgorithms\tare\tsuitable\tfor\tall\tthree\tapplications,\twhereas\tothers\tcan\tbe\tused\tonly\tfor\tone\tor\ttwo.\nFig. 1: Applications for Public-Key Cryptosystems. Requirements for Public-Key Cryptography Conditions\tthat\tthese\talgorithms\tmust\tfulfill:\nIt\tis\tcomputationally\teasy\tfor\ta\tparty\tB\tto\tgenerate\ta\tpair\t(publickey\tPUb, private\tkey\tPRb). It\tis\tcomputationally\teasy\tfor\ta\tsender\tA,\tknowing\tthe\tpublic\tkey\tand\tthe\tmessage\tto\tbe\tencrypted,\tto\tgenerate\tthe\tcorresponding\tciphertext. It\tis\tcomputationally\teasy\tfor\tthe\treceiver\tB\tto\tdecrypt\tthe\tresulting\tciphertext\tusing\tthe\tprivate\tkey\tto\trecover\tthe\toriginal\tmessage. It\tis\tcomputationally\tinfeasible\tfor\tan\tadversary,\tknowing\tthe\tpublic\tkey,\tto\tdetermine\tthe\tprivate\tkey. It\tis\tcomputationally\tinfeasible\tfor\tan\tadversary,\tknowing\tthe\tpublic\tkey\tand\ta\tciphertext,\tto\trecover\tthe\toriginal\tmessage. The\ttwo\tkeys\tcan\tbe\tapplied\tin\teither\torder. Need a trap-door one-way function\nA one-way function is one that maps a domain into a range such that every function value has a unique inverse, with the condition that the calculation of the function is easy, whereas the calculation of the inverse is infeasible Y = f(X) easy X = f^(-1)(Y) infeasible A trap-door one-way function is a family of invertible functions f_k, such that:\nY = f_k(X) easy, if k and X are known X = f_k^(-1)(Y) easy, if k and Y are known X = f_k^(-1)(Y) infeasible, if Y known but k not known A practical public-key scheme depends on a suitable trap-door one-way function\nPublic-Key Cryptanalysis A\tpublic-key\tencryption\tscheme\tis\tvulnerable\tto\ta\tbrute-force\tattack\nCountermeasure:\tuse\tlarge\tkeys. Key\tsize\tmust\tbe\tsmall\tenough\tfor\tpractical\tencryption\tand\tdecryption. Key\tsizes\tthat\thave\tbeen\tproposed\tresult\tin\tencryption/decryption\tspeeds\tthat\tare\ttoo\tslow\tfor\tgeneral-purpose\tuse. Public-key\tencryption\tis\tcurrently\tconfined\tto\tkey\tmanagement\tand\tsignature\tapplications. Another\tform\tof\tattack\tis\tto\tfind\tsome\tway\tto\tcompute\tthe\tprivate\tkey\tgiven\tthe\tpublic\tkey. To\tdate\tit\thas\tnot\tbeen\tmathematically\tproven\tthat\tthis\tform\tof\tattack\tis\tinfeasible\tfor\ta\tparticular\tpublic-key\talgorithm.\nFinally,\tthere\tis\ta\tprobable-message\tattack\tThis\tattack\tcan\tbe\tthwarted\tby\tappending\tsome\trandom\tbits\tto\tbits\tto\tthe\tmessages.\nThe RSA Algorithm Rivest-Shamir-Adleman\t(RSA)\tAlgorithm Developed\tin\t1977\tat\tMIT\tby\tRon\tRivest,\tAdi\tShamir\t\u0026\tLen\tAdleman. Most\twidely\tused\tgeneral-purpose\tapproach\tto\tpublic-key\tencryption.\tIs\ta\tcipher\tin\twhich\tthe\tplaintext\tand\tciphertext are\tintegers\tbetween\t0\tand\tn\t–\t1\tfor\tsome\tn. A\ttypical\tsize\tfor\tn\tis\t1024\tbits,\tor\t309\tdecimal\tdigits\nRSA\tmakes\tuse\tof\tan\texpression\twith\texponentials. Plaintext\tis\tencrypted\tin\tblocks\twith\teach\tblock\thaving\ta\tbinary\tvalue\tless\tthan\tsome\tnumber\tn.\tEncryption\tand\tdecryption\tare\tof\tthe\tfollowing\tform,\tfor\tsome\tplaintext\tblock\tM\tand\tciphertext block\tC:\nC\t=\tM^e mod\tn M\t=\tC^d\tmod\tn\t=\t(M^e)^d\tmod\tn\t=\tM^(ed)\tmod\tn Both\tsender\tand\treceiver\tmust\tknow\tthe\tvalue\tof\tn. The\tsender\tknows\tthe\tvalue\tof\te,\tand\tonly\tthe\treceiver\tknows\tthe\tvalue\tof\td. This\tis\ta\tpublic-key\tencryption\talgorithm\twith\ta\tpublic\tkey\tof\tPU={e,n}\tand\ta\tprivate\tkey\tof\tPR={d,n}.\nRSA:\tCreating\tpublic/private\tkey\tpair choose\ttwo\tlarge\tprime\tnumbers\tp,\tq. compute\tn\t=\tpq,\tz\t=\t(p-1)(q-1) choose\te\t(with\te \u003c n)\tthat\thas\tno\tcommon\tfactors\twith\tz\t(e,\tz are\t“relatively\tprime”). choose\td\tsuch\tthat\ted-1\tis\texactly\tdivisible\tby\tz. (in\tother\twords:\ted\tmod\tz\t=\t1\t). public\tkey\tis\t(n,e).\tprivate\tkey\tis\t(n,d). RSA:\tencryption,\tdecryption given\t(n,e)\tand\t(n,d)\tas\tcomputed\tabove to\tencrypt\tmessage\tm\t(\u003c n),\tcompute\tc\t=\tm^e mod n to\tdecrypt\treceived\tbit\tpattern,\tc,\tcompute\tm\t=\tc^d\tmod\tn m =\t(m^e mod n)^d\tmod n Why\tis\tRSA\tsecure? Suppose\tyou\tknow\tBob’s\tpublic\tkey\t(n,e).\tHow\thard\tis\tit\tto\tdetermine\td? Essentially\tneed\tto\tfind\tfactors\tof\tn\twithout\tknowing\tthe\ttwo\tfactors\tp\tand\tq.\nFact:\tfactoring\ta\tbig\tnumber\tis\thard. Algorithm\tRequirements For\tthis\talgorithm\tto\tbe\tsatisfactory\tfor\tpublickey\tencryption,\tthe\tfollowing requirements\tmust\tbe\tmet:\nIt\tis\tpossible\tto\tfind\tvalues\tof\te,\td,\tn\tsuch\tthat\tMed\tmod\tn\t=\tM\tfor\tall\tM\t\u003c\tn. It\tis\trelatively\teasy\tto\tcalculate\tMe mod\tn\tand\tCd\tmod\tn\tfor\tall\tvalues\tof\tM\t\u003c\tn. It\tis\tinfeasible\tto\tdetermine\td\tgiven\te\tand\tn. Exponentiation\tin\tModular\tArithmetic Both\tencryption\tand\tdecryption\tin\tRSA\tinvolve\traising\tan\tinteger\tto\tan\tinteger\tpower,\tmod\tn. Can\tmake\tuse\tof\ta\tproperty\tof\tmodular\tarithmetic:\t[(a\tmod\tn)\tx\t(b\tmod\tn)]\tmod\tn\t=(a\tx\tb)\tmod\tn. With\tRSA\tyou\tare\tdealing\twith\tpotentially\tlarge\texponents\tso\tefficiency\tof exponentiation\tis\ta\tconsideration. Efficient\tOperation\tUsing\tthe\tPublic\tKey To\tspeed\tup\tthe\toperation\tof\tthe\tRSA\talgorithm\tusing\tthe\tpublic\tkey,\ta\tspecific\tchoice\tof\te\tis\tusually\tmade.\nThe\tmost\tcommon\tchoice\tis\t65537\t(2^16\t+\t1)\nTwo\tother\tpopular\tchoices\tare\te=3\tand\te=17. Each\tof\tthese\tchoices\thas\tonly\ttwo\t1\tbits,\tso\tthe\tnumber\tof\tmultiplications\trequired\tto\tperform\texponentiation\tis\tminimized. With\ta\tvery\tsmall\tpublic\tkey,\tsuch\tas\te\t=\t3,\tRSA\tbecomes\tvulnerable\tto\ta\tsimple\tattack. Efficient\tOperation\tUsing\tthe\tPrivate\tKey Decryption\tuses\texponentiation\tto\tpower\td. A\tsmall\tvalue\tof\td\tis\tvulnerable\tto\ta\tbrute-force\tattack\tand\tto\tother\tforms\tof\tcryptanalysis. Can\tuse\tthe\tChinese\tRemainder\tTheorem\t(CRT)\tto\tspeed\tup\tcomputation. The\tquantities\td\tmod\t(p\t–\t1)\tand\td\tmod\t(q\t–\t1)\tcan\tbe\tprecalculated. End\tresult\tis\tthat\tthe\tcalculation\tis\tapproximately\tfour\ttimes\tas\tfast\tas\tevaluating\tM\t=\tCd mod\tn\tdirectly. Key\tGeneration Before\tthe\tapplication\tof\tthe\tpublic-key\tcryptosystem\teach\tparticipant\tmust\tgenerate\ta\tpair\tof\tkeys:\nDetermine\ttwo\tprime\tnumbers\tp\tand\tq. Select\teither\te\tor\td\tand\tcalculate\tthe\tother. Because\tthe\tvalue\tof\tn\t=\tpq will\tbe\tknown\tto\tany\tpotential\tadversary,\tprimes must\tbe\tchosen\tfrom\ta\tsufficiently\tlarge\tset. The\tmethod\tused\tfor\tfinding\tlarge\tprimes\tmust\tbe\treasonably\tefficient.\nProcedure\tfor\tPicking\ta\tPrime\tNumber Pick\tan\todd\tinteger\tn\tat\trandom Pick\tan\tinteger\ta\t\u003c\tn\tat\trandom Perform\tthe\tprobabilistic\tprimality\ttest\twith\ta\tas\ta\tparameter.\tIf\tn\tfails\tthe\ttest,\treject\tthe\tvalue\tn\tand\tgo\tto\tstep\t1 If\tn\thas\tpassed\ta\tsufficient\tnumber\tof\ttests,\taccept\tn;\totherwise,\tgo\tto\tstep\t2 Breaking\tan\tencryption\tscheme Cipher-text\tonly\tattack:\tTrudy\thas\tciphertext\tshe\tcan\tanalyze. Two\tapproaches:\tbrute\tforce:\tsearch\tthrough\tall\tkeys; statistical\tanalysis. Known-plaintext\tattack:\tTrudy\thas\tplaintext\tcorresponding\tto\tciphertext. e.g.,\tin\tmonoalphabetic\tcipher,\tTrudy\tdetermines\tpairings\tfor\ta,l,i,c,e,b,o, Chosen-plaintext\tattack:\tTrudy\tcan\tget\tciphertext\tfor\tchosen\tplaintext. The Security of RSA Five possible approaches to attacking RSA are:\nChosen ciphertext attacks\nThis type of attack exploits properties of the RSA algorithm. Brute force\nInvolves trying all possible private keys. Mathematical attacks\nThere are several approaches, all equivalent in effort to factoring the product of two primes. Hardware fault-based attack\nThis involves inducing hardware faults in the processor that is generating digital signatures. Timing attacks\nThese depend on the running time of the decryption algorithm. Factoring\tProblem We\tcan\tidentify\tthree\tapproaches\tto\tattacking\tRSA\tmathematically:\nFactor\tn\tinto\tits\ttwo\tprime\tfactors.\tThis\tenables\tcalculation\tof\tø(n)\t=\t(p\t–\t1)\tx\t(q\t–\t1),\twhich\tin\tturn\tenables\tdetermination\tof\td\t=\te-1\t(mod\tø(n)) Determine\tø(n)\tdirectly\twithout\tfirst\tdetermining\tp\tand\tq.\tAgain,\tthis\tenables\tdetermination\tof\td\t=\te-1 (mod\tø(n)) Determine\td\tdirectly\twithout\tfirst\tdetermining\tø(n) Timing\tAttacks Paul\tKocher,\ta\tcryptographic\tconsultant,\tdemonstrated\tthat\ta\tsnooper\tcan\tdetermine\ta\tprivate\tkey\tby\tkeeping\ttrack\tof\thow\tlong\ta\tcomputer\ttakes\tto\tdecipher\tmessages\nAre\tapplicable\tnot\tjust\tto\tRSA\tbut\tto\tother\tpublickey\tcryptography\tsystems\nAre\talarming\tfor\ttwo\treasons: It\tcomes\tfrom\ta\tcompletely\tunexpected\tdirection. It\tis\ta\tciphertext-only\tattack\nCountermeasures Constant exponentiation time: Ensure that all exponentiations take the same amount of time before returning a result; this is a simple fix but does degrade performance. Random delay: Better performance could be achieved by adding a random delay to the exponentiation algorithm to confuse the timing attack. Blinding: Multiply the ciphertext by a random number before performing exponentiation; this process prevents the attacker from knowing what ciphertext bits are being processed inside the computer and therefore prevents the bit-by-bit analysis essential to the timing attack. Fault-Based\tAttack An\tattack\ton\ta\tprocessor\tthat\tis\tgenerating\tRSA\tdigital\tsignatures. Induces\tfaults\tin\tthe\tsignature\tcomputation\tby\treducing\tthe\tpower\tto\tthe\tprocessor. The\tfaults\tcause\tthe\tsoftware\tto\tproduce\tinvalid\tsignatures\twhich\tcan\tthen\tbe\tanalyzed\tby\tthe\tattacker\tto\trecover\tthe\tprivate\tkey.\nThe\tattack\talgorithm\tinvolves\tinducing\tsingle-bit\terrors\tand\tobserving\tthe\tresults.\nWhile\tworthy\tof\tconsideration,\tthis\tattack\tdoes\tnot\tappear\tto\tbe\ta\tserious\tthreat\tto\tRSA. It\trequires\tthat\tthe\tattacker\thave\tphysical\taccess\tto\tthe\ttarget\tmachine\tand\tis\table\tto\tdirectly\tcontrol\tthe\tinput\tpower\tto\tthe\tprocessor.\nChosen\tCiphertext\tAttack\t(CCA) The\tadversary\tchooses\ta\tnumber\tof\tciphertexts\tand\tis\tthen\tgiven\tthe\tcorresponding\tplaintexts,\tdecrypted\twith\tthe\ttarget’s\tprivate\tkey. Thus\tthe\tadversary\tcould\tselect\ta\tplaintext,\tencrypt\tit\twith\tthe\ttarget’s\tpublic\tkey,\tand\tthen\tbe\table\tto\tget\tthe\tplaintext\tback\tby\thaving\tit\tdecrypted\twith\tthe\tprivate\tkey.\tThe\tadversary\texploits\tproperties\tof\tRSA\tand\tselects\tblocks\tof\tdata\tthat,\twhen\tprocessed\tusing\tthe\ttarget’s\tprivate\tkey,\tyield\tinformation\tneeded\tfor\tcryptanalysis.\nTo\tcounter\tsuch\tattacks,\tRSA\tSecurity\tInc.\trecommends\tmodifying\tthe\tplaintext\tusing\ta\tprocedure\tknown\tas\toptimal\tasymmetric\tencryption\tpadding\t(OAEP).\nCitation Cited as:\nPublic-Key Cryptography and RSA https://mnguyen0226.github.io/posts/info_security_2/post/ Or\n@article{nguyen2023mtl, title = \"Public-Key Cryptography and RSA\", author = \"Nguyen, Minh\", journal = \"mnguyen0226.github.io\", year = \"2023\", month = \"October\", url = \"https://mnguyen0226.github.io/posts/info_security_9/post/\" } References [1] Pearson, https://www.pearson.com/en-us/subject-catalog/p/Stallings-Pearson-e-Text-for-Cryptography-and-Network-Security-Principles-and-Practice-Access-Card-8th-Edition/P200000003477 (accessed Oct. 18, 2023).\nFig. 2: Indiana, U.S.A (Image Source: Hannah Hutson @ Unsplash). ",
+  "wordCount" : "2320",
+  "inLanguage": "en",
+  "datePublished": "2023-10-18T00:00:00Z",
+  "dateModified": "2023-10-18T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Minh T. Nguyen"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mnguyen0226.github.io/posts/info_security_9/post/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Minh T. Nguyen",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mnguyen0226.github.io/favicon/android-chrome-192x192.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://mnguyen0226.github.io/" accesskey="h" title="Minh T. Nguyen (Alt + H)">Minh T. Nguyen</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://mnguyen0226.github.io/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mnguyen0226.github.io/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://mnguyen0226.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://mnguyen0226.github.io/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Public-Key Cryptography and RSA
+    </h1>
+    <div class="post-meta"><span title='2023-10-18 00:00:00 +0000 UTC'>October 18, 2023</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;Minh T. Nguyen
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#principles-of-public-key-cryptosystems" aria-label="Principles of Public-Key Cryptosystems">Principles of Public-Key Cryptosystems</a><ul>
+                        
+                <li>
+                    <a href="#public-key-cryptosystems" aria-label="Public-Key Cryptosystems">Public-Key Cryptosystems</a></li>
+                <li>
+                    <a href="#terminology-related-to-asymmetric-encryption" aria-label="Terminology Related to Asymmetric Encryption">Terminology Related to Asymmetric Encryption</a></li>
+                <li>
+                    <a href="#misconceptionsconcerningpublic-keyencryption" aria-label="Misconceptions	Concerning	Public-Key	Encryption">Misconceptions	Concerning	Public-Key	Encryption</a></li>
+                <li>
+                    <a href="#principlesofpublic-keycryptosystems" aria-label="Principles	of	Public-Key	Cryptosystems">Principles	of	Public-Key	Cryptosystems</a></li>
+                <li>
+                    <a href="#conventional-vs-public-key-encryption" aria-label="Conventional vs Public-Key Encryption">Conventional vs Public-Key Encryption</a></li>
+                <li>
+                    <a href="#applications-for-public-key-cryptosystems" aria-label="Applications for Public-Key Cryptosystems">Applications for Public-Key Cryptosystems</a></li>
+                <li>
+                    <a href="#requirements-for-public-key-cryptography" aria-label="Requirements for Public-Key Cryptography">Requirements for Public-Key Cryptography</a></li>
+                <li>
+                    <a href="#public-key-cryptanalysis" aria-label="Public-Key Cryptanalysis">Public-Key Cryptanalysis</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-rsa-algorithm" aria-label="The RSA Algorithm">The RSA Algorithm</a><ul>
+                        
+                <li>
+                    <a href="#rivest-shamir-adlemanrsaalgorithm" aria-label="Rivest-Shamir-Adleman	(RSA)	Algorithm">Rivest-Shamir-Adleman	(RSA)	Algorithm</a></li>
+                <li>
+                    <a href="#rsacreatingpublicprivatekeypair" aria-label="RSA:	Creating	public/private	key	pair">RSA:	Creating	public/private	key	pair</a></li>
+                <li>
+                    <a href="#rsaencryptiondecryption" aria-label="RSA:	encryption,	decryption">RSA:	encryption,	decryption</a></li>
+                <li>
+                    <a href="#whyisrsasecure" aria-label="Why	is	RSA	secure?">Why	is	RSA	secure?</a></li>
+                <li>
+                    <a href="#algorithmrequirements" aria-label="Algorithm	Requirements">Algorithm	Requirements</a></li>
+                <li>
+                    <a href="#exponentiationinmodulararithmetic" aria-label="Exponentiation	in	Modular	Arithmetic">Exponentiation	in	Modular	Arithmetic</a></li>
+                <li>
+                    <a href="#efficientoperationusingthepublickey" aria-label="Efficient	Operation	Using	the	Public	Key">Efficient	Operation	Using	the	Public	Key</a></li>
+                <li>
+                    <a href="#efficientoperationusingtheprivatekey" aria-label="Efficient	Operation	Using	the	Private	Key">Efficient	Operation	Using	the	Private	Key</a></li>
+                <li>
+                    <a href="#keygeneration" aria-label="Key	Generation">Key	Generation</a></li>
+                <li>
+                    <a href="#procedureforpickingaprimenumber" aria-label="Procedure	for	Picking	a	Prime	Number">Procedure	for	Picking	a	Prime	Number</a></li>
+                <li>
+                    <a href="#breakinganencryptionscheme" aria-label="Breaking	an	encryption	scheme">Breaking	an	encryption	scheme</a></li></ul>
+                </li>
+                <li>
+                    <a href="#the-security-of-rsa" aria-label="The Security of RSA">The Security of RSA</a><ul>
+                        
+                <li>
+                    <a href="#factoringproblem" aria-label="Factoring	Problem">Factoring	Problem</a></li>
+                <li>
+                    <a href="#timingattacks" aria-label="Timing	Attacks">Timing	Attacks</a></li>
+                <li>
+                    <a href="#countermeasures" aria-label="Countermeasures">Countermeasures</a></li>
+                <li>
+                    <a href="#fault-basedattack" aria-label="Fault-Based	Attack">Fault-Based	Attack</a></li>
+                <li>
+                    <a href="#chosenciphertextattackcca" aria-label="Chosen	Ciphertext	Attack	(CCA)">Chosen	Ciphertext	Attack	(CCA)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#citation" aria-label="Citation">Citation</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p style="color: #286EE0"><strong>[v.1.0] (10/18/2023):</strong> Post started!</p>
+<h2 id="principles-of-public-key-cryptosystems">Principles of Public-Key Cryptosystems<a hidden class="anchor" aria-hidden="true" href="#principles-of-public-key-cryptosystems">#</a></h2>
+<h3 id="public-key-cryptosystems">Public-Key Cryptosystems<a hidden class="anchor" aria-hidden="true" href="#public-key-cryptosystems">#</a></h3>
+<p>About:</p>
+<ul>
+<li>Radically different approach [Diffie-Hellman76, RSA78].</li>
+<li>Sender, receiver do not share secret key.</li>
+<li>Public encryption key known to all.</li>
+<li>Private decryption key known only to receiver.</li>
+</ul>
+<p>A	public-key	encryption	scheme	has	six	ingredients:</p>
+<ul>
+<li><strong>Plaintext</strong>: The readable message or data that is input into the encryption algorithm.</li>
+<li><strong>Encryption Algorithm</strong>: Performs various transformations on the plaintext to produce ciphertext.</li>
+<li><strong>Public Key</strong>: Used specifically for the encryption process. This key can be shared openly.</li>
+<li><strong>Private Key</strong>: Used for either encryption or decryption. This key remains confidential.</li>
+<li><strong>Ciphertext</strong>: The scrambled version of the original message, produced as output from the encryption process.</li>
+<li><strong>Decryption Algorithm</strong>: Takes in the ciphertext and the appropriate key (either public or private) to reproduce the original plaintext.</li>
+</ul>
+<h3 id="terminology-related-to-asymmetric-encryption">Terminology Related to Asymmetric Encryption<a hidden class="anchor" aria-hidden="true" href="#terminology-related-to-asymmetric-encryption">#</a></h3>
+<ul>
+<li>A<strong>symmetric Keys</strong>: Two related keys, a public key and a private key that are used to perform complementary operations, such as encryption and decryption or signature generation and signature verification.</li>
+<li><strong>Public Key Certificate</strong>: A digital document issued and digitally signed by the private key of a Certification Authority that binds the name of a subscriber to a public key. The certificate indicates that the subscriber identified in the certificate has sole control and access to the corresponding private key.</li>
+<li><strong>Public Key (Asymmetric) Cryptographic Algorithm</strong>: A cryptographic algorithm that uses two related keys, a public key and a private key. The two keys have the property that deriving the private key from the public key is computationally infeasible.</li>
+<li><strong>Public Key Infrastructure (PKI)</strong>: A set of policies, processes, server platforms, software and workstations used for the purpose of administering certificates and public-private key pairs, including the ability to issue, maintain, and revoke public key certificates.</li>
+</ul>
+<h3 id="misconceptionsconcerningpublic-keyencryption">Misconceptions	Concerning	Public-Key	Encryption<a hidden class="anchor" aria-hidden="true" href="#misconceptionsconcerningpublic-keyencryption">#</a></h3>
+<ul>
+<li>Public-key	encryption	is	more	secure	from	cryptanalysis	than	symmetric	encryption.</li>
+<li>Public-key	encryption	is	a	general-purpose	technique	that	has	made	symmetric encryption	obsolete.</li>
+<li>There	is	a	feeling	that	key	distribution	is	trivial	when	using	public-key	encryption,	compared	to	the	cumbersome	handshaking	involved	with	key	distribution	centers	for	symmetric	encryption.</li>
+</ul>
+<h3 id="principlesofpublic-keycryptosystems">Principles	of	Public-Key	Cryptosystems<a hidden class="anchor" aria-hidden="true" href="#principlesofpublic-keycryptosystems">#</a></h3>
+<p>The	concept	of	public-key	cryptography	evolved	from	an	attempt	to	attack	two	of	the	most	difficult	problems	associated	with	symmetric	encryption:</p>
+<ul>
+<li>Key	distribution: How	to	have	secure	communications	in	general	without	having	to
+trust	a	KDC	with	your	key.</li>
+<li>Digital	signatures: How	to	verify	that	a	message	comes	intact	from	the	claimed	sender</li>
+</ul>
+<p>Whitfield	Diffie	and	Martin	Hellman	from	Stanford	University	achieved	a	breakthrough	in	1976	by	coming	up	with	a	method	that	addressed	key	distribution	problem	and	was	radically	different	from	all	previous	approaches	to	cryptography.</p>
+<h3 id="conventional-vs-public-key-encryption">Conventional vs Public-Key Encryption<a hidden class="anchor" aria-hidden="true" href="#conventional-vs-public-key-encryption">#</a></h3>
+<p><strong>Conventional Encryption</strong></p>
+<ul>
+<li>
+<p>Needed to Work:</p>
+<ul>
+<li>The same algorithm with the same key is used for encryption and decryption.</li>
+<li>The sender and receiver must share the algorithm and the key.</li>
+</ul>
+</li>
+<li>
+<p>Needed for Security:</p>
+<ul>
+<li>The key must be kept secret.</li>
+<li>It must be impossible or at least impractical to decipher a message if the key is kept secret.</li>
+<li>Knowledge of the algorithm plus samples of ciphertext must be insufficient to determine the key.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Public-Key Encryption</strong></p>
+<ul>
+<li>Needed to Work:
+<ul>
+<li>One algorithm is used for encryption and a related algorithm for decryption with a pair of keys, one for encryption and one for decryption.</li>
+<li>The sender and receiver must each have one of the matched pair of keys (not the same one).</li>
+</ul>
+</li>
+<li>Needed for Security:
+<ul>
+<li>One of the two keys must be kept secret.</li>
+<li>It must be impossible or at least impractical to decipher a message if one of the keys is kept secret.</li>
+<li>Knowledge of the algorithm plus one of the keys plus samples of ciphertext must be insufficient to determine the other key.</li>
+</ul>
+</li>
+</ul>
+<h3 id="applications-for-public-key-cryptosystems">Applications for Public-Key Cryptosystems<a hidden class="anchor" aria-hidden="true" href="#applications-for-public-key-cryptosystems">#</a></h3>
+<p>Public-key	cryptosystems	can	be	classified	into	three	categories:</p>
+<ul>
+<li>Encryption/decryption: The	sender	encrypts	a	message	with	the	recipient’s	public	key.</li>
+<li>Digital signature: the	sender	“signs”	a	message	 Digital	signature	 with	its	private	key.</li>
+<li>Key exchange: Two sides cooperate to exchange a session key.</li>
+</ul>
+<p>Some	algorithms	are	suitable	for	all	three	applications,	whereas	others	can	be	used	only	for	one	or	two.</p>
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_9/imgs/pkc.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 1: Applications for Public-Key Cryptosystems.
+</figcaption>
+<br/>
+<h3 id="requirements-for-public-key-cryptography">Requirements for Public-Key Cryptography<a hidden class="anchor" aria-hidden="true" href="#requirements-for-public-key-cryptography">#</a></h3>
+<p><strong>Conditions	that	these	algorithms	must	fulfill</strong>:</p>
+<ul>
+<li>It	is	computationally	easy	for	a	party	B	to	generate	a	pair	(publickey	PUb, private	key	PRb).</li>
+<li>It	is	computationally	easy	for	a	sender	A,	knowing	the	public	key	and	the	message	to	be	encrypted,	to	generate	the	corresponding	ciphertext.</li>
+<li>It	is	computationally	easy	for	the	receiver	B	to	decrypt	the	resulting	ciphertext	using	the	private	key	to	recover	the	original	message.</li>
+<li>It	is	computationally	infeasible	for	an	adversary,	knowing	the	public	key,	to	determine	the	private	key.</li>
+<li>It	is	computationally	infeasible	for	an	adversary,	knowing	the	public	key	and	a	ciphertext,	to	recover	the	original	message.</li>
+<li>The	two	keys	can	be	applied	in	either	order.</li>
+</ul>
+<p><strong>Need a trap-door one-way function</strong></p>
+<ul>
+<li>A one-way function is one that maps a domain into a range such that every function value has a unique inverse, with the condition that the calculation of the function is easy, whereas the calculation of the inverse is infeasible
+<ul>
+<li>Y = f(X) easy</li>
+<li>X = f^(-1)(Y) infeasible</li>
+</ul>
+</li>
+</ul>
+<p><strong>A trap-door one-way function is a family of invertible functions f_k</strong>, such that:</p>
+<ul>
+<li>Y = f_k(X) easy, if k and X are known</li>
+<li>X = f_k^(-1)(Y) easy, if k and Y are known</li>
+<li>X = f_k^(-1)(Y) infeasible, if Y known but k not known</li>
+</ul>
+<p><strong>A practical public-key scheme depends on a suitable trap-door one-way function</strong></p>
+<h3 id="public-key-cryptanalysis">Public-Key Cryptanalysis<a hidden class="anchor" aria-hidden="true" href="#public-key-cryptanalysis">#</a></h3>
+<p>A	public-key	encryption	scheme	is	vulnerable	to	a	brute-force	attack</p>
+<ul>
+<li>Countermeasure:		use	large	keys.</li>
+<li>Key	size	must	be	small	enough	for	practical	encryption	and	decryption.</li>
+<li>Key	sizes	that	have	been	proposed	result	in	encryption/decryption	speeds	that	are	too	slow	for	general-purpose	use.</li>
+<li>Public-key	encryption	is	currently	confined	to	key	management	and	signature	applications.</li>
+</ul>
+<p>Another	form	of	attack	is	to	find	some	way	to	compute	the	private	key	given	the	public	key. To	date	it	has	not	been	mathematically	proven	that	this	form	of	attack	is	infeasible	for	a	particular	public-key	algorithm.</p>
+<p>Finally,	there	is	a	probable-message	attack	This	attack	can	be	thwarted	by	appending	some	random	bits	to	bits	to	the	messages.</p>
+<h2 id="the-rsa-algorithm">The RSA Algorithm<a hidden class="anchor" aria-hidden="true" href="#the-rsa-algorithm">#</a></h2>
+<h3 id="rivest-shamir-adlemanrsaalgorithm">Rivest-Shamir-Adleman	(RSA)	Algorithm<a hidden class="anchor" aria-hidden="true" href="#rivest-shamir-adlemanrsaalgorithm">#</a></h3>
+<p>Developed	in	1977	at	MIT	by	Ron	Rivest,	Adi	Shamir	&amp;	Len	Adleman. Most	widely	used	general-purpose	approach	to	public-key	encryption.	Is	a	cipher	in	which	the	plaintext	and	ciphertext are	integers	between	<code>0</code>	and	<code>n	–	1</code>	for	some	<code>n</code>. A	typical	size	for	n	is	1024	bits,	or	309	decimal	digits</p>
+<p>RSA	makes	use	of	an	expression	with	exponentials. Plaintext	is	encrypted	in	blocks	with	each	block	having	a	binary	value	less	than	some	number	n.	Encryption	and	decryption	are	of	the	following	form,	for	some	plaintext	block	M	and	ciphertext block	<code>C</code>:</p>
+<ul>
+<li><code>C	=	M^e mod	n</code></li>
+<li><code>M	=	C^d	mod	n	=	(M^e)^d	mod	n	=	M^(ed)	mod	n</code></li>
+</ul>
+<p>Both	sender	and	receiver	must	know	the	value	of	<code>n</code>. The	sender	knows	the	value	of	<code>e</code>,	and	only	the	receiver	knows	the	value	of	<code>d</code>. This	is	a	public-key	encryption	algorithm	with	a	public	key	of	<code>PU={e,n}</code>	and	a	private	key	of	<code>PR={d,n}</code>.</p>
+<h3 id="rsacreatingpublicprivatekeypair">RSA:	Creating	public/private	key	pair<a hidden class="anchor" aria-hidden="true" href="#rsacreatingpublicprivatekeypair">#</a></h3>
+<ol>
+<li>choose	two	large	prime	numbers	p,	q.</li>
+<li>compute	n	=	pq,		z	=	(p-1)(q-1)</li>
+<li>choose	e	(with	e &lt; n)	that	has	no	common	factors		with	z	(e,	z are	“relatively	prime”).</li>
+<li>choose	d	such	that	ed-1	is		exactly	divisible	by	z. (in	other	words:	ed	mod	z		=	1	).</li>
+<li>public	key	is	(n,e).		private	key	is	(n,d).</li>
+</ol>
+<h3 id="rsaencryptiondecryption">RSA:	encryption,	decryption<a hidden class="anchor" aria-hidden="true" href="#rsaencryptiondecryption">#</a></h3>
+<ol start="0">
+<li>given	(n,e)	and	(n,d)	as	computed	above</li>
+<li>to	encrypt	message	m	(&lt; n),	compute	c	=	m^e mod n</li>
+<li>to	decrypt	received	bit	pattern,	c,	compute	m	=	c^d	mod	n</li>
+<li>m =	(m^e mod n)^d	 mod n</li>
+</ol>
+<h3 id="whyisrsasecure">Why	is	RSA	secure?<a hidden class="anchor" aria-hidden="true" href="#whyisrsasecure">#</a></h3>
+<p>Suppose	you	know	Bob’s	public	key	(n,e).	How	hard	is	it	to	determine	d? Essentially	need	to	find	factors	of	n	without	knowing	the	two	factors	p	and	q.</p>
+<ul>
+<li>Fact:	factoring	a	big	number	is	hard.</li>
+</ul>
+<h3 id="algorithmrequirements">Algorithm	Requirements<a hidden class="anchor" aria-hidden="true" href="#algorithmrequirements">#</a></h3>
+<p>For	this	algorithm	to	be	satisfactory	for	publickey	encryption,	the	following requirements	must	be	met:</p>
+<ol>
+<li>It	is	possible	to	find	values	of	e,	d,	n	such	that	Med	mod	n	=	M	for	all	M	&lt;	n.</li>
+<li>It	is	relatively	easy	to	calculate	Me 	mod	n	and	Cd	mod	n	for	all	values	of	M	&lt;	n.</li>
+<li>It	is	infeasible	to	determine	d	given	e	and	n.</li>
+</ol>
+<h3 id="exponentiationinmodulararithmetic">Exponentiation	in	Modular	Arithmetic<a hidden class="anchor" aria-hidden="true" href="#exponentiationinmodulararithmetic">#</a></h3>
+<ul>
+<li>Both	encryption	and	decryption	in	RSA	involve	raising	an	integer	to	an	integer	power,	mod	n.</li>
+<li>Can	make	use	of	a	property	of	modular	arithmetic:	[(a	mod	n)	x	(b	mod	n)]	mod	n	=(a	x	b)	mod	n.</li>
+<li>With	RSA	you	are	dealing	with	potentially	large	exponents	so	efficiency	of exponentiation	is	a	consideration.</li>
+</ul>
+<h3 id="efficientoperationusingthepublickey">Efficient	Operation	Using	the	Public	Key<a hidden class="anchor" aria-hidden="true" href="#efficientoperationusingthepublickey">#</a></h3>
+<p>To	speed	up	the	operation	of	the	RSA	algorithm	using	the	public	key,	a	specific	choice	of	e	is	usually	made.</p>
+<p>The	most	common	choice	is	65537	(2^16	+	1)</p>
+<ul>
+<li>Two	other	popular	choices	are	e=3	and	e=17.</li>
+<li>Each	of	these	choices	has	only	two	1	bits,	so	the	number	of	multiplications	required	to	perform	exponentiation	is	minimized.</li>
+<li>With	a	very	small	public	key,	such	as	e	=	3,	RSA	becomes	vulnerable	to	a	simple	attack.</li>
+</ul>
+<h3 id="efficientoperationusingtheprivatekey">Efficient	Operation	Using	the	Private	Key<a hidden class="anchor" aria-hidden="true" href="#efficientoperationusingtheprivatekey">#</a></h3>
+<ul>
+<li>Decryption	uses	exponentiation	to	power	d.</li>
+<li>A	small	value	of	d	is	vulnerable	to	a	brute-force	attack	and	to	other	forms	of	cryptanalysis.</li>
+<li>Can	use	the	Chinese	Remainder	Theorem	(CRT)	to	speed	up	computation.
+<ul>
+<li>The	quantities	d	mod	(p	–	1)	and	d	mod	(q	–	1)	can	be	precalculated.</li>
+<li>End	result	is	that	the	calculation	is	approximately	four	times	as	fast	as	evaluating	M	=	Cd mod	n	directly.</li>
+</ul>
+</li>
+</ul>
+<h3 id="keygeneration">Key	Generation<a hidden class="anchor" aria-hidden="true" href="#keygeneration">#</a></h3>
+<p>Before	the	application	of	the	public-key	cryptosystem	each	participant	must	generate	a	pair	of	keys:</p>
+<ul>
+<li>Determine	two	prime	numbers	p	and	q.</li>
+<li>Select	either	e	or	d	and	calculate	the	other.</li>
+</ul>
+<p>Because	the	value	of	n	=	pq will	be	known	to	any	potential	adversary,	primes must	be	chosen	from	a	sufficiently	large	set. The	method	used	for	finding	large	primes	must	be	reasonably	efficient.</p>
+<h3 id="procedureforpickingaprimenumber">Procedure	for	Picking	a	Prime	Number<a hidden class="anchor" aria-hidden="true" href="#procedureforpickingaprimenumber">#</a></h3>
+<ol>
+<li>Pick	an	odd	integer	n	at	random</li>
+<li>Pick	an	integer	a	&lt;	n	at	random</li>
+<li>Perform	the	probabilistic	primality	test	with	a	as	a	parameter.		If	n	fails	the	test,	reject	the	value	n	and	go	to	step	1</li>
+<li>If	n	has	passed	a	sufficient	number	of	tests,	accept	n;	otherwise,	go	to	step	2</li>
+</ol>
+<h3 id="breakinganencryptionscheme">Breaking	an	encryption	scheme<a hidden class="anchor" aria-hidden="true" href="#breakinganencryptionscheme">#</a></h3>
+<ul>
+<li>Cipher-text	only	attack:	Trudy	has	ciphertext	she	can	analyze.</li>
+<li>Two	approaches:	brute	force:	search	through	all	keys; statistical	analysis.</li>
+<li>Known-plaintext	attack:	Trudy	has	plaintext	corresponding	to	ciphertext.
+<ul>
+<li>e.g.,	in	monoalphabetic	cipher,	Trudy	determines	pairings	for	a,l,i,c,e,b,o,</li>
+</ul>
+</li>
+<li>Chosen-plaintext	attack:	Trudy	can	get	ciphertext	for	chosen	plaintext.</li>
+</ul>
+<h2 id="the-security-of-rsa">The Security of RSA<a hidden class="anchor" aria-hidden="true" href="#the-security-of-rsa">#</a></h2>
+<p><strong>Five possible approaches to attacking RSA are:</strong></p>
+<ol>
+<li>
+<p><strong>Chosen ciphertext attacks</strong></p>
+<ul>
+<li>This type of attack exploits properties of the RSA algorithm.</li>
+</ul>
+</li>
+<li>
+<p><strong>Brute force</strong></p>
+<ul>
+<li>Involves trying all possible private keys.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mathematical attacks</strong></p>
+<ul>
+<li>There are several approaches, all equivalent in effort to factoring the product of two primes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hardware fault-based attack</strong></p>
+<ul>
+<li>This involves inducing hardware faults in the processor that is generating digital signatures.</li>
+</ul>
+</li>
+<li>
+<p><strong>Timing attacks</strong></p>
+<ul>
+<li>These depend on the running time of the decryption algorithm.</li>
+</ul>
+</li>
+</ol>
+<h3 id="factoringproblem">Factoring	Problem<a hidden class="anchor" aria-hidden="true" href="#factoringproblem">#</a></h3>
+<p>We	can	identify	three	approaches	to	attacking	RSA	mathematically:</p>
+<ul>
+<li>Factor	n	into	its	two	prime	factors.	This	enables	calculation	of	ø(n)	=	(p	–	1)	x	(q	–	1),	which	in	turn	enables	determination	of	d	=	e-1	(mod	ø(n))</li>
+<li>Determine	ø(n)	directly	without	first	determining	p	and	q.	Again,	this	enables	determination	of	d	=	e-1 (mod	ø(n))</li>
+<li>Determine	d	directly	without	first	determining	ø(n)</li>
+</ul>
+<h3 id="timingattacks">Timing	Attacks<a hidden class="anchor" aria-hidden="true" href="#timingattacks">#</a></h3>
+<p>Paul	Kocher,	a	cryptographic	consultant,	demonstrated	that	a	snooper	can	determine	a	private	key	by	keeping	track	of	how	long	a	computer	takes	to	decipher	messages</p>
+<p>Are	applicable	not	just	to	RSA	but	to	other	publickey	cryptography	systems</p>
+<p>Are	alarming	for	two	reasons: It	comes	from	a	completely	unexpected	direction. It	is	a	ciphertext-only	attack</p>
+<h3 id="countermeasures">Countermeasures<a hidden class="anchor" aria-hidden="true" href="#countermeasures">#</a></h3>
+<ul>
+<li>Constant exponentiation time: Ensure that all exponentiations take the same amount of time before returning a result; this is a simple fix but does degrade performance.</li>
+<li>Random delay: Better performance could be achieved by adding a random delay to the exponentiation algorithm to confuse the timing attack.</li>
+<li>Blinding: Multiply the ciphertext by a random number before performing exponentiation; this process prevents the attacker from knowing what ciphertext bits are being processed inside the computer and therefore prevents the bit-by-bit analysis essential to the timing attack.</li>
+</ul>
+<h3 id="fault-basedattack">Fault-Based	Attack<a hidden class="anchor" aria-hidden="true" href="#fault-basedattack">#</a></h3>
+<p>An	attack	on	a	processor	that	is	generating	RSA	digital	signatures. Induces	faults	in	the	signature	computation	by	reducing	the	power	to	the	processor. The	faults	cause	the	software	to	produce	invalid	signatures	which	can	then	be	analyzed	by	the	attacker	to	recover	the	private	key.</p>
+<p>The	attack	algorithm	involves	inducing	single-bit	errors	and	observing	the	results.</p>
+<p>While	worthy	of	consideration,	this	attack	does	not	appear	to	be	a	serious	threat	to	RSA. It	requires	that	the	attacker	have	physical	access	to	the	target	machine	and	is	able	to	directly	control	the	input	power	to	the	processor.</p>
+<h3 id="chosenciphertextattackcca">Chosen	Ciphertext	Attack	(CCA)<a hidden class="anchor" aria-hidden="true" href="#chosenciphertextattackcca">#</a></h3>
+<p>The	adversary	chooses	a	number	of	ciphertexts	and	is	then	given	the	corresponding	plaintexts,	decrypted	with	the	target’s	private	key. Thus	the	adversary	could	select	a	plaintext,	encrypt	it	with	the	target’s	public	key,	and	then	be	able	to	get	the	plaintext	back	by	having	it	decrypted	with	the	private	key.	The	adversary	exploits	properties	of	RSA	and	selects	blocks	of	data	that,	when	processed	using	the	target’s	private	key,	yield	information	needed	for	cryptanalysis.</p>
+<p>To	counter	such	attacks,	RSA	Security	Inc.	recommends	modifying	the	plaintext	using	a	procedure	known	as	optimal	asymmetric	encryption	padding	(OAEP).</p>
+<h2 id="citation">Citation<a hidden class="anchor" aria-hidden="true" href="#citation">#</a></h2>
+<p>Cited as:</p>
+<blockquote>
+    <summary>Public-Key Cryptography and RSA</summary>
+    <summary>https://mnguyen0226.github.io/posts/info_security_2/post/</summary>
+</blockquote>
+<p>Or</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">@article<span class="o">{</span>nguyen2023mtl,
+</span></span><span class="line"><span class="cl">  <span class="nv">title</span>   <span class="o">=</span> <span class="s2">&#34;Public-Key Cryptography and RSA&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">author</span>  <span class="o">=</span> <span class="s2">&#34;Nguyen, Minh&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">journal</span> <span class="o">=</span> <span class="s2">&#34;mnguyen0226.github.io&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">year</span>    <span class="o">=</span> <span class="s2">&#34;2023&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">month</span>   <span class="o">=</span> <span class="s2">&#34;October&#34;</span>,
+</span></span><span class="line"><span class="cl">  <span class="nv">url</span>     <span class="o">=</span> <span class="s2">&#34;https://mnguyen0226.github.io/posts/info_security_9/post/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<p>[1] Pearson, <a href="https://www.pearson.com/en-us/subject-catalog/p/Stallings-Pearson-e-Text-for-Cryptography-and-Network-Security-Principles-and-Practice-Access-Card-8th-Edition/P200000003477">https://www.pearson.com/en-us/subject-catalog/p/Stallings-Pearson-e-Text-for-Cryptography-and-Network-Security-Principles-and-Practice-Access-Card-8th-Edition/P200000003477</a> (accessed Oct. 18, 2023).</p>
+<center>
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_9/imgs/indiana.avif" />
+</center>
+<figcaption class="img_footer">
+    Fig. 2: Indiana, U.S.A </br>(Image Source: 
+    <a href="https://unsplash.com/photos/green-grass-field-during-sunset-lN9uP-G3x-Q" class="img_footer">Hannah Hutson @ Unsplash</a>).
+</figcaption>
+<!-- CSS Styling -->
+<style>
+.img_size {
+  width: 100%;
+}
+
+.img_footer {
+    color: #888888;
+    text-align: center;
+}
+</style><blockquote>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://mnguyen0226.github.io/tags/cybersecurity/">cybersecurity</a></li>
+      <li><a href="https://mnguyen0226.github.io/tags/long-read/">long-read</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://mnguyen0226.github.io/posts/info_security_8/post/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Random Bit Generation and Stream Ciphers</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Public-Key Cryptography and RSA on twitter"
+        href="https://twitter.com/intent/tweet/?text=Public-Key%20Cryptography%20and%20RSA&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f&amp;hashtags=cybersecurity%2clong-read">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Public-Key Cryptography and RSA on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f&amp;title=Public-Key%20Cryptography%20and%20RSA&amp;summary=Public-Key%20Cryptography%20and%20RSA&amp;source=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Public-Key Cryptography and RSA on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f&title=Public-Key%20Cryptography%20and%20RSA">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Public-Key Cryptography and RSA on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Public-Key Cryptography and RSA on whatsapp"
+        href="https://api.whatsapp.com/send?text=Public-Key%20Cryptography%20and%20RSA%20-%20https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Public-Key Cryptography and RSA on telegram"
+        href="https://telegram.me/share/url?text=Public-Key%20Cryptography%20and%20RSA&amp;url=https%3a%2f%2fmnguyen0226.github.io%2fposts%2finfo_security_9%2fpost%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://mnguyen0226.github.io/">Minh T. Nguyen</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
