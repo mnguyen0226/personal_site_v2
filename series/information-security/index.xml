@@ -10,7 +10,17 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advanced Encryption Standard</title>
+      <link>https://mnguyen0226.github.io/posts/info_security_6/post/</link>
+      <pubDate>Wed, 27 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/posts/info_security_6/post/</guid>
+      <description>[v.1.0] (09/27/2023): Post started!
+Advanced Encryption Standard (AES) Background A clear replacement for DES was needed as DES have demonstrated exhaustive key search attacks. We can definitely use Triple-DES; however, it is slow with small blocks. In 1997, US NIST issued call for cipher in which 15 candidates accepted in June 1998 and 5 were shortlisted in August 1999. Rijndael was selected as the AES in October 2000 and issues as FIPS PUB 107 standard in November 2001.</description>
+    </item>
+    
     <item>
       <title>Finite Fields</title>
       <link>https://mnguyen0226.github.io/posts/info_security_5/post/</link>
