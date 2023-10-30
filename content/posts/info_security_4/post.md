@@ -162,6 +162,7 @@ Or
 ```
 
 ## References
+[1] Pearson, https://www.pearson.com/en-us/subject-catalog/p/Stallings-Pearson-e-Text-for-Cryptography-and-Network-Security-Principles-and-Practice-Access-Card-8th-Edition/P200000003477 (accessed Sept. 18, 2023). 
 
 <center>
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/info_security_4/imgs/florida.avif" />
