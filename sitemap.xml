@@ -2,20 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</loc>
-    <lastmod>2023-09-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/posts/web_dev_odin/post/</loc>
     <lastmod>2023-09-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</loc>
-    <lastmod>2023-09-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/info_security_1/post/</loc>
     <lastmod>2023-08-21T00:00:00+00:00</lastmod>
@@ -40,6 +28,18 @@
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/system_design_concepts/post/</loc>
     <lastmod>2023-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</loc>
+    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</loc>
+    <lastmod>2023-09-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</loc>
+    <lastmod>2023-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</loc>
+    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
