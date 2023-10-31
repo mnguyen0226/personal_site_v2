@@ -10,16 +10,7 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Number Theory</title>
-      <link>https://mnguyen0226.github.io/posts/info_security_2/post/</link>
-      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/info_security_2/post/</guid>
-      <description>Number theory is about integers and their properties. This blog post covers everything from the basics of divisibility and the Division Algorithm to advanced concepts like modular arithmetic, prime numbers, the renowned theorems of Fermat and Euler, Miller-Rabin algorithm, and the Chinese Remainder Theorem.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 21 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/information-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Information and Network Security Concepts</title>
       <link>https://mnguyen0226.github.io/posts/info_security_1/post/</link>
