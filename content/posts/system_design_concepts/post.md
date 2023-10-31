@@ -1,6 +1,6 @@
 ---
 author: "Minh T. Nguyen"
-title: "System Design Fundamentals Note"
+title: "System Design Fundamentals"
 date: "2023-01-20"
 description: "Notes on fundamentals system design concepts, collected from Sahn Lam's lecture series"
 tags: ["long-read"]
@@ -96,7 +96,7 @@ Such design above make DNS decentralized and robust.
 Cited as:
 
 <blockquote>
-    <summary>System Design Fundamentals Note</summary>
+    <summary>System Design Fundamentals</summary>
     <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary>
 </blockquote>
 
@@ -104,7 +104,7 @@ Or
 
 ```sh
 @article{nguyen2023sdfund,
-  title   = "System Design Fundamentals Note",
+  title   = "System Design Fundamentals",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",

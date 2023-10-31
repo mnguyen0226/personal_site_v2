@@ -9,7 +9,7 @@ series: ["Information Security"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
-draft: false
+draft: true
 weight: 5
 ---
 
