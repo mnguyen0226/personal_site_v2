@@ -158,115 +158,6 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Public-Key Cryptography and RSA
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (10/18/2023): Post started!
-Principles of Public-Key Cryptosystems Public-Key Cryptosystems About:
-Radically different approach [Diffie-Hellman76, RSA78]. Sender, receiver do not share secret key. Public encryption key known to all. Private decryption key known only to receiver. A	public-key	encryption	scheme	has	six	ingredients:
-Plaintext: The readable message or data that is input into the encryption algorithm. Encryption Algorithm: Performs various transformations on the plaintext to produce ciphertext. Public Key: Used specifically for the encryption process....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-18 00:00:00 +0000 UTC'>October 18, 2023</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Public-Key Cryptography and RSA" href="https://mnguyen0226.github.io/posts/info_security_9/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Random Bit Generation and Stream Ciphers
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (10/09/2023): Post started!
-Principles of Pseudorandom Number Generation Random Number A	number	of	network	security	algorithms	and	protocols based	on	cryptography	make	use	of	random	binary	numbers:
-Key	distribution	and	reciprocal	authentication	schemes. Session	key	generation. Generation	of	keys	for	the	RSA	public-key	encryption	algorithm.. Generation	of	a	bit	stream	for	symmetric	stream	encryption. There	are	two	distinct	requirements	for	a	sequence	of	random	numbers: Randomness	and Unpredictability.
-Randomness The	generation	of	a	sequence	of	allegedly	random	numbers	being	random	in	some	well-defined	statistical	sense	has	been	a	concern....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-09 00:00:00 +0000 UTC'>October 9, 2023</span>&nbsp;·&nbsp;14 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Random Bit Generation and Stream Ciphers" href="https://mnguyen0226.github.io/posts/info_security_8/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Block Cipher Operation
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (10/02/2023): Post started!
-Multiple Encryption and Triple DES Meet-in-the-Middle	Attack The	use	of	double	Data Encryption Standard (DES) results	in	a	mapping	that	is	not	equivalent	to	a	single	DES	encryption.
-The	meet-in-the-middle	attack	algorithm	will	attack	this	scheme	and	does	not	depend	on	any	particular	property	of	DES	but	will	work	against	any block	encryption	cipher.
-Triple	DES	with	Three	Keys Many	researchers	now	feel	that	three-key	3DES	is	the	preferred	alternative....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-10-02 00:00:00 +0000 UTC'>October 2, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Block Cipher Operation" href="https://mnguyen0226.github.io/posts/info_security_7/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Advanced Encryption Standard
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (09/27/2023): Post started!
-Advanced Encryption Standard (AES) Background A clear replacement for DES was needed as DES have demonstrated exhaustive key search attacks. We can definitely use Triple-DES; however, it is slow with small blocks. In 1997, US NIST issued call for cipher in which 15 candidates accepted in June 1998 and 5 were shortlisted in August 1999. Rijndael was selected as the AES in October 2000 and issues as FIPS PUB 107 standard in November 2001....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-27 00:00:00 +0000 UTC'>September 27, 2023</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Advanced Encryption Standard" href="https://mnguyen0226.github.io/posts/info_security_6/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Finite Fields
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (09/22/2023): Post started!
-Groups A set of elements with a binary operation denoted by “•” that associates to each ordered pair (a,b) of elements in G an element (a • b) in G, such that the following axioms are obeyed:
-(A1) Closure: If a and b belong to G, then a • b is also in G. (A2) Associative: a • (b • c) = (a • b) • c for all a, b, c in G....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-22 00:00:00 +0000 UTC'>September 22, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Finite Fields" href="https://mnguyen0226.github.io/posts/info_security_5/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Block Ciphers and the Data Encryption Standard
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (09/18/2023): Post started!
-Traditional Block Cipher Structure Stream Cipher Primary Function: Stream Cipher encrypts a digital data stream one bit or one byte at a time.
-Examples of Stream Ciphers: Autokeyed Vigenère cipher, Vernam cipher.
-Ideal Use-case: In the perfect situation, a one-time pad version of the Vernam cipher would be utilized. In this scenario, the keystream length matches that of the plaintext bit stream.
-Security Consideration: If the cryptographic keystream is entirely random, the cipher becomes impenetrable unless one obtains the keystream....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-18 00:00:00 +0000 UTC'>September 18, 2023</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Block Ciphers and the Data Encryption Standard" href="https://mnguyen0226.github.io/posts/info_security_4/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Classical Encryption Techniques
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>[v.1.0] (09/04/2023): Post started!
-Definitions Plaintext: an original message.
-Ciphertext: the coded message.
-Enciphering/Encryption: the process of converting from plaintext to ciphertext.
-Deciphering/Decryption: restoring the plaintext from the ciphertext.
-Cryptography: the area of study of the many schemes used for encryption.
-Cryptographic System/Cipher: a scheme.
-Cryptanalysis: techniques used for deciphering a message without any knowledge of the enciphering details.
-Cryptology: the areas of cryptography and cryptanalysis.
-Symmetric Cipher Model There	are	two	requirements	for	secure	use	of	conventional	encryption:...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-09-04 00:00:00 +0000 UTC'>September 4, 2023</span>&nbsp;·&nbsp;9 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
-  <a class="entry-link" aria-label="post link to Classical Encryption Techniques" href="https://mnguyen0226.github.io/posts/info_security_3/post/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
     <h2>Number Theory
     </h2>
   </header>
@@ -279,12 +170,21 @@ a = qn &#43; r 0	≤	r	&lt;	n;	q	=	[a/n] The Euclidean Algorithm This is one of 
   <footer class="entry-footer"><span title='2023-08-28 00:00:00 +0000 UTC'>August 28, 2023</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
   <a class="entry-link" aria-label="post link to Number Theory" href="https://mnguyen0226.github.io/posts/info_security_2/post/"></a>
 </article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="next" href="https://mnguyen0226.github.io/categories/information-security/page/2/">Next&nbsp;&nbsp;»
-    </a>
-  </nav>
-</footer>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Information and Network Security Concepts
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>[v.1.0] (08/21/2023): Post started!
+The field of cybersecurity consists of: measures of deter, prevent, detect, and correct security violations that involve the storage, processing, and transmission of information.
+Computer Security Objectives: CIA Confidentiality:
+Data confidentiality: assures that private or confidential information is not made available or disclosed to unauthorized individuals. Privacy: assures that individuals control or influence what information related to them may be collected and stored and by whom and to whom that information may be disclosed....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-21 00:00:00 +0000 UTC'>August 21, 2023</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;Minh T. Nguyen</footer>
+  <a class="entry-link" aria-label="post link to Information and Network Security Concepts" href="https://mnguyen0226.github.io/posts/info_security_1/post/"></a>
+</article>
     </main>
     
 <footer class="footer">

@@ -10,22 +10,22 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>information security</title>
-      <link>https://mnguyen0226.github.io/categories/information-security/</link>
-      <pubDate>Wed, 18 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/categories/information-security/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>software engineer</title>
       <link>https://mnguyen0226.github.io/categories/software-engineer/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/categories/software-engineer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>information security</title>
+      <link>https://mnguyen0226.github.io/categories/information-security/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/categories/information-security/</guid>
       <description></description>
     </item>
     
