@@ -10,7 +10,7 @@ aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: false
 draft: false
-weight: 5
+weight: 8
 ---
 
 <p style="color: #286EE0"><strong>[v.1.0] (09/11/2023):</strong> Post published!</p>
