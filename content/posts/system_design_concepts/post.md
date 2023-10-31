@@ -161,6 +161,65 @@ There are many ways to versioning an API. The most common way is to prefix the v
 
 RESTful API is sensible if used correctly as it is simple and good enough, and that's why it is so widely used. Other options are `GraphQL` and `gRPC`.
  
+## [10 Key Data Structures in System Design](https://www.youtube.com/watch?v=ouipSd_5ivQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=5)
+
+The choice of correct data structures based on the specification and constraints of the projects is important.
+
+### List
+List is a versatile and essential data structure in software development. It is great for storing and manipulating ordered data. They are useful in various applications such as *task-management*, *social media feeds*, and *shopping carts*.
+
+For *task-management application*, a list can be used to store and organize tasks for each user. Tasks can be added, removed, or reordered easily, and users can mark them as complete or incomplete.
+
+In *social media application*, e.g. Twitter (X), where they can store and display a users' feeds in real-time, ensuring the order is correct in real-time.
+
+### Array 
+Array provdes a fixed-size, ordered collection of elements. They are suitable for situation where the size of the collections is known or isn't changed frequently. Arrays are commonly used in mathematical operations, storing large datasets, or when there is a need for random access to elements.
+
+For instance, in the *weather application*, an array can store temperature readings for a specific location over a defined period. This allows for easy calculations like average temperature or trends analysis.
+
+Arrays are also used in *image-processing*, where each pixel's color data can be represented in a 2D array. It enables efficient manipulation and transformation of the image.
+
+### Stack
+Stacks follow the LIFO principle, and they are perfect for supporting undo/redo operations in *text editors* or maintaining *browsing history in web browsers*.
+
+In the *text editors*, a stack can be used to store each change made to the text, making it simple to revert to a previous state when the user triggers an undo operation.
+
+### Queue
+Queues operate on the FIFO principle, and they are good for managing *printer jobs*, sending actions in *games*, or handling messages in *chat applications*. Specifically, in *chat applications*, a queue can be used to store incoming messages in the order they are received. It ensures that they are displayed to the recipient in the correct sequence.
+
+### Heap
+Heaps are used for *task scheduling* and *memory management*. They are helpful in implementing priority queues where we need to access the highest or lowest priority item efficiently.
+
+### Tree
+Trees organize data hierarchically. They are useful for representing data with natural hierarchies or relationships. Trees are used in *database indexing*, *file systems*, or *AI decision tree*.
+
+For *database indexing*, tree helps speed up search, insert, or delete operations. For example, B-trees and B+ trees are commonly used in relational databases to efficiently manage and index large amount of data.
+
+### Hash Table
+Hash table or hashmap allows for efficent data lookup, insertion, and deletion. They use a hash function to map keys to their corresponding storage locations. It enables constant-time access to the stored values. Hash tables are widely used in various applications, such as *search engines*, *caching systems*, and *programming language interpreters* or *compilers*.
+
+In *search engine*, hash table allows to store and quickly retrieve indexed data based on keywords. This provides fast and relevant search results.
+
+*Caching systems* may use hash tables to store and manage cached data. It allows for eapid access to frequently requested resources and improves overall system performance.
+
+### Suffix Tree
+Suffix trees or tries are specialized for searching strings in documents. This makes them perfect for *text editors* and *search algorithms*. In a *search engine*, a suffix tree can be used to efficiently locate all occurrences of a search term within a larger corpus of text.
+
+### Graph
+Graphs are all about tracking relationships or finding paths. This makes them invaluable in *social networks*, *recommendation engines*, and *pathfinding algorithms*.
+
+In a *social network*, a graph can be used to represent a connections between users. It enables features like friend suggestion or analyzing network trends.
+
+### R-tree
+R-trees are good at finding nearest neighbors. They are crucial for *mapping apps* and *geolocation services*. In a *mapping applications*, R-trees can be used to store spatial data, such as points of interest. This enables efficient queries to find the nearest locations based on the user's current position.
+
+### Cache Friendliness Relations to Data Structures
+CPU cache is a small, fast memory between the main memory (RAM) and the CPU. It stores recently accessed data and instructions, so the CPU can access them quickly without fetching them from the slower main memory.
+
+Different data structures have different levels of cache friendliness based on how their elements are stored in memory. Contiguous memory storage (arrays) allows for better cache locality and fewer cache misses, resulting in improved performance. When an array element is accessed, the cache can be prefetch and store nearby elements, anticipating that they might be accessed soon. While data structures with non-contiguous memory storage (linked-list) can experience more cache misses and reduce performance. In a linked list, elements are stored in nodes scattered throughout the memory and each node contains a pointer to the next node in the sequence. This makes it difficult for the CPU to predict and load the next node before it's needed.
+
+Other data structures have varying degrees of cache friendliness based on their implementation and use case. This disparity in access times can lead to performance issues in modern computing, particularly in situations where cache misses occur frequently.
+
 ## Citation
 Cited as:
 
@@ -187,6 +246,15 @@ Or
 ‌
 
 [2] ByteByteGo, “10+ Key Memory & Storage Systems: Crash Course System Design #5,” YouTube. Mar. 28, 2023. Accessed: Oct. 25, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=lX4CrbXMsNQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf
+‌
+
+[3] ByteByteGo, “Latency Numbers Programmer Should Know: Crash Course System Design #1,” YouTube. Oct. 04, 2022. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=FqR5vESuKe0&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=3
+‌
+
+[4] ByteByteGo, “What Is REST API? Examples And How To Use It: Crash Course System Design #3,” YouTube. Aug. 24, 2022. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=-mN3VyJuCjM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=4
+‌
+
+[5] ByteByteGo, “10 Key Data Structures We Use Every Day,” YouTube. May 01, 2023. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=ouipSd_5ivQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=5
 ‌
 
 <center>
