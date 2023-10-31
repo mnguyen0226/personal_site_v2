@@ -159,7 +159,7 @@ There are many ways to versioning an API. The most common way is to prefix the v
 /v2/products
 ```
 
-RESTful API is sensible if used correctly as it is simple and good enough, and that's why it is so widely used. Other options are `GraphQL` and `gRPC`.
+RESTful API is sensible if used correctly as it is simple and good enough, and that's why it is so widely used. Other options are **GraphQL** and **gRPC**.
  
 ## [10 Key Data Structures in System Design](https://www.youtube.com/watch?v=ouipSd_5ivQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=5)
 
@@ -265,6 +265,36 @@ At the OS level, there are *page cache* and other *file system caches*. *Page ca
 - *Transaction-log* records all transactions and updates to the database.
 - *Replication-log* tracks the replication state in the database cluster.
 
+## [Redis's Versitality](https://www.youtube.com/watch?v=a4yX7RUgTxI&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=10)
+Redis is an in-memory data structure store. It is most commonly used as a cache. It support many data structure such as strings, hashes, lists, sets, and sorted sets. Redis is known for its speed.
+
+### Cache
+The number one use case for Redis is caching objects to speed up web applications. Here, Redis stores frequently requested data in memory. They allows the web servers to return frequently accessed data quickly. This reduces the load on the database and improves the response time for the application.
+
+At scale, the cache is distributed among a cluster of Redis servers. *Sharding* is a common technique to distribute the cache load evenly across the cluster.
+
+### Session
+Redis can be used as a session storage to share session data among stateless servers. When a user logs into a web application, a session data is stored in Redis along with a unique session ID that is returned to the client as cookie. When the user makes a request to the application, the session ID is included in the request and the stateless web server retrieves the session data from Redis using the ID.
+
+Redis is an in-memory database. The session data stored in Redis will be lost if the Redis server restarts. Even through Redis provides persistence options like snapshots or AOF (Append-Only File) that allow session data to be saved to disk and reloaded into memory in the event of a restart, these options often take too long to load on restart to be practical.
+
+In production, replication is usually used instead such as back-up instance. If there is a crash, the back-up instance will be promoted to take over the traffic.
+
+### Distributed Lock
+Distributed locks are used when multiple nodes in an application need to coordinate access to some shared resource. Redis is used as a distributed lock with is atomic commands like `SETNX` (set if not exist). The command allows a caller to set a key only if it does not already exist.
+
+For instance, `client_1` tries to acquire the lock by setting a key with a unique value and a timeout using the `SETNX` command, `SETNX lock "1234abcd" EX 3`. If the key was not already set, the `SETNX` command returns `1`, indicating that the lock has been acquired by `client_1`. `client_1` finishes its work and releases the lock by deleting the key. If the key was already set, the `SETNX` command returns `0`, indicating that the lock is already held by another client. In this case, `client_1` waits and retries the `SETNX` until the lock is released by other client.
+
+### Rate Limiter
+Redis can be used as a rate limiter by using its increment command on some counters and setting expiration times on those counters. 
+
+Basic rate-limiting: For each incoming request, the request IP or user ID is used as a key. The number of requests for the key is incremented using the `INCR` command in Redis. The current count is compared to the allowed rate limit. If the count is within the rate limit, the request is processed. If the count is over the rate limit, the request is rejected. The keys are set to expire after a specific time-window (minutes) to reset the counts for the next time window.
+
+There is also a [Leaky Bucket Algorithm](https://en.wikipedia.org/wiki/Leaky_bucket) implemented using Redis.
+
+### Rank/Leaderboard
+For most games that are not super high scale, Redis is a way to implement various types of gaming leaderboards. *Sorted Sets* (or sorted container or sorted hashmap) are the fundamental data structure that enables this. Here, we can retrieve the data in **O(logN)**.
+
 ## Citation
 Cited as:
 
@@ -303,6 +333,9 @@ Or
 ‌
 
 [6] ByteByteGo, “Cache Systems Every Developer Should Know,” YouTube. Apr. 04, 2023. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=dGAgxozNWFE&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=6
+‌
+
+[7] ByteByteGo, “Top 5 Redis Use Cases,” YouTube. Feb. 16, 2023. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=a4yX7RUgTxI&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=10
 ‌
 
 <center>
