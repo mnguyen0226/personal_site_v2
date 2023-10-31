@@ -1,8 +1,8 @@
 ---
 author: "Minh T. Nguyen"
-title: "System Design Fundamentals"
+title: "System Design Fundamentals Mega-Blog"
 date: "2023-01-20"
-description: "Notes on fundamentals system design concepts, collected from Sahn Lam's lecture series"
+description: "Notes on fundamentals system design concepts, collected from Sahn Lam's lecture series."
 tags: ["long-read"]
 categories: ["software engineer", "systems design"]
 series: ["Systems Design"]
@@ -92,19 +92,88 @@ Such design above make DNS decentralized and robust.
 - **100-1000 ms**: Bcrypt a password, TLS handshake, reading sequentially 1GB of SSD.
 - **1 s**: Tranfer 1GB over the network within the same cloud region.
  
+## [REST API](https://www.youtube.com/watch?v=-mN3VyJuCjM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=4)
+**Representational State Transfer Application Programming Interface (REST API)** is the most popular communication standard between computers over Internet. **API** is a way for two computers to talk to each other. The common API used by mobile and web applications to talk to the servers is called **REST**. For instance, Twilio, Stripe, Google Maps use REST API.
+
+**REST** is not a specification, it is a loose set of rules for building web API since the early 2000s. Those rules are:
+- Uniform Interface.
+- Client-Server.
+- Stateless.
+- Cacheable.
+- Layered System.
+- Code on Demand (Optional).
+
+### Basics of REST API
+The REST API organizes resources into a set of unique Uniform Resource Identifiers (URIs). The URIs differentiate types of resources on a server.
+```
+https://example.com/api/v3/products
+https://example.com/api/v3/users
+```
+
+A client connects to resources by making a request to the endpoint for the resource over HTTP. The request has a specific format such as `POST/products HTTP/1.1`.
+
+Here are the operations (CRUD)
+- `POST`: `CREATE` a new resource.
+- `GET`: `READ` the data about an existing resource.
+- `PUT`: `UPDATE` an existing resource.
+- `DELETE`: `DELETE` an existing resource.
+
+In the body of these request, there could be an optional HTTP request body that contains a custom payload of data, usually encoded in JSON. 
+```
+POST/produccts HTTP/1.1
+Accept: application/json
+
+JSON: {
+  "customer": "Minh Nguyen",
+  "quantity": 1,
+  "price": 19.00
+}
+```
+
+The server receives a request, processes it and form the result into response.
+```
+HTTP/1.1 200 OK
+```
+
+Some HTTP status codes:
+- `200`: Request is successful.
+- `400`: Something is wrong with our request, such as wrong syntax.
+- `500`: Something is wrong at the server level, such as the server is not available.
+
+### Stateless
+A REST implementation should be stateless. This means that the two parties don't need to store any information about each other, and every request and response (cycle) is independent from all others. This attribute leads to the web application that is easy to scale and well behaved.
+
+### Pagination
+If the return endpoint returns a huge amount of data, we should use pagination. A common scheme uses `limit` and `offset` as parameters. If they are not specified, the server should assume sensible default values.
+
+```
+/products?limit=25&offset=50
+```
+
+### Versioning
+Versioning allows an implementation to provide backward compatibility, so that if we introduce breaking changes from one version to another, consumers can get enough time to move to the next version.
+
+There are many ways to versioning an API. The most common way is to prefix the version before the resource on the URI.
+```
+/v1/products
+/v2/products
+```
+
+RESTful API is sensible if used correctly as it is simple and good enough, and that's why it is so widely used. Other options are `GraphQL` and `gRPC`.
+ 
 ## Citation
 Cited as:
 
 <blockquote>
-    <summary>System Design Fundamentals</summary>
+    <summary>System Design Fundamentals Mega-Blog</summary>
     <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary>
 </blockquote>
 
 Or 
 
 ```sh
-@article{nguyen2023sdfund,
-  title   = "System Design Fundamentals",
+@article{nguyen2023sdmega,
+  title   = "System Design Fundamentals Mega-Blog",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",
