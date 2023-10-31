@@ -163,10 +163,10 @@ RESTful API is sensible if used correctly as it is simple and good enough, and t
  
 ## [10 Key Data Structures in System Design](https://www.youtube.com/watch?v=ouipSd_5ivQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=5)
 
-The choice of correct data structures based on the specification and constraints of the projects is important.
+The choice of correct data structures based on the specification and constraints of the projects is important. To refresh the fundamentals of these data structures, please visit [https://neetcode.io/](https://neetcode.io/).
 
-### List
-List is a versatile and essential data structure in software development. It is great for storing and manipulating ordered data. They are useful in various applications such as *task-management*, *social media feeds*, and *shopping carts*.
+### Linked List
+Linked list (or list) is a versatile and essential data structure in software development. It is great for storing and manipulating ordered data. They are useful in various applications such as *task-management*, *social media feeds*, and *shopping carts*.
 
 For *task-management application*, a list can be used to store and organize tasks for each user. Tasks can be added, removed, or reordered easily, and users can mark them as complete or incomplete.
 
@@ -196,14 +196,14 @@ Trees organize data hierarchically. They are useful for representing data with n
 For *database indexing*, tree helps speed up search, insert, or delete operations. For example, B-trees and B+ trees are commonly used in relational databases to efficiently manage and index large amount of data.
 
 ### Hash Table
-Hash table or hashmap allows for efficent data lookup, insertion, and deletion. They use a hash function to map keys to their corresponding storage locations. It enables constant-time access to the stored values. Hash tables are widely used in various applications, such as *search engines*, *caching systems*, and *programming language interpreters* or *compilers*.
+Hash table (or hashmap) allows for efficent data lookup, insertion, and deletion. They use a hash function to map keys to their corresponding storage locations. It enables constant-time access to the stored values. Hash tables are widely used in various applications, such as *search engines*, *caching systems*, and *programming language interpreters* or *compilers*.
 
 In *search engine*, hash table allows to store and quickly retrieve indexed data based on keywords. This provides fast and relevant search results.
 
 *Caching systems* may use hash tables to store and manage cached data. It allows for eapid access to frequently requested resources and improves overall system performance.
 
 ### Suffix Tree
-Suffix trees or tries are specialized for searching strings in documents. This makes them perfect for *text editors* and *search algorithms*. In a *search engine*, a suffix tree can be used to efficiently locate all occurrences of a search term within a larger corpus of text.
+Suffix trees (or tries) are specialized for searching strings in documents. This makes them perfect for *text editors* and *search algorithms*. In a *search engine*, a suffix tree can be used to efficiently locate all occurrences of a search term within a larger corpus of text.
 
 ### Graph
 Graphs are all about tracking relationships or finding paths. This makes them invaluable in *social networks*, *recommendation engines*, and *pathfinding algorithms*.
@@ -219,6 +219,51 @@ CPU cache is a small, fast memory between the main memory (RAM) and the CPU. It 
 Different data structures have different levels of cache friendliness based on how their elements are stored in memory. Contiguous memory storage (arrays) allows for better cache locality and fewer cache misses, resulting in improved performance. When an array element is accessed, the cache can be prefetch and store nearby elements, anticipating that they might be accessed soon. While data structures with non-contiguous memory storage (linked-list) can experience more cache misses and reduce performance. In a linked list, elements are stored in nodes scattered throughout the memory and each node contains a pointer to the next node in the sequence. This makes it difficult for the CPU to predict and load the next node before it's needed.
 
 Other data structures have varying degrees of cache friendliness based on their implementation and use case. This disparity in access times can lead to performance issues in modern computing, particularly in situations where cache misses occur frequently.
+
+## [Cache Systems](https://www.youtube.com/watch?v=dGAgxozNWFE&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=6)
+Caching is a common technique in modern computing to system performance and reduce response time. From the front-end to back-end, caching plays a crucial role in improving the efficiency of various applications and systems.
+
+A typical system architecture involves several layers of caching. At each layer, there are multiple strategies and mechanisms for caching data, depending on the requirements and constraints of the specific application.
+
+### Computer Caching Mechanism
+The most common hardware cache are *L1*, *L2*, and *L3* caches. 
+- *L1 cache* (KBs) is the smallest and fastest cache, typically integrated into the CPU itself. It stores frequently accessed data and instructions, allowing the CPU to quickly access them without having to fetch them from slower memory.
+- *L2 cache* (MBs) is larger but slower than L1. It is typically located on the CPU die or on a separate chip.
+- *L3 cache* is larger but slower than L2. It is typically shared between multiple CPU cores.
+
+Another common hardware cache is the *translation lookaside buffer (TLB)*. It stores recently used virtual-to-physical address translations. It is used by the CPU to quickly translate virtual memory addresses to physical memory addresses, reducing the time needed to access data from memory
+
+At the OS level, there are *page cache* and other *file system caches*. *Page cache* is managed by the OS and resides in the main memory. It is used to store recently used disk blocks in memory. When a program requests data from the disk, the OS can quickly retrieve the data from memory instead of reading it from disk. There are other caches managed by the OS, such as *inode cache*. These caches are used to speed up file system operations by reducing the number of disk accesses required to access files and directories.
+
+### Cache in System Architecture
+
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/6_cache.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 3: Cache in System Architecture (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+**Front-end**: web browsers can cache HTTP response to enable faster retrieval of data. When we request data over HTTP for the first time and it returned with an expiration policy in the HTTP header; we request thee same data again, and the broweser returns the data from its cache if available.
+
+**CDNs**: are used to improve the delivery of static contents (images, videos, web assets). When a user requests a content from a CDN, the CDN network looks for the requested content in its cache. If the content is not already in the cache, the CDN fetches it from the origin server and caches it on its edge servers. When another user requests the same content, the CDN can deliever the content directly from its cache, eliminating the need to fetch it from the origin server again.
+
+**Load-balancers**: implement cache resources to reduce the load on back-end servers. When a user requests content from a server behind a load balancer, the load balancer can cache the response and server it directly to future users who request the same content. This can improve response times and reduce the load on back-end servers.
+
+**Messeging infrastructure**, **message brokers** such as Kafka can cache a massive amount of messages on disk. This allows consumers to retrieve the message at their own pace. The messages can be cached for a long period of time based onthe retention policy.
+
+**Distributed caches** such as Redis can store key-value pairs in memory, providing high read/write performance compared to traditional databases.
+
+**Full-text search engines** like Elastic Search can index data for document search and log search, providing quick and efficient access to specific data.
+
+**Relational database**: has multiple levels of caching:
+- *Data* is typicaly written to WAL (write-ahead-log), before indexed in a B-tree.
+- *Buggerpool* is a memory area used to cache query results.
+- *Materialized-view* can precompute query results for faster performance.
+- *Transaction-log* records all transactions and updates to the database.
+- *Replication-log* tracks the replication state in the database cluster.
 
 ## Citation
 Cited as:
@@ -255,6 +300,9 @@ Or
 ‌
 
 [5] ByteByteGo, “10 Key Data Structures We Use Every Day,” YouTube. May 01, 2023. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=ouipSd_5ivQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=5
+‌
+
+[6] ByteByteGo, “Cache Systems Every Developer Should Know,” YouTube. Apr. 04, 2023. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=dGAgxozNWFE&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=6
 ‌
 
 <center>
