@@ -295,7 +295,7 @@ There is also a [Leaky Bucket Algorithm](https://en.wikipedia.org/wiki/Leaky_buc
 ### Rank/Leaderboard
 For most games that are not super high scale, Redis is a way to implement various types of gaming leaderboards. *Sorted Sets* (or sorted container or sorted hashmap) are the fundamental data structure that enables this. Here, we can retrieve the data in **O(logN)**.
 
-## Continuous Integration / Continuous Delivery (CI/CD)
+## [Continuous Integration / Continuous Delivery (CI/CD)](https://www.youtube.com/watch?v=42UP1fxi2SY&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=11&pp=iAQB)
 
 CI/CD is a software development process including:
 - **Continuous Integration**
@@ -335,12 +335,104 @@ A very few teams has the resource to implement real continuous, hands-off deploy
 
 Instead, these systems are usually on a fixed deploy cadence. The deployment process is manual, risky, and time consuming. They require the care of dedicated platform team. It is rare to see these systems deployed fully, continuously, and automatically.
 
+## [Kubernetes (K8s)](https://www.youtube.com/watch?v=TlHvYWVUZyc&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=12)
+Kubernetes is an open-source container orchestration platform. It automates the deployment, scaling, and management of containerized applications.
+
+Kubernestes is a set of machines called nodes, that are used to run containerized applications. There are two core pieces in a Kubernestes cluster: 
+- **Control plane**: responsible for managing the state of the cluster. In production environment, the control plane runs on multiple nodes that span across several data center zones.
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/12_control_plane.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 5: Control Plane (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+- **Set of worker nodes**: run the containerized application workloads. The containerized applications run in a **Pod**. Pods are the smallest deployable units in Kubernetes. Pods hosts one or more containers and provides shared sotrage and networking for those containers. Pods are created and managed by the Kubernetes control plane. They are the basic building blocks of Kubernetes applications
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/12_worker_nodes.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 6: Worker Nodes and Pods (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Control Plane
+Control plane consists of a number of core components such as API server, controller manager, scheduler, etcd. The API server is the primary interface between the control plane and the rest of the cluster. It exposes a RESTful API that allows clients to interact with the control plane and submit requests to manage the cluster
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/12_control_plane_detail.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 7: Control Plane Connections (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Etcd
+Etcd is a distributed key-value store. It stores the cluster's persistent state.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/12_etcd.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 8: Etcd (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Scheduler
+The scheduler is responsible for scheduling pods onto the worker nodes in the cluster. It uses the information about the resource required by the pods and available resources on the worker nodes to make the placement decisions
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/12_scheduler.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 9: Scheduler (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Controller Manager
+Controller manager is responsible for running controllers that manage the state of the cluster. For instance
+- The replication controller ensures that the desired number of replicas of a pod are running.
+```sh
+apiVersion: v1
+kind: ReplicationController
+metadata: 
+  name: nginx
+spec:
+  replicas: 4
+```
+- The deployment controller, which manages the rolling update and rollback of deployments.
+
+### Worker Nodes
+The core compoenents of Kubernetes that run on the worker nodes include Kubelet, Container Runtime, and Kube-proxy.
+- **Kubelet**: is a daemon that runs on each worker node. It is responsible for communicating with the control plane. It receives instructions from the control plane about which pods to run on the node and ensures that the desired state of the pods is maintained.
+- **Container Runtime** runs the containers on the worker nodes. It is responsible for pilling the container images from a registry, starting and stopping the containers, and managing the containers' resources.
+- **Kube-proxy**: is a network proxy that runs on each worker node. It is responsible for routing traffic to the correct pods. It also provides load balancing for the pods and ensures that the traffic is distributed evenly across the pods
+
+### Use Cases
+It's about trade-off. 
+
+**Pros**:
+- Kubernetes is scalable and highly available. It provides features like self-healing, automatic rollbacks, and horizontal scaling. It makes it easy to scale out applications up and down as needed, allowing us to respond to changes in demannd quickly.
+- Kubernetes is portable. It helps us deploy and manage applications in a consistent and reliable way regardless of the underlying infrastructure. It runs on-premise, in a public cloud, or in a hybrid environment. it provides a uniform way to package, deploy, and manage applications.
+
+**Cons**:
+- Kubernetes is complex to set up and operate! The upfront cost is high, especially for organizations new to container orchestration. It requires a high level of expertise and resources to set up and manage a production Kubernetes environment.
+- Kubernetes is costly. It requires a certain minimum level of resources to run in order to support all the features. Thus, it is an overkill for smaller organizations.
+
+**Services**: Amazon EKS, Google Cloud GKE, or Azure AKS.
+
 ## Citation
 Cited as:
 
 <blockquote>
     <summary>System Design Fundamentals Mega-Blog</summary>
-    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary>
+    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary> It is used by the API server and other components of the control and retrieve information about the cluster
 </blockquote>
 
 Or 
@@ -379,6 +471,9 @@ Or
 ‌
 
 [8] ByteByteGo, “CI/CD In 5 Minutes | Is It Worth The Hassle: Crash Course System Design #2,” YouTube. Jan. 18, 2023. Accessed: Nov. 01, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=42UP1fxi2SY&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=11
+‌
+
+[9] ByteByteGo, “Kubernetes Explained in 6 Minutes | k8s Architecture,” YouTube. Jan. 11, 2023. Accessed: Nov. 01, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=TlHvYWVUZyc&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=12
 ‌
 
 <center>
