@@ -295,6 +295,46 @@ There is also a [Leaky Bucket Algorithm](https://en.wikipedia.org/wiki/Leaky_buc
 ### Rank/Leaderboard
 For most games that are not super high scale, Redis is a way to implement various types of gaming leaderboards. *Sorted Sets* (or sorted container or sorted hashmap) are the fundamental data structure that enables this. Here, we can retrieve the data in **O(logN)**.
 
+## Continuous Integration / Continuous Delivery (CI/CD)
+
+CI/CD is a software development process including:
+- **Continuous Integration**
+  - Code commit (multiple developers).
+  - Build.
+  - Unit and integration tests.
+  - Create application or service image.
+- **Continuous Delivery**
+  - Functional testing.
+  - User acceptance testing.
+  - Configuration automation.
+  - Load testing.
+  - Deployment.
+
+It eliminates much of the manual human intervention traditionally require to get new code to production. CI/CD promises software teams to deploy better quality software and faster.
+
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/11_cicd.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 4: CI/CD Toolkits (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Continuous Integration: Build, Test, Release
+CI is the practice of using automation to enable teams to merge code changes into the shared repository early and often. Each commit triggers an automated workflow on a CI server that runs a series of tasks to make sure the commit is safe to merge into the main branch.
+
+A good CI process relies on a set of good tests. It is non-trivial to maintain a set of tests with sufficient coverage that is not flakey.
+
+High test coverage usually takes longer to run. This impacts developer's productivity. 
+
+### Continuous Deployment: Deploy, Operate, Monitor
+Real CD is hard as the practice is not as common as CI. Many teams only practice CD on the most basic types of systems. These systems are usually stateless such as API or web server tiers.
+
+A very few teams has the resource to implement real continuous, hands-off deployment on complex stateful systems like database, backend clusters, or other types of stateful systems like websocket cluster.
+
+Instead, these systems are usually on a fixed deploy cadence. The deployment process is manual, risky, and time consuming. They require the care of dedicated platform team. It is rare to see these systems deployed fully, continuously, and automatically.
+
 ## Citation
 Cited as:
 
@@ -338,11 +378,14 @@ Or
 [7] ByteByteGo, “Top 5 Redis Use Cases,” YouTube. Feb. 16, 2023. Accessed: Oct. 31, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=a4yX7RUgTxI&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=10
 ‌
 
+[8] ByteByteGo, “CI/CD In 5 Minutes | Is It Worth The Hassle: Crash Course System Design #2,” YouTube. Jan. 18, 2023. Accessed: Nov. 01, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=42UP1fxi2SY&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=11
+‌
+
 <center>
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/golden_bridge.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
+    Fig. 5: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/gZXx8lKAb7Y" class="img_footer">Maarten van den Heuvel @ Unsplash</a>).
 </figcaption>
 
