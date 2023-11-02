@@ -32,6 +32,9 @@
     <loc>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</loc>
     <lastmod>2023-09-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mnguyen0226.github.io/posts/web_dev_odin/post/</loc>
+    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</loc>
     <lastmod>2023-09-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -65,6 +68,15 @@
     <loc>https://mnguyen0226.github.io/tags/tdd/</loc>
     <lastmod>2023-09-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
+    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/systems-design/</loc>
+    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/web-development/</loc>
+    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/tags/oop/</loc>
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -95,19 +107,10 @@
     <loc>https://mnguyen0226.github.io/categories/systems-design/</loc>
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/web-development/</loc>
-    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/tags/data-science/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/tags/paper-reading/</loc>
-    <lastmod>2023-06-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/systems-design/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/deep-learning/</loc>
