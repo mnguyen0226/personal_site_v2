@@ -360,7 +360,7 @@ Kubernestes is a set of machines called nodes, that are used to run containerize
 </br>
 
 ### Control Plane
-Control plane consists of a number of core components such as API server, controller manager, scheduler, etcd. The API server is the primary interface between the control plane and the rest of the cluster. It exposes a RESTful API that allows clients to interact with the control plane and submit requests to manage the cluster
+Control plane consists of a number of core components such as API server, controller manager, scheduler, etcd. The API server is the primary interface between the control plane and the rest of the cluster. It is used by the API server and other components of the control and retrieve information about the cluster. It exposes a RESTful API that allows clients to interact with the control plane and submit requests to manage the cluster.
 
 <center>
     <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/12_control_plane_detail.png" />
@@ -505,7 +505,7 @@ The physical layer is responsible for transmitting raw bits of data across a phy
 The data link layer takes the raw bits from the physical layer and organizes them into frames. It ensures that the frames are delivered to the correct destination. The Ethernet primarily lives in this layer.
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_data_link.png" />
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_data_link.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 15: Data Link Layer (Image source: 
@@ -517,7 +517,7 @@ The data link layer takes the raw bits from the physical layer and organizes the
 The network layer is responsible for routing data frames across different networks. The IP part of TCP/IP is a well-known example of this layer.
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_network_layer.png" />
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_network_layer.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 16: Network Layer (Image source: 
@@ -540,7 +540,7 @@ The transport layer handles end-to-end communication between 2 nodes. This is th
 TCP provides reliable, end-to-end communication between devices. It does this by dividing the data into small, manageable segments and sending each segment individually. Each segment has asequence number attached to it. The receiving end uses the sequence numbers to reassemble the data in the correct order.
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_tcp.png" />
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_tcp.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 18: TCP in Transport Layer (Image source: 
@@ -575,12 +575,63 @@ Let's see how the data is move through the layer:
 - 5. The encapsulated frames are sent over the network in raw bits in the physical layer.
 - 6-10. When the webserver receives the raw bits from the network, it reverses the process. The headers are removed layer-by-layer, and eventually, the webserver processes the HTTP request.
 
+## [CDN](https://www.youtube.com/watch?v=RI9np1LWzqw&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=15)
+Content delivery network (CDN) should be used whenever HTTP traffic is served. Fundamentally, a CDN brings content closer to the user. This improves the performance of a web service as perceived by the user. It is noted that performance is critical to user engagement and retentionn as a *0.1-second improvement* of mobile site speed increases conversion rates by 8.4% for retails sites and 10.1% for travel sites.
+
+To bring the server closer to the users, CDN deploys servers at hundreds of locations all over the world. These server locations are called Point of Presence (PoP). A server inside the PoP is called edge server. Having many PoPs all over the world ensures that every user can reach a fast-edge server close to them.
+
+### Routings
+Different CDNs, e.g. Amazon Cloudfront or Cloudflare, use different technologies to direct a user's request to the closest PoP. Two common ones are DNS-based routing and Anycast. 
+- With DNS-based routing, each PoP has its own IP address. When the user looks up the IP address for the CDN, DNS returns the IP address of the PoP closest to them. 
+- With Anycast, all PoPs share the same IP address. When the request comes into the Anycast netowrk for that IP address, the network sends the request to the PoP that is closest to the requester.
+
+### Edge Server & Static Contents
+Each edge server acts as a reverse proxy with a huge content cache. Static contents are cached on the edge server in this content cache. If a piece of content is in the cache, it could quickly returned to the user. Since the edge server only ask for a copy of the static content from the origin server if it is not in the cache. This greatly reduces the load and bandwidth requirements of the origin server cluster.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/15_cdn.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 20: Edge Server and Static Contents (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+A modern CDN can also transform static content into more optimized formats.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/15_static_contents_transformation.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 21: Static Contents Optimization (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Performance
+The edge server also serve an important role in the modern HTTP stack: All TLS connections terminate ath the edge server. TLS handshakes are expensive. The commonly used TLS versions like TLS 1.2 take several network round trips to establish. However, terminating the TLS connection at the edge will significantly reduce the latency for the user to establish an encrypted TCP connection. This is why modern sites send dynamic uncacheable HTTP content over the CDN (single-page website).
+
+### Security
+All modern CDNs have huge network capacity at the edge. This is the key to provide effective DDoS protection against large-scale attacks by having the network with a capacity much larger than the attackers.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/15_static_contents_transformation.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 22: CDNs vs. DDoS (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Availability
+The modern CDN improves availability as by nature, a CDN is higly distributed. By having copies of contents available in many PoPs, a CDN can withstand many more hardware failures than the origin servers.
+
 ## Citation
 Cited as:
 
 <blockquote>
     <summary>System Design Fundamentals Mega-Blog</summary>
-    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary> It is used by the API server and other components of the control and retrieve information about the cluster
+    <summary>https://mnguyen0226.github.io/posts/system_design_concepts/post/</summary>
 </blockquote>
 
 Or 
@@ -631,11 +682,14 @@ Or
 [11] ByteByteGo, “What is OSI Model | Real World Examples,” YouTube. Dec. 23, 2022. Accessed: Nov. 02, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14
 ‌
 
+[12] ByteByteGo, “What Is A CDN? How Does It Work?,” YouTube. Nov. 24, 2022. Accessed: Nov. 02, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=RI9np1LWzqw&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=15
+‌
+
 <center>
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/golden_bridge.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 5: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
+    Fig. 23: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/gZXx8lKAb7Y" class="img_footer">Maarten van den Heuvel @ Unsplash</a>).
 </figcaption>
 
