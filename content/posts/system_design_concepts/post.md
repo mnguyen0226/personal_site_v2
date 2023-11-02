@@ -427,6 +427,57 @@ It's about trade-off.
 
 **Services**: Amazon EKS, Google Cloud GKE, or Azure AKS.
 
+## [CAP Theorem](https://www.youtube.com/watch?v=BHqjEjzAicA&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=15)
+Consistency-Availability-Partition Tolerance (CAP) Theorem explains the trade-off between consistency, availability, and partition tolerance in distributed systems. The CAP theorem helps us think in a high-level trade-off to consider when there is network partition.
+
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/13_cap.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 10: CAP Theorem Illustration (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+**Consistency** refers to the property of a system where all nodes have a consistent view of the data. It means all clients see the same data at the same time no matter which node they connect to.
+
+**Availability** refers to the ability of a system to respond to requests from users at all time. 
+
+**Partition Tolerance** refers to the ability of a system to continue operating even if there is a network partition.
+
+### Network Partition
+A network partition happens when nodes in a distributed system are unable to communicate with each other due to network failures. When this happen, a system must choose between consistency and availability. 
+- If the system prioritizes consistency, it may becomes unavailable until the partition is resolved.
+- If the system prioritizes availability, it may allow updates to the data. This could result in data inconsistencies until the partition is resolved.
+
+### Banking System Example
+For instance, let's say we have a tiny bank with 2 ATMs connected over a network. The ATMs support 3 operations: deposit, withdraw, and check balance. No matter what happens, the lance should never go below zero. There is no central database to keep the account balance, it is stored on both ATMs. When a customer uses an ATM, the balance is updated on both ATMs over the network. This ensures that the ATMs have a consistent view of the account balance.
+
+If there is a network partiotion and the ATM are unable to communicate with each other, the system must choose between consistency and availability.
+- If the bank prioritizes consistency, the ATM may refuse to process deposit or withdrawals until the partition is resolved. This ensures that the balance remains consistent, but the system is unavailable to customers.
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/13_bank_consistency.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 11: Bank Consistency (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+- If the bank prioritizes availability, the bank may allow deposit or withdrawals to occur but the balance may be inconsistent until the partition is resolved. When there is a network partition, the customer could withdraw the entire balance from both ATMs. When the network is back online, the inconsistency is resolve and the balance is negative, which is not good
+
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/13_bank_availability.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 12: Bank Availability (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+
+## [OSI Model](https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14)
+
 ## Citation
 Cited as:
 
@@ -474,6 +525,12 @@ Or
 ‌
 
 [9] ByteByteGo, “Kubernetes Explained in 6 Minutes | k8s Architecture,” YouTube. Jan. 11, 2023. Accessed: Nov. 01, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=TlHvYWVUZyc&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=12
+
+
+[10] ByteByteGo, “CAP Theorem Simplified,” YouTube. Jan. 03, 2023. Accessed: Nov. 01, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=BHqjEjzAicA&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=13
+‌
+‌
+[11] ByteByteGo, “What is OSI Model | Real World Examples,” YouTube. Dec. 23, 2022. Accessed: Nov. 02, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14
 ‌
 
 <center>
