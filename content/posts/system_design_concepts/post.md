@@ -15,7 +15,7 @@ weight: 5
 
 <p style="color: #286EE0"><strong>[v.1.0] (01/20/2023):</strong> Post started!</p>
 
-## [Computer Memory & Storage](https://www.youtube.com/watch?v=lX4CrbXMsNQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=1)
+## Computer Memory & Storage
 - **Storage**
   - **HDD** (hard disk drive): it works by spinning magnetics disk.
   - **SSD** (solid state drive): it uses NAND-based flash memory, providing fast data access, reduces power consumption, and increases durability. It is more expensive.
@@ -32,7 +32,7 @@ weight: 5
     - **Firmware**: is a type of software stored in ROM that determines how hardware devices communicate with each others
     - **BIOS** (basic input-output systems): first run when you booth up the computer. It is responsible for starting your computer, initializes hardware components, and hands over controls to the OS.
 
-## [Domain Name System (DNS)](https://youtu.be/27r4Bzuj5NQ?si=t1Zb0_2fB1yiGKTs)
+## Domain Name System (DNS)
 It is the backbone of the internet. 
 
 ***But how does it work?***
@@ -69,7 +69,7 @@ Such design above make DNS decentralized and robust.
 - The DNS Resolver then reachout to the Authoritative Nameservers and get the IP-address of "google.com".
 - The DNS Resolver then returns the address of the IP system to the OS, and the OS returns it to the browswer.
 
-## [Common Latency Numbers](https://youtu.be/FqR5vESuKe0?si=o4TviuBEP_tAExaY)
+## Common Latency Numbers
 
 <center>
     <img style="width: 35%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/3_latency.png" />
@@ -92,7 +92,7 @@ Such design above make DNS decentralized and robust.
 - **100-1000 ms**: Bcrypt a password, TLS handshake, reading sequentially 1GB of SSD.
 - **1 s**: Tranfer 1GB over the network within the same cloud region.
  
-## [REST API](https://www.youtube.com/watch?v=-mN3VyJuCjM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=4)
+## REST API
 **Representational State Transfer Application Programming Interface (REST API)** is the most popular communication standard between computers over Internet. **API** is a way for two computers to talk to each other. The common API used by mobile and web applications to talk to the servers is called **REST**. For instance, Twilio, Stripe, Google Maps use REST API.
 
 **REST** is not a specification, it is a loose set of rules for building web API since the early 2000s. Those rules are:
@@ -161,7 +161,7 @@ There are many ways to versioning an API. The most common way is to prefix the v
 
 RESTful API is sensible if used correctly as it is simple and good enough, and that's why it is so widely used. Other options are **GraphQL** and **gRPC**.
  
-## [10 Key Data Structures in System Design](https://www.youtube.com/watch?v=ouipSd_5ivQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=5)
+## 10 Key Data Structures in System Design
 
 The choice of correct data structures based on the specification and constraints of the projects is important. To refresh the fundamentals of these data structures, please visit [https://neetcode.io/](https://neetcode.io/).
 
@@ -220,7 +220,7 @@ Different data structures have different levels of cache friendliness based on h
 
 Other data structures have varying degrees of cache friendliness based on their implementation and use case. This disparity in access times can lead to performance issues in modern computing, particularly in situations where cache misses occur frequently.
 
-## [Cache Systems](https://www.youtube.com/watch?v=dGAgxozNWFE&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=6)
+## Cache Systems
 Caching is a common technique in modern computing to system performance and reduce response time. From the front-end to back-end, caching plays a crucial role in improving the efficiency of various applications and systems.
 
 A typical system architecture involves several layers of caching. At each layer, there are multiple strategies and mechanisms for caching data, depending on the requirements and constraints of the specific application.
@@ -265,7 +265,7 @@ At the OS level, there are *page cache* and other *file system caches*. *Page ca
 - *Transaction-log* records all transactions and updates to the database.
 - *Replication-log* tracks the replication state in the database cluster.
 
-## [Redis's Versitality](https://www.youtube.com/watch?v=a4yX7RUgTxI&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=10)
+## Redis's Versitality
 Redis is an in-memory data structure store. It is most commonly used as a cache. It support many data structure such as strings, hashes, lists, sets, and sorted sets. Redis is known for its speed.
 
 ### Cache
@@ -295,7 +295,7 @@ There is also a [Leaky Bucket Algorithm](https://en.wikipedia.org/wiki/Leaky_buc
 ### Rank/Leaderboard
 For most games that are not super high scale, Redis is a way to implement various types of gaming leaderboards. *Sorted Sets* (or sorted container or sorted hashmap) are the fundamental data structure that enables this. Here, we can retrieve the data in **O(logN)**.
 
-## [Continuous Integration / Continuous Delivery (CI/CD)](https://www.youtube.com/watch?v=42UP1fxi2SY&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=11&pp=iAQB)
+## Continuous Integration / Continuous Delivery (CI/CD)
 
 CI/CD is a software development process including:
 - **Continuous Integration**
@@ -335,7 +335,7 @@ A very few teams has the resource to implement real continuous, hands-off deploy
 
 Instead, these systems are usually on a fixed deploy cadence. The deployment process is manual, risky, and time consuming. They require the care of dedicated platform team. It is rare to see these systems deployed fully, continuously, and automatically.
 
-## [Kubernetes (K8s)](https://www.youtube.com/watch?v=TlHvYWVUZyc&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=12)
+## Kubernetes (K8s)
 Kubernetes is an open-source container orchestration platform. It automates the deployment, scaling, and management of containerized applications.
 
 Kubernestes is a set of machines called nodes, that are used to run containerized applications. There are two core pieces in a Kubernestes cluster: 
@@ -427,7 +427,7 @@ It's about trade-off.
 
 **Services**: Amazon EKS, Google Cloud GKE, or Azure AKS.
 
-## [CAP Theorem](https://www.youtube.com/watch?v=BHqjEjzAicA&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=15)
+## CAP Theorem
 Consistency-Availability-Partition Tolerance (CAP) Theorem explains the trade-off between consistency, availability, and partition tolerance in distributed systems. The CAP theorem helps us think in a high-level trade-off to consider when there is network partition.
 
 <center>
@@ -476,7 +476,7 @@ If there is a network partiotion and the ATM are unable to communicate with each
 </br>
 
 
-## [7 Layers of OSI Model](https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14)
+## 7 Layers of OSI Model
 
 The Open System Interconnect (OSI) model is a theoretical framework that provides one way of thinking about networking. It splits the network communication between two devices on a network into seven abstraction layers.
 
