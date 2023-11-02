@@ -2,7 +2,7 @@
 author: "Minh T. Nguyen"
 title: "Odin's Resources Repository"
 date: "2023-09-15"
-description: "Learning notes on the Odin project."
+description: "Learning notes and resources from the Odin project."
 tags: ["web development", "long-read"]
 categories: ["software engineer"]
 series: ["Systems Design"]
@@ -175,7 +175,7 @@ Or
 [1] Full Stack JavaScript | The Odin Project. Theodinproject.com. Published 2023. Accessed September 15, 2023. https://www.theodinproject.com/paths/full-stack-javascript
 ‌
 <center>
-    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/web_dev_odin/imgs/golden_bridge.png" />
+    <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/web_dev_odin/imgs/kansas.avif" />
 </center>
 <figcaption class="img_footer">
     Fig. 2: Kansas City, Kansas, U.S.A </br>(Image Source: 
