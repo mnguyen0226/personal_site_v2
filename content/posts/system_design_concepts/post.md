@@ -476,7 +476,104 @@ If there is a network partiotion and the ATM are unable to communicate with each
 </br>
 
 
-## [OSI Model](https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14)
+## [7 Layers of OSI Model](https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14)
+
+The Open System Interconnect (OSI) model is a theoretical framework that provides one way of thinking about networking. It splits the network communication between two devices on a network into seven abstraction layers.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_osi_layers.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 13: Seven Layers of OSI Model (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Physical Layer
+The physical layer is responsible for transmitting raw bits of data across a physical connection.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_physical.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 14: Physical Layer (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Data Link Layer
+The data link layer takes the raw bits from the physical layer and organizes them into frames. It ensures that the frames are delivered to the correct destination. The Ethernet primarily lives in this layer.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_data_link.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 15: Data Link Layer (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Network Layer
+The network layer is responsible for routing data frames across different networks. The IP part of TCP/IP is a well-known example of this layer.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_network_layer.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 16: Network Layer (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Transport Layer
+The transport layer handles end-to-end communication between 2 nodes. This is the layer where the TCP and UDP protocols live.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_transport.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 17: Transport Layer (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+TCP provides reliable, end-to-end communication between devices. It does this by dividing the data into small, manageable segments and sending each segment individually. Each segment has asequence number attached to it. The receiving end uses the sequence numbers to reassemble the data in the correct order.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_tcp.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 18: TCP in Transport Layer (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+TCP also provide error checking to make sure that the data was not corrupted during transmission.
+
+UDP is a protocal that is similar to TCP but is simpler and faster. Unlike TCP, UDP does not provide the same level of error-checking and reliability. It simply send packets of data from one device to another. The receiving end is responsible for determining whether the packets were received correctly. If an error is detected, the receiving end simply discards the packet.
+
+
+### Session, Presentation, Application Layers
+The analysis of these layers in OSI model is not useful in practice as the OSI is too fine-grained and does not reflect reality. Let's consider them as application protocols like HTTP.
+
+### Networking Workflow
+
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/14_workflow.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 19: OSI Workflow (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+Let's see how the data is move through the layer:
+- 1. When a user sends an HTTP request to a webserver over the network, the HTTP header is added to the data at the application layer.
+- 2. A TCP header is added to the data. It encapsulated into TCP segments at the transport layer. The header contains the source port, destination port, and sequence number.
+- 3. The segments are then encapsulated with an IP header at the network layer. The IP header contains the source and destination IP addresses.
+- 4. A MAC header is added at the data link layer, with the source and destination MAC addresses. Here, the MAC addresses are the ones of routing devices, not the computer itself in reality.
+- 5. The encapsulated frames are sent over the network in raw bits in the physical layer.
+- 6-10. When the webserver receives the raw bits from the network, it reverses the process. The headers are removed layer-by-layer, and eventually, the webserver processes the HTTP request.
 
 ## Citation
 Cited as:
@@ -530,6 +627,7 @@ Or
 [10] ByteByteGo, “CAP Theorem Simplified,” YouTube. Jan. 03, 2023. Accessed: Nov. 01, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=BHqjEjzAicA&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=13
 ‌
 ‌
+
 [11] ByteByteGo, “What is OSI Model | Real World Examples,” YouTube. Dec. 23, 2022. Accessed: Nov. 02, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=0y6FtKsg6J4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=14
 ‌
 
