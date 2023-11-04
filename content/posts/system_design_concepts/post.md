@@ -647,7 +647,7 @@ gRPC is a popular implementation of RPC. Many organizations have adopted gRPC as
 ### Workflow
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/16_grpc.png" />
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/16_grpc.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 23: gRPC Workflow Example (Image source: 
@@ -665,6 +665,91 @@ Let's walk through a flow from a gRPC client to a gRPC server.
 
 ### Use Case
 gRPC is known to be the inter-service communication mechanism of choice between microservices in the data centers. Its broad support for many programming languages allows services to choose their own language and developer ecosystems best suited for their own use cases.
+
+## GraphQL 
+GraphQL is a query language for API developed by Meta. It provides a schema of the data in the API and gives clients the power to ask for exactly what they need. GraphQL sits between the client and the backend services. It could aggregate multiple resource requests into a single query. It also supports mutations and subscriptions. 
+
+Mutations are GraphQL's way of applying data modifications to resources.
+
+Subscriptions are GraphQL's way for clients to receive notifications on data modifications.
+
+### GraphQL vs. REST: Similarity
+In practice, both GraphQL and REST send HTTP requests and receive HTTP responses.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/17_graphql.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 24: GraphQL vs REST (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+Let's look at a REST operation
+```sh
+# rest
+https://example.com/api/v3/products
+https://example.com/api/v3/user
+```
+
+REST centers around resources, and each resource is identified by an URL. To fetch a book from a bookstore API, it could look something like this
+```sh
+{
+    "title": "Harry Porter",
+    "authors": [
+        {
+            "name": "J.K.Rowling"
+        },
+    ...
+    ]
+}
+```
+
+The end point will be `GET /book/123`.
+
+Let's look at a REST operation
+```sh
+# graphql query
+type Query {
+    book(id: ID!): Book
+}
+```
+
+Here's what data transfer looks like for GraphQL
+```sh
+type Book {
+    id: ID
+    title: String 
+    authors: [Author]
+}
+
+type Author {
+    id: ID
+    name: String
+    books: [Book]
+}
+```
+
+The end point will be `GET /graphql?query={ book(id: "123") {title, authors {name}}}`.
+
+As we can see, both REST and GraphQL make a request via an URL and both can return a JSON response in the same shape. 
+
+### GraphQL vs. REST: Difference
+With GraphQL, we specify the exact resources we want and also which fields we want. While in REST, the API implementer decided that authors are included as related resources (as example above). With GraphQL, the client decides what to include.
+
+### Pros & Cons of GraphQL
+**Pros**:
+- The main benefit of GraphQL is that it doesn't use URLs to specify the resources that are available in the API. Instead, it uses the GraphQL schema. This means that we can send a complex query that fetches additional data according to the 
+relationship defined in the schema.
+- Doing the same in REST is more complicated, as we have to do it client-side with multiple requests. This is a common problem resulting in N+1 queries.
+
+**Cons**:
+- For REST, we don't need special libraries to consume someone else's API. Requests can be sent using common tools like cURL or web browser.
+- In constrast, GraphQL requires heavier tooling support, both on client and server sides such as GraphQL, Apollo, `schema.graphql`, `codegen.yml`, `operation.graphql`. This cost in resources might not be worth it if the application is a simple CRUD APIs.
+- In addition, GraphQL is more difficult to cache. REST uses HTTP GET for fetching resources, and HTTP GET has a well-defined caching behavior that is leveraged by browsers, CDNs, proxies, and web servers.
+- In constrast, GraphQL has a single point of entry and uses HTTP POST by default. This prevents the full use of HTTP caching.
+- As GraphQL allows users to get the data they need, it is also a threat.
+
 
 ## Citation
 Cited as:
@@ -726,6 +811,9 @@ Or
 ‌
 
 [13] ByteByteGo, “What is RPC? gRPC Introduction.,” YouTube. Dec. 01, 2022. Accessed: Nov. 04, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=gnchfOojMk4&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=19&ab_channel=ByteByteGo
+‌
+
+[14] ByteByteGo, “What Is GraphQL? REST vs. GraphQL,” YouTube. Nov. 10, 2022. Accessed: Nov. 04, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=yWzKJPw_VzM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=17&ab_channel=ByteByteGo
 ‌
 
 <center>
