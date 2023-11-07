@@ -1,6 +1,6 @@
 ---
 author: "Minh T. Nguyen"
-title: "System Design Fundamentals Mega-Blog"
+title: "System Design Concepts Mega-Blog"
 date: "2023-01-20"
 description: "Notes on fundamentals system design concepts, collected from Sahn Lam's lecture series."
 tags: ["long-read"]
@@ -777,7 +777,7 @@ An API gateway is a single point of entry to the clients of an application, it s
 8. The API gateway transform the requests into the appropriate protocol and sends the transformed request to the backend service. A protocol can be gRPC. When the response comes back from the backend service, the API gateway transforms the response back to the public-facing protocol and returns the response to the client.
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/18_api_gateway_workflow.png" />
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/18_api_gateway_steps.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 26: API Gateway Workflow (Image source: 
@@ -795,7 +795,7 @@ There are two common types of proxies are forward proxy and reverse proxy.
 - Forward proxy is a server that sits between a group of client machine and the internet. When those clients make requests to websites on the internet, the forward proxy acts as a middle-man intercepts those requests and talks to the web servers on behalf of those client machines.
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/19_forward_proxy.png" />
+    <img style="width: 40%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/19_forward_proxy.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 27: Forward Proxy (Image source: 
@@ -812,7 +812,7 @@ There are reasons why we use forward proxy:
 - Reverse proxy sits between the internet and the web servers. It intercepts the requests from clients and talks to the web server on behalf of the clients.
 
 <center>
-    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/19_reversed_proxy.png" />
+    <img style="width: 40%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/19_reversed_proxy.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 28: Reversed Proxy (Image source: 
@@ -852,12 +852,14 @@ Well-architected microservices practice strong information hiding. This means br
 
 Other requirements needed for a successful microservices architecture:
 - A key component is an API gateway. API gateway handles incoming requests and routes them to the relevant microservices. The API gateway relies on an identity provider service to handle the authentication and put authorization of each request coming through the API gateway. To locate the service to route an incoming request to, the API gateway consults a service registry and discovery service. Microservices register with this service registry and discover the location of other microservices through the discovery service.
-- Monitoring, alering, DevOps toolings for deployment and troubleshooting are needed
+- Monitoring, alering, DevOps toolings for deployment and troubleshooting are needed.
 
 ### When to use Microservices
 Microserivces cost money to build and operate. It really only make sense for large teams. This enables team independence. Each domain or function can be independently maintained by a dedicated team. In a well-designed microservices architecture, these independent teams can move faster, and blast rarius of failures is well-contained. Each service could be independently designed, deployed, and scaled. 
 
 Microservices are not a good fit for startups.
+
+## Kafka
 
 ## Citation
 Cited as:
@@ -871,7 +873,7 @@ Or
 
 ```sh
 @article{nguyen2023sdmega,
-  title   = "System Design Fundamentals Mega-Blog",
+  title   = "System Design Concepts Mega-Blog",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",
