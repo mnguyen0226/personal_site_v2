@@ -826,6 +826,39 @@ There are reasons why we use reversed proxy:
 - A reversed proxy can cache a static content.
 - A reversed proxy can handle SSL encryption. SSL handshake is computationally expensive. A reversed proxy can free up the origin servers from these expensive operations. Instead of handling SSL for all clients, a website only needs to handle SSL handshake from a small number of reverse proxies.
 
+## Microservices
+Microservices architecture enables large teams to build scalable applications that are composed of many loosely coupled services. Each services handle a dedicated function inside a large-scale application. These functional areas are called domains.
+
+<center>
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/20_microservices.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 29: Microservices (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+Microservices communicate with each other via well-defined interfaces with small surface areas. The small surface areas limit the blast radius of failures and defects. It makes each service easier to reason about in the context of the entire applications.
+
+Microservices talk to one another over a combination of remote procedure calls (RPC), event-streaming, or message brokers.
+- RPC provides faster response, but the blast radius or the impact to other microservices would be larger when the services was to go down.
+- Event-streaming provides better isolation between services but they take longer to process
+
+Microservices can be independently deployed. Since each service is small, easier to reason about, and has a small blast radius, this gives the operators peace of mind and confidence to deploy often.
+
+Microservices provide more flexibility to scale up individual microservices independently. The operational flexibilty is invaluable.
+
+Well-architected microservices practice strong information hiding. This means breaking up a monolithic database into its logical components and keeping each logical component well hidden inside its corresponding microservice. The big drawback of microservices is the breaking up of database. By breaking up a database into separate logic units, the database can no longer maintain foreign keuy relationships and enforce referential integrity between these units. The burden of maintaining data integrity is now moved into the application layer
+
+Other requirements needed for a successful microservices architecture:
+- A key component is an API gateway. API gateway handles incoming requests and routes them to the relevant microservices. The API gateway relies on an identity provider service to handle the authentication and put authorization of each request coming through the API gateway. To locate the service to route an incoming request to, the API gateway consults a service registry and discovery service. Microservices register with this service registry and discover the location of other microservices through the discovery service.
+- Monitoring, alering, DevOps toolings for deployment and troubleshooting are needed
+
+### When to use Microservices
+Microserivces cost money to build and operate. It really only make sense for large teams. This enables team independence. Each domain or function can be independently maintained by a dedicated team. In a well-designed microservices architecture, these independent teams can move faster, and blast rarius of failures is well-contained. Each service could be independently designed, deployed, and scaled. 
+
+Microservices are not a good fit for startups.
+
 ## Citation
 Cited as:
 
@@ -895,6 +928,9 @@ Or
 ‌
 
 [16] ByteByteGo, “Proxy vs Reverse Proxy (Real-world Examples),” YouTube. Oct. 25, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=4NB0NDtOwIQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=19
+‌
+
+[17] ByteByteGo, “What Are Microservices Really All About? (And When Not To Use It),” YouTube. Oct. 11, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=lTAcCNbJ7KE&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=20
 ‌
 
 <center>
