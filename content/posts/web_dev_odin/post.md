@@ -148,7 +148,41 @@ weight: 8
 - [Flexbox Crash Course](https://www.youtube.com/watch?v=3YW65K6LcIA) is a nice resource by Traversy Media.
 - For more interactive demos, try the [Scrim on the `justify-content` property](https://scrimba.com/learn/flexbox/justify-content-flexbox-tutorial-cVWPacR) and the [Scrim on the `align-items` property](https://scrimba.com/learn/flexbox/align-items-flexbox-tutorial-cJqymH9). Note that these Scrims require logging into Scrimba in order to view.
 
-## JavaScript
+### JavaScript
+- The differences between var and let are explained in [this javascript.info article titled the old “var”](https://javascript.info/var).
+- [Data types in JavaScript](https://javascript.info/types).
+- [Handling text — strings in JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings)
+- [Regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions), commonly known as regex, is a tool that matches or locates patterns in strings for string validation. However, it’s important to know [when you shouldn’t use regular expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). There are other various methods to process strings, and regex can be slower in comparison.
+- [Web Dev Simplified’s Regular Expressions In 20 Minutes](https://www.youtube.com/watch?v=rhzKDrUiJVk)
+- [Chrome DevTools Documentation](https://developer.chrome.com/docs/devtools/) by Google.
+- [View and change CSS](https://developer.chrome.com/docs/devtools/css/)
+- [CSS features reference](https://developer.chrome.com/docs/devtools/css/reference/)
+- [Get Started With Viewing And Changing The DOM](https://developer.chrome.com/docs/devtools/dom/)
+- [Simulate mobile devices with Device Mode](https://developer.chrome.com/docs/devtools/device-mode/)
+- [Debug JavaScript](https://developer.chrome.com/docs/devtools/javascript/)
+- [Pause your code with breakpoints](https://developer.chrome.com/docs/devtools/javascript/breakpoints/)
+- [The console overview video and read through the page](https://developer.chrome.com/docs/devtools/console/) to familiarize yourself with the console and its usage.
+- [Learn 14 tips and tricks in this JavaScript 30 Video](https://www.youtube.com/watch?v=xkzDaKwinA8) by Wes Bos
+- [Functions](https://javascript.info/function-basics)
+- [Function expressions](https://javascript.info/function-expressions)
+- [Arrow functions, the basics](https://javascript.info/arrow-functions-basics)
+- [JavaScript Call Stack](https://www.javascripttutorial.net/javascript-call-stack/)
+- [What’s the difference between using “let” and “var”? - stackoverflow](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var#:~:text=The%20main%20difference%20is%20scoping,(hence%20the%20block%20scope))
+- [How JavaScript Code is executed?](https://youtu.be/iLWTnMzWtj4)
+- [The Art of Problem Solving](https://www.theodinproject.com/lessons/foundations-problem-solving)
+- Read [How to Think Like a Programmer - Lessons in Problem Solving](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/) by Richard Reis.
+- Watch [How to Begin Thinking Like a Programmer](https://www.youtube.com/watch?v=azcrPFhaY9k) by Coding Tech. It’s an hour long but packed full of information and definitely worth your time watching.
+- Read this [Pseudocode: What It Is and How to Write It](https://www.builtin.com/data-science/pseudocode) article from Built In.
+- Read the first chapter in [Think Like a Programmer: An Introduction to Creative Problem Solving](https://nostarch.com/thinklikeaprogrammer) (not free). This book’s examples are in C++, but you will understand everything since the main idea of the book is to teach programmers to better solve problems. It’s an amazing book and worth every penny. It will make you a better programmer.
+- Watch this video on [repetitive programming techniques](https://ocw.mit.edu/courses/res-tll-004-stem-concept-videos-fall-2013/resources/basic-programming-techniques/).
+- Watch Jonathan Blow on [solving hard problems](https://www.youtube.com/watch?v=6XAu4EPQRmY) where he gives sage advice on how to approach problem solving in software projects.
+- [MDN Javascript Errors Reference](https://www.theodinproject.com/lessons/foundations-understanding-errors)
+- [This list of clean-code tips](https://onextrapixel.com/10-principles-for-keeping-your-programming-code-clean/).
+- [This article](https://blog.codinghorror.com/coding-without-comments/), and [this one](https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/) too about the role of comments in your code.
+- [A nice op-ed](https://www.martinfowler.com/bliki/CodeAsDocumentation.html)
+- [Airbnb style guide](https://github.com/airbnb/javascript)
+- [Chaining methods to write sentences](https://web.archive.org/web/20190211152543/https://javascriptissexy.com/beautiful-javascript-easily-create-chainable-cascading-methods-for-expressiveness/)
+
 
 ## Citation
 Cited as:
