@@ -750,6 +750,42 @@ relationship defined in the schema.
 - In constrast, GraphQL has a single point of entry and uses HTTP POST by default. This prevents the full use of HTTP caching.
 - As GraphQL allows users to get the data they need, it is also a threat.
 
+## API Gateway
+An API gateway is a single point of entry to the clients of an application, it sits between the clients and a collection of backend services for the application. An API gateway provides several important functions:
+- Authentication and Security Policy Enforcements.
+- Load Balancing and Circuit Breaking.
+- Protocol Translation and Service Discovery.
+- Monitoring, Logging, Analytics, and Billing.
+- Caching.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/18_api_gateway.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 25: API Gateway (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Workflow
+1. The client sends a request to the API gateway. The request is typically a HTTP-based. It could be REST, GraphQL, or higher-level abstractions.
+2. The API gateway validates the HTTP request.
+3. The API gateway checks the caller's IP address and other HTTP headers against its allow-list and deny-list. It could also perform basic rate limit checks against attributes such as IP address and HTTP headers. For example, it could reject requests from an IP address exceeding a certain rate.
+4. The API gateway passes the request to an identity provider for authentication and authorization. The API gateway gets back from the provider with a scope of what the request is allowed to do.
+5. A higher level rate-limit check is applied against the authenticated session. If it is over the lomit, the request is rejected at this point.
+6-7. With the help of a service discovery component, the API gateway locates the appropriate backend service to handle the request by path matching.
+8. The API gateway transform the requests into the appropriate protocol and sends the transformed request to the backend service. A protocol can be gRPC. When the response comes back from the backend service, the API gateway transforms the response back to the public-facing protocol and returns the response to the client.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/18_api_gateway_workflow.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 26: API Gateway Workflow (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+API gateway should be deployed to multiple regions to improve availability.
 
 ## Citation
 Cited as:
@@ -814,6 +850,9 @@ Or
 ‌
 
 [14] ByteByteGo, “What Is GraphQL? REST vs. GraphQL,” YouTube. Nov. 10, 2022. Accessed: Nov. 04, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=yWzKJPw_VzM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=17&ab_channel=ByteByteGo
+‌
+
+[15] ByteByteGo, “What is API Gateway?,” YouTube. Nov. 01, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=6ULyxuHKxg8&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=20
 ‌
 
 <center>
