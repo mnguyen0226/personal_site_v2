@@ -787,6 +787,45 @@ An API gateway is a single point of entry to the clients of an application, it s
 
 API gateway should be deployed to multiple regions to improve availability.
 
+
+## Proxy and Reverse Proxy
+There are two common types of proxies are forward proxy and reverse proxy.
+
+### Forward Proxy
+- Forward proxy is a server that sits between a group of client machine and the internet. When those clients make requests to websites on the internet, the forward proxy acts as a middle-man intercepts those requests and talks to the web servers on behalf of those client machines.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/19_forward_proxy.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 27: Forward Proxy (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+There are reasons why we use forward proxy:
+- A forward proxy protects the client's online identity, by using a forward proxy to connect to a website, the IP address of the client is hidden from the server. Only the IP address of the proxy is visible. It would be harder to trace back to the client
+- A forward proxy can be used to bypass browsing restrictions. Institutions such as schools or government and big businesses use firewalls to restrict access to the internet. By connecting to a forward proxy outside the firewalls, the client machine can potentially get around these restrictions. This does not always work as the firewall can block the connection to the proxy.
+- A forward proxy can be used to block a certain content by applying filters.
+
+### Reversed Proxy
+- Reverse proxy sits between the internet and the web servers. It intercepts the requests from clients and talks to the web server on behalf of the clients.
+
+<center>
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/19_reversed_proxy.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 28: Reversed Proxy (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+There are reasons why we use reversed proxy:
+- A reversed proxy can be used to protects a website. The website's IP addresses are hidden behaind the reversed proxy and are not revealed to the clients. This makes it much harder to target a DDoS attack against a website.
+- A reversed proxy is used for load balancing. A popular website handling millions of users everyday is unlikely to be able to handle the traffic with a single server. A reversed proxy can balance a large amount of incoming requests by distributing the traffic to a large pool of web servers, and effectively preventing any single one of them to becoming overloaded. Services like Cloudflare put reverse proxy servers in hundreds of locations all around the world. This puts the reversed proxy closer to the users and at the same time provides a large amount of processing capacity.
+- A reversed proxy can cache a static content.
+- A reversed proxy can handle SSL encryption. SSL handshake is computationally expensive. A reversed proxy can free up the origin servers from these expensive operations. Instead of handling SSL for all clients, a website only needs to handle SSL handshake from a small number of reverse proxies.
+
 ## Citation
 Cited as:
 
@@ -853,6 +892,9 @@ Or
 ‌
 
 [15] ByteByteGo, “What is API Gateway?,” YouTube. Nov. 01, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=6ULyxuHKxg8&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=20
+‌
+
+[16] ByteByteGo, “Proxy vs Reverse Proxy (Real-world Examples),” YouTube. Oct. 25, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=4NB0NDtOwIQ&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=19
 ‌
 
 <center>
