@@ -886,7 +886,7 @@ Let's first look on how Kafka sends a page of data on disk to the consumer when 
 - Finally, the data is sent over the network to the consumer.
 
 <center>
-    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/21_kafka_without_zero_copy.png" />
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/21_kafka_withou_zero_copy.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 30: Read Without Zero Copy (Image source: 
@@ -904,6 +904,38 @@ Now, let's take a look at zero copy:
 </center>
 <figcaption class="img_footer">
     Fig. 31: Read With Zero Copy (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+## Store & Validate Passwords To Database
+
+It's essential to store passwords in a way that keeps an attacker from getting them even if the database is compromised.
+
+What is **not** to do: Do not store password in plaintext. ANyone with internal access to the database can see them. If the database is compromised, an attacker could easily get all the passwords
+
+The **Open Web Application Security Project** (OWASP) provided some guidelines on how to store passwords:
+- First, use a modern hashing algorithm. Hashing is a one-way function, it is impossivle to decrypt a hash to obtain the original value. If an attacker obtained the hashed password, they can't just enter it into the application to gain access. It's important to use a modern hashing function designed to securely store passwords. These functions are slow that use more resources to compute. This makes brute force attacks unattractive. There are some legacy hashing functions like MD5 and SHA-1 are fast. They are less secure and should not be used.
+- Second, salt the passwords, a salt is a unique randomly generated string that is added to each password as  
+a part of a hashing process. Why do we need to salt the password at all? Storing a password as a one-way hash is a step in the right direction, but not sufficient. An attacker can defeat one-way hashes with pre-computation attacks. Some common attacks are *rainbows tables* and *database-based lookups*. With these techniques, a hacker could crack a password in seconds. By adding a salt that is unique to each password to the hashing process, it ensures that the hash is unique to each password. This simple technique makes pre-computation attacks unattractive. 
+
+### Salt & Hash
+
+Let's look to see how we store the password:
+- First, combine the password provided by the user with the randomly generated salt.
+- Then, we compute the hash of this combination using an appropriate hashing function.
+- The hash is stored in the database along with the salt. The salt is used to generate unique hash. It's not a secret and can be stored safely as plaintext in the database.
+
+Let's look to see how to validate the password:
+- When a user logs in, we fetch the salt for the user from the database. 
+- We then append the salt to the password provided by the user and hash it.
+- We compare this computed hash against the hash stored in the database. If they are the same, the password is valid.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/22_password_hash_salt.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 32: Password Hashed & Salted (Image source: 
     <a>ByteByteGo.com</a>).
 </figcaption>
 </br>
@@ -983,6 +1015,12 @@ Or
 ‌
 
 [18] ByteByteGo, “System Design: Why is Kafka fast?,” YouTube. Jun. 29, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=UNUz1-msbOM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=21
+‌
+
+[19] ByteByteGo, “System Design: How to store passwords in the database?,” YouTube. Jul. 06, 2022. Accessed: Nov. 08, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=zt8Cocdy15c&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=22
+‌
+
+[20] ByteByteGo, “Big Misconceptions about Bare Metal, Virtual Machines, and Containers,” YouTube. Jul. 14, 2022. Accessed: Nov. 08, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=Jz8Gs4UHTO8&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=23
 ‌
 
 <center>
