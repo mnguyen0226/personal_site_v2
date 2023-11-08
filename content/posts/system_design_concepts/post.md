@@ -860,6 +860,53 @@ Microserivces cost money to build and operate. It really only make sense for lar
 Microservices are not a good fit for startups.
 
 ## Kafka
+In what senses that Kafka is fast? Latency? Throughput? Fast compared to what?
+
+Kafka is optimized for high throughput. It is designed to move a large number of records in a short amountt of time. Think of it as a very large pipe moving liquid: The bigger the diameter of the pipe, the larger the volumn of liquid that can move through it.
+
+So "Kafka is fast" indicates Kafka's ability to move a lot of data efficiently. What are some of the design decisions that help Kafka move a lot of data quickly? There are several reasons but the top 2 are: Sequential I/O and Efficiency
+
+### Sequential I/O
+
+Kafka relies on Sequential I/O. There's a misconception that disk access is slow compared to memory access, but this largely depends on data access patterns. There are two types of access patterns: Random and Sequential. For hard drives, it takes time to physically move the arm to different location on the magnetic disks. This is what makes random access slow. For sequential access, since the arm doesn't need to jump around, it is much faster to read and write blocks of data one after the other. Kafka takes advantage of this by using an append-only log as its primary data structure. An append-only log adds new data to the end of the file. This access pattern is sequential.
+
+Specifically, on modern hardward with an array of these hard disks, sequential writes reach hundreds of megabytes per second, while random writes are measured in hundreds of kilobyte per second. Sequential access is a several order of magnitude faster. 
+
+Using hard disks has its cost advantage: Compared to SSD, hard disks come at one-third of the price but with about 3 times the capacity. Giving Kafka a large pool of cheap disk space without any performance penalty means that Kafka can cost effectively retain messages for a long period of time, a feature that was uncommon to messaging systems before Kafka.
+
+### Efficiency
+
+Kafka is known for focusing on efficiency. Kafka moves a lot of data from network to disk, and from disk to network. It is critically important to eliminate excess copy when moving pages and pages of ata between the disk and the network. This is where zero copy principle comes into the picture. Modern unix operating systems are higly optimized to transfer data from disk to network without copying data excessively.
+
+Let's first look on how Kafka sends a page of data on disk to the consumer when zero copy is not used at all. 
+- First, the data is loaded from disk to the OS cache.
+- Second, the data is copied from the OS cache into the Kafka application.
+- Third, the data is copied from Kafka to the socket buffer. 
+- Fourth, the data is copied from the socket buffer to the network interface card buffer. 
+- Finally, the data is sent over the network to the consumer.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/21_kafka_without_zero_copy.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 30: Read Without Zero Copy (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+These five steps are clearly inefficient since there are 4 copies and 2 system calls.
+
+Now, let's take a look at zero copy:
+- First, the data is loaded from disk to the OS cache. With zero copy, the Kafka application uses a system call called `sendfile()` to tell the operating system to directly copy the data from the OS cache to the network interface card buffer. In this optimized path, the only copy is from the OS cache into the network card buffer. With a modern network card, this copying is done with direct memory access (DMA). When DMA is used, the CPU is not involved, making it even more efficient. 
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/21_kafka_zero_copy.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 31: Read With Zero Copy (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
 
 ## Citation
 Cited as:
@@ -933,6 +980,9 @@ Or
 ‌
 
 [17] ByteByteGo, “What Are Microservices Really All About? (And When Not To Use It),” YouTube. Oct. 11, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=lTAcCNbJ7KE&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=20
+‌
+
+[18] ByteByteGo, “System Design: Why is Kafka fast?,” YouTube. Jun. 29, 2022. Accessed: Nov. 07, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=UNUz1-msbOM&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=21
 ‌
 
 <center>
