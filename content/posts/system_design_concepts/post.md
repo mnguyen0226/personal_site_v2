@@ -945,7 +945,7 @@ Let's look to see how to validate the password:
 When building a system, which one do we use?
 
 <center>
-    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/23_comparison.png" />
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/23_comparison.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 33: Bare Metal, Virtual Machines, and Containers (Image source: 
@@ -998,6 +998,93 @@ For container, we got the hardware, host OS, container engine, and severals runn
 - Less secure. They share the same underlying OS amd the isolation relies on the OS-level primitives. This means containers are exposed to a wider class of security vulnerabilities at the OS level.
 
 It is possible to run containers in virtual machine for better security by reducing the possible attack surfaces. This is the trade-off between flexibility and security.
+
+## HTTP/1, HTTP/1.1, HTTP/2, HTTP/3
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_https.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 34: HTTP Versions Comparison (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### HTTP/1
+HTTP/1 is built on top of TCP. Every request to the same server requires a separate TCP connection.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http_1.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 35: HTTP/1 Architecture (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### HTTP/1.1
+HTTP/1.1 introduces a keep-alive mechanism so a connection could be reused for more than a single request. The persistent connections reduce request latency because the cleint does not need to initiate expensive TCP three-way handshake for every request.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http_1_1.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 36: HTTP/1.1 Architecture (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+HTTP/1.1 also added HTTP pipelining. In theory, this allows the client to send multiple requests before waiting for each response. The response must be received in the same order as to requests. It was tricky to implement correctly and many proxuy servers in between did not handle pipelining properly. Its support was eventually removed from many web browsers.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http_1_1_pipelining.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 37: HTTP/1.1 With Pipelining Architecture (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+HTTP/1.1 with pipelining also suffers from an issue called head of line blocking. Without align blocking, subsequent requests on the same connection must wait for the previous requests to complete. If a request is blocked for any reason like packet loss, all subsequent requests on the same connection are also impacted
+
+### HTTP/2
+HTTP/2 introduces HTTP streams, where multiple streams of requests could be sent to the same server on a single TCP connection. Unlike HTTP/1.1 with pipelining, each stream is independent of each other, and it does not need to be sent or received in order.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http_2.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 38: HTTP/2 With Pipelining Architecture (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+HTTP/2 solves the headline blocking issue at the application layer but the issue still exists in the transport layer with TCP. Also note that HTTP/2 introduced a push capability to allow servers to send updates to the clients whenever new data is available without requiring a client to poll.
+ 
+### HTTP/3
+HTTP/3 uses the new protocol called QUIC instead of TCP as the underlying transport protocol. QUIC is based on UDP. It introduces streams as the first-class citizen at the transport layer. QUIC streams share the same quick connection, so no additional handshakes are required to create new ones.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http3.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 39: HTTP/3 Architecture (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+QUIC streams are delivered independently. In most cases, packet loss affect one stream doesn't afect others. This is how QUIC eliminates the head of line blocking at the transport layer.
+
+QUIC is designed for mobile heavy internet usage. People carrying smartphones constantly switch from one network to another as they move about their day. With TCP, the handoff of one connection from one network to another is sluggish. QUIC implements a concept called connection ID, which allows connections to move between IP addresses and network interfaces quickly and reliably.
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http3_quic.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 39: HTTP/3 QUIC Mechanism (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
 
 ## Citation
 Cited as:
@@ -1080,6 +1167,9 @@ Or
 ‌
 
 [20] ByteByteGo, “Big Misconceptions about Bare Metal, Virtual Machines, and Containers,” YouTube. Jul. 14, 2022. Accessed: Nov. 08, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=Jz8Gs4UHTO8&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=23
+‌
+
+[21] ByteByteGo, “HTTP/1 to HTTP/2 to HTTP/3,” YouTube. Aug. 17, 2022. Accessed: Nov. 08, 2023. [YouTube Video]. Available: https://www.youtube.com/watch?v=a-sBfyiXysI&list=PLCRMIe5FDPsd0gVs500xeOewfySTsmEjf&index=24
 ‌
 
 <center>
