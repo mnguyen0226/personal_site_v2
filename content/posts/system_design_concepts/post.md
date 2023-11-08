@@ -999,10 +999,10 @@ For container, we got the hardware, host OS, container engine, and severals runn
 
 It is possible to run containers in virtual machine for better security by reducing the possible attack surfaces. This is the trade-off between flexibility and security.
 
-## HTTP/1, HTTP/1.1, HTTP/2, HTTP/3
+## HTTP/1, HTTP/1.1, HTTP/2, & HTTP/3
 
 <center>
-    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_https.png" />
+    <img style="width: 100%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_https.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 34: HTTP Versions Comparison (Image source: 
@@ -1014,7 +1014,7 @@ It is possible to run containers in virtual machine for better security by reduc
 HTTP/1 is built on top of TCP. Every request to the same server requires a separate TCP connection.
 
 <center>
-    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http_1.png" />
+    <img style="width: 50%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/24_http_1.png" />
 </center>
 <figcaption class="img_footer">
     Fig. 35: HTTP/1 Architecture (Image source: 
@@ -1176,7 +1176,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/golden_bridge.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 23: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
+    Fig. 40: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/gZXx8lKAb7Y" class="img_footer">Maarten van den Heuvel @ Unsplash</a>).
 </figcaption>
 
