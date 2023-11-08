@@ -940,6 +940,65 @@ Let's look to see how to validate the password:
 </figcaption>
 </br>
 
+## Bare Metal, Virtual Machines, & Containers
+
+When building a system, which one do we use?
+
+<center>
+    <img style="width: 80%" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/system_design_concepts/imgs/23_comparison.png" />
+</center>
+<figcaption class="img_footer">
+    Fig. 33: Bare Metal, Virtual Machines, and Containers (Image source: 
+    <a>ByteByteGo.com</a>).
+</figcaption>
+</br>
+
+### Bare Metal
+A bare metal server is a physical computer that is a single tenant only. Bare metal gives us complete control over the hardware resources and the software stack to run. For software applications that require the absolute highest performance from the hardware, bare metal could be a good way to go. 
+
+**Advantages** - Bare metal servers are physically isolated, which provides 2 benefits:
+- It is not affected by the noisy neighbor problem. This problem occures when one tenant's performance is impacted because of the activities of another tenant sharing the same hardware.
+- Isolation provides the highest level of security. For example, it is not affected by side-channel attacks. These attacks take advantage of the design flaws in modern microprocessors to allow a malicious tenant to steal secrets from its neighbors. 
+
+**Disadvantages**:
+- Expensive.
+- Hard to manage.
+- Hard to scale.
+- Take time to install.
+- Take a competent team to manage.
+
+### Virtual Machines
+A virtual machine is the emulation of a physical computer, this is called virtualization. Many virtual machines can run on a single piece of bare metal hardware. On top of the bare metal hardware is the host operating system. Running on top of the host operating system is a hypervisor (virtual machine monitor). The hypervisor manages virtual machine. It creates an abstraction layer over the hardware so that multiple operation systems can run alongside each other.
+
+Each virtual machine has its own guest operating system. On top of each guest operating system runs the application for a tenant. Note that *Bare Metal Hypervisor* != *Bare Metal Hardware*. 
+
+A bare metal hypervisor controls the hardware directly without relying on the host operating system. This gives the hypervisor full control over the hardware and provides higher performance. However, hardware that supports the bare metal hypervisor is more expensive.
+
+**Advantages**:
+- Cheaper to run.
+- Share the same hardware.
+- Resources utilization.
+- Easier to scale (vertically or horizontally).
+
+**Disadvantages**:
+- Virtual machine could be vulnerable to the noisy neighbor problem described earlier. If our application co-locates with a resource hog of a neighbor, our own application performance could suffer. 
+- Virtual machine running on the same bare metal hardware share the same physical CPU cores. They are vulnerable to attacks that aim at design flaws in modern processors. Side-channel attacks like Meltdown and Spectre are well-known examples.
+
+### Containers
+A container is a lightweight and standalone package of an application with all its dependencies like libraries, frameworks, and runtime. Containerization is considered to be a lightweight version of virtualization.
+
+For container, we got the hardware, host OS, container engine, and severals running containers. Each container is its own application environment. The container engine provides even faster resource provisioning. All the resources needed to run the application are packaged together, so that the applications can run anywhere.
+
+**Advantages**:
+- Containers are scalable and portable. 
+- A bare metal can store significantly more containers than virtual machines. 
+- Since each container runs as a native process of the host OS, they are much faster to start too. 
+
+**Disadvantages**:
+- Less secure. They share the same underlying OS amd the isolation relies on the OS-level primitives. This means containers are exposed to a wider class of security vulnerabilities at the OS level.
+
+It is possible to run containers in virtual machine for better security by reducing the possible attack surfaces. This is the trade-off between flexibility and security.
+
 ## Citation
 Cited as:
 
