@@ -14,8 +14,14 @@ weight: 5
 
 <details><summary><strong>Data Engineer Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS.</summary>
+    <summary style="display: flex">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/homebase/homebase.png" alt="" style="height:150px;">
+        &nbsp;
+        &nbsp;
+    </summary>
     <summary>▪ Date: 06/2023 - 9/2023.</summary>
     <summary>▪ Location: Ho Chi Minh City, Vietnam (Remote).</summary>
+    <summary>▪ <a href="https://realdeal.com.vn/">Site</a>.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
         <summary>▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%.</summary>
         <summary>▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</summary>
@@ -25,13 +31,14 @@ weight: 5
 
 <details><summary><strong>Graduate Research Assistant</strong> @ CS Department (Virginia Tech)</summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python (Dash, Plotly), Docker, Kubernetes.</summary>
-        <summary style="display: flex">
+    <summary style="display: flex">
         <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/mathbridge/mathbridge2.png" alt="" style="height:150px;">
         &nbsp;
         &nbsp;
     </summary>
     <summary>▪ Date: 04/2023 - Present.</summary>
     <summary>▪ Location: Falls Church, Virginia.</summary>
+    <summary>▪ <a href="https://mathbridge.discovery.cs.vt.edu/">Site</a>.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
         <summary>▪ Designed and built an interactive website for statistics and ML algorithms visualization with Python (Dash, Plotly) and Docker.</summary>
         <summary>▪ Deployed the website on Kubernetes cluster, ensuring scalability and reliability.</summary>
@@ -39,13 +46,22 @@ weight: 5
 </blockquote></details>
 
 <details><summary><strong>Graduate Research Assistant</strong> @ Commonwealth Cyber Initiatives (Virginia Tech) </summary><blockquote>
-    <summary><em><strong>▪ Tech Stack:</strong></em> Python, Tensorflow, Matplotlib, Pandas, Seaborn.</summary>
+    <summary><em><strong>▪ Tech Stack:</strong></em> Python, Dash, Tensorflow, Matplotlib, Pandas, Seaborn.</summary>
+    <summary style="display: flex">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/cci/rads.png" alt="" style="height:150px;">
+        &nbsp;
+        &nbsp;
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/cci/scada.jpeg" alt="" style="height:150px;">
+        &nbsp;
+        &nbsp;
+    </summary>
     <summary>▪ Date: 05/2022 - 08/2022.</summary>
     <summary>▪ Location: Arlington, Virginia.</summary>
+    <summary>▪ <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/cci/poster.pdf">Poster</a>.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
         <summary>▪ Developed and fine‑tuned RNN, LSTM, and Transformer forecasting models with Python and Tensorflow, reducing operational costs by 30%.</summary>
         <summary>▪ Enhanced time‑series data quality via data cleaning, feature engineering, exploratory data analysis (EDA) using Pandas and Plotly.</summary>
-        <summary>▪ Designed and implemented the visualization dashboard with Python and Dash for seamless integration of ML into existing SCADA system.</summary>        <summary>▪ Boosted prediction accuracy by 4% and doubled database records by implementing TimeGAN data synthesis model.</summary>
+        <summary>▪ Designed and implemented the visualization dashboard with Python and Dash for seamless integration of ML into existing SCADA water system.</summary>        <summary>▪ Boosted prediction accuracy by 4% and doubled database records by implementing TimeGAN data synthesis model.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -62,10 +78,10 @@ weight: 5
     </summary>
     <summary>▪ Date: 09/2021 - 05/2022.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
+    <summary>▪ <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/poster.jpeg">Poster</a>, <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/presentation.pdf">Presentation</a>.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
         <summary>▪ Improved transparency by applying ROS-Bridge data transfer pipeline between the low-level robotic controller and Unity.</summary>
         <summary>▪ Created 3D interactive simulation environments in Unity with VR headsets and Haptix Gloves synchronization.</summary>
-        <summary>▪ <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/poster.jpeg">Poster</a>, <a href="https://github.com/mnguyen0226/mnguyen0226.github.io/blob/main/static/profile_images/trec/presentation.pdf">Presentation</a>.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -77,9 +93,8 @@ weight: 5
     <summary>▪ Date: 05/2021 - 08/2021.</summary>
     <summary>▪ Location: Alexandria, Virginia.</summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
-        <summary>▪ Developed and refined the classification model using Python and PyTorch, predicting battle outcomes for DARPA’s Game Breaker.</summary>
-        <summary>▪ Determined optimal pre‑deployment configurations for LSTM, GRU, and Transformer models by evaluating them using IMDb dataset.</summary>
-        <summary>▪ Built the dashboard with Python, Dash, and SQLAlchemy of the models, aiding in the securement of DARPA’s $1M second funding round.</summary>
+        <summary>▪ Developed Encoder‑Decoder machine translation models (RNN, LSTM, GRU, and Transformer) with PyTorch and SpaCy.</summary>
+        <summary>▪ Evaluated different configurations of context vector to find the remedy of information loss problem in the decoding process.</summary>
     </blockquote></details>
 </blockquote></details>
 
@@ -125,6 +140,15 @@ weight: 5
     <summary><em><strong>▪ Tech Stack:</strong></em> C++, Circuit Design, Arduino, MIT Mobile App Inventor.</summary>
     <summary>▪ Date: 05/2020 - 05/2021.</summary>
     <summary>▪ Location: Blacksburg, Virginia.</summary>
+    <summary style="display: flex">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/smart_home/advanced_smart_home_structure.png" alt="Smart Home Image" style="height:150px;">
+        &nbsp;
+        &nbsp;
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/smart_home/arduino_circuit_advanced_sm.png" alt="Smart Home Image" style="height:150px;">
+        &nbsp;
+        &nbsp;
+        <img src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/smart_home/mit_app_user_interface.png" alt="Smart Home Image" style="height:150px;">
+    </summary>
     <details><summary><strong>Responsibilities</strong></summary><blockquote>
         <summary>▪ Conducted 3 two‑hour office sessions and graded labs for 50+ students 2 times per week.</summary>
         <summary>▪ Proactively addressed student inquiries on micro‑controller applications and software development in C.</summary>
