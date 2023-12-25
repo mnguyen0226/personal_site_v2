@@ -212,6 +212,20 @@ weight: 5
 - <p>"AI for Cyberbiosecurity in Water Systems—A Survey." Daniel Sobien, Mehmet O. Yardimci, <strong>Minh T. Nguyen</strong>, Wan-Yi Mao, Vinita Fordham, Abdul Rahman, Susan Duncan, Feras Batarseh. Springer's Cyberbiosecurity Book (01/2023). <a href="https://link.springer.com/chapter/10.1007/978-3-031-26034-6_13">Link.</a></p>
 
 ## 💻 Projects
+<details><summary><strong>RentalGPT</strong></summary><blockquote>
+    <summary><em><strong>▪ Tech Stack:</strong></em> Python, Dash, Bootstrap, Docker, Kubernetes, HTML, CSS.</summary>
+    <summary style="display: flex">
+        <img src="https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/apartments_listing_page.png" alt="" style="height:150px;">
+        &nbsp;
+        &nbsp;
+        <img src="https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/rental_gpt_dash_architecture.png" alt="" style="height:150px;">
+    </summary>
+    <summary>▪ Developed a user‑friendly real‑estate web app serving diverse stakeholder needs, using Python (Dash, Plotly), SQLite, Docker, and GCP.</summary>
+    <summary>▪ Conducted data processing and EDA using pre‑trained NLP (HuggingFace’s BERT) and CV (PyTorch’s YOLOv5) for insightful market analytics.</summary>
+    <summary>▪ Implemented predictive models for interest level and rental price, alongside LLaMA chatbot, enhancing user engagement and decision support.</summary>
+    <summary>▪ <a href="https://rentalgpt.discovery.cs.vt.edu/">Link</a>.</summary>
+</blockquote></details>
+
 <details><summary><strong>Machine Learning Algorithms Visualization</strong></summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python, Dash, Bootstrap, Docker, Kubernetes, HTML, CSS.</summary>
     <summary style="display: flex">
