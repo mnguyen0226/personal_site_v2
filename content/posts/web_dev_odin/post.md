@@ -182,7 +182,21 @@ weight: 8
 - [A nice op-ed](https://www.martinfowler.com/bliki/CodeAsDocumentation.html)
 - [Airbnb style guide](https://github.com/airbnb/javascript)
 - [Chaining methods to write sentences](https://web.archive.org/web/20190211152543/https://javascriptissexy.com/beautiful-javascript-easily-create-chainable-cascading-methods-for-expressiveness/)
-
+- [This article](https://www.w3schools.com/js/js_array_methods.asp) covers some of the most useful built-in array methods. These fundamentals are something you’ll use every day, so don’t rush too much and miss out!
+- The Document Object Model (DOM) is an application programming interface (API) for manipulating HTML documents. The DOM represents an HTML document as a tree of nodes. The DOM provides functions that allow you to add, remove, and modify parts of the document effectively.
+- [Eloquent JS - DOM](http://eloquentjavascript.net/13_dom.html)
+- [Eloquent JS - Handling Events](http://eloquentjavascript.net/14_event.html)
+- [DOM Enlightenment](http://domenlightenment.com/)
+- [Plain JavaScript](https://plainjs.com/javascript/) is a reference of JavaScript code snippets and explanations involving the DOM, as well as other aspects of JS. If you’ve already learned jQuery, it will help you figure out how to do things without it.
+- [This W3Schools](https://www.w3schools.com/js/js_htmldom.asp) article offers simple and easy-to-understand lessons on the DOM.
+- [JS DOM Crash Course](https://www.youtube.com/watch?v=0ik6X4DJKCc&list=PLillGF-RfqbYE6Ik_EuXA2iZFcE082B3s) is an extensive and well explained 4 part video series on the DOM by Traversy Media.
+- [Understanding The Dom](https://www.digitalocean.com/community/tutorial_series/understanding-the-dom-document-object-model) is an aptly named article-based tutorial series by DigitalOcean.
+- [Introduction to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) by MDN covers the same topics you learned in this lesson on events.
+- [Wes Bos’s Drumkit](https://www.youtube.com/watch?v=VuN8qwZoego) JavaScript30 program reinforces the content covered in the assignment. In the video you will notice that a deprecated [keycode](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) keyboard event is used, replace it with the recommended [code](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code) keyboard event and replace the data-key tags accordingly.
+- [Event Capture, Propagation and Bubbling video](https://www.youtube.com/watch?v=F1anRyL37lE) from Wes Bos’s JavaScript30 program.
+- Actively learn the Git workflows discussed in this lesson with this [interactive Visual Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html#loc=index;) by Andrew Peterson. It’s okay to be unfamiliar with the variety of commands you’ll interact with. You’ll learn about them later in the curriculum.
+- Make pushing your local commits to remote branches easier with the command git push -u origin <branch>. It automatically links the local branch you push with the remote one. [Read this educative.io article](https://www.educative.io/edpresso/what-is-the-git-push--u-remote-branch-name-command) by Talha Ashar and commit faster to a remote branch with a simple git push command.
+- Learn Git Branching by going through this [interactive visualizer](https://learngitbranching.js.org/) by Peter Cottle. You can learn the substantial commands about branching while seeing how the commands you write affect your visually presented branch tree.
 
 ## Citation
 Cited as:
