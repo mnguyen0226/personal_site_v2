@@ -79,10 +79,23 @@ This book is about data engineering lifecycle: data generation, storage, ingesti
       - Once organizations reach stage 3, they must constantly focus on maintenance and improvement or risk falling back to a lower stage.
       - Technology distractions are a more significant danger here than in the other stages. There’s a temptation to pursue expensive hobby projects that don’t deliver value to the business. Utilize custom-built technology only where it provides a competitive advantage.
 
-  - **The Background and Skills of Data Engineer**
-    - 
+- **The Background and Skills of Data Engineer**
+  - Data engineer must understand both data and technology. Data engineer must also understand the requirements of data consumers (data analysts and data scientists) and the broader implications o data across the org.
 
-### Data Engineers Inside an Organization 
+- **Business Responsibilities**
+  - Know how to communicate with nontechnical and technical people. Pay close attention to organizational hierarchies, who reports to whom, how people interact. Observe!
+  - Understand how to scope and gather business and product requirements. Know what to build and ensure that your stakeholders agress with your assessments. Develop a sense of how data and technologuy decisions impact the business.
+  - Understand the cultural foundations of Agile, DevOps, and DataOps.
+  - Control cost. You will be successful when you can keep the cost low while providing outsized values. Know how to optimize for time to value, the total cost of ownership, and opportunity cost.
+  - Learn continuously. People who succeed in data are great at picking up new things while sharpening their fundamental knowledge.They’re also good at filtering, determining which new developments are most relevant to their work, which are still immature, and which are just fads. Stay abreast of the field and learn how to learn.
+
+- **Technical Responsibilities**
+  - SQL: The most common interface for databases and data lakes. After briefly being sidelined by the need to write custom MapReduce code for big data processing, SQL (in various forms) has reemerged as the lingua franca of data.
+    - We believe that competent data engineers should be
+highly proficient in SQL
+  - Python: API, Pandas, NumPy, Airflow, Sklearn, Tensorflow, PyTorch, and PySpark.
+  - JVM (Java, Scala): Spark, Hive, Druid.
+  - Bash
 
 ## 2. The Data Engineering Lifecycle
 
