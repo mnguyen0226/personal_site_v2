@@ -220,45 +220,217 @@ nance, downtime, and opportunity cost than simply doing batch?
 - Development of OS frameworks.
 - Streaming: Engineers must also write code to apply a variety of windowing methods. Windowing allows real-time systems to calculate valuable metrics such as trailing statistics. Engineers have many frameworks to choose from, including various function platforms (OpenFaaS, AWS Lambda, Google Cloud Func‐
 tions) for handling individual events or dedicated stream processors (Spark, Beam, Flink, or Pulsar) for analyzing streams to support reporting and real-time actions.
-- Infrastructure as code
-- Pipelines as code
+- Infrastructure as code.
+- Pipelines as code.
 - General-purpose problem solving.
 
 ## 3. Designing Good Data Architecture
+Good data architecture provides seamless capabilities across every step of the data lifecycle and undercurrent. We will discuss about the components, batch patterns (data warehouses, data lakes), streaming patterns, and patterns that unify batch and streaming.
 
-### What is Data Architecture?
+### [Important] What is Data Architecture?
+Successful data engineering is built upon rock-solid data architecture. We will review a few popular architecture approaches and frameworks.
+
+**Enterprise Architecture Defined**
+- Enterprise architecture is the design of systems to support change in the enterprise, achieved by flexible and reversible decisions reached through careful evaluation of trade-off.
+- Architects are not simply mapping out IT processes and vaguely looking toward a distant, utopian future. They actively solve business problems and create new opportunities. **Technical solutions exist not for their own sake but in support of business goals.** Architects identify problems in the current state (poor data quality, scalability limits, money-losing lines of business), define desired future states (agile data-quality improvement, scalable cloud data solutions, improved business processes), and realize initiatives through execution of small, concrete steps
+
+**Data Architecture Defined**
+- Data architecture is the design of systems to support the evolving data needs of an enterprise, achieved by flexible and reversible decisions reached through a careful evaluation of trade-offs. 
+  - What business processes does the data serve?
+  - How does the organization manage data quality?
+  - What is the latency requirement from when the data is produced to when it becomes avaialble to query?
+  - How will you move 10TB of data every hour from a source database to your data lake.
+- Data architecture = Operational + Technical
+  - Operational architecture describe what nees to be done.
+  - Technical architecture details how it will happen.
+
+**"Good" Data Architecture**
+- Good data architecutre serves business requirements with a common, widely reusable set of building blocks while maintaining flexibility and making appropriate trade-off.
 
 ### Principles of Good Data Architecutre
+This is a 10000-foot view of good architecture, borrowed from AWS Well-Architected Framework andd Google Cloud's Five Principles for Cloud-Native Architecture
+
+[AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html)
+- Operational excellence.
+- Security.
+- Reliability.
+- Performance efficiency.
+- Cost optimization.
+- Sustainability.
+
+[Google Cloud's Five Principles for Cloud-Native Architecture](https://cloud.google.com/blog/products/application-development/5-principles-for-cloud-native-architecture-what-it-is-and-how-to-master-it)
+- Design for automation.
+- Be smart with state.
+- Favor managed services.
+- Practice defense in depth.
+- Always be architecting.
+
+Additional principles:
+- Choose common components wisely.
+- Plan for failure.
+- Architect for scalability.
+- Architecture is leadership.
+- Always be architecting.
+- Build loosely coupled systems.
+- Make reversible decisions.
+- Prioritize security.
+- Embrace FinOps.
+
+**Principle 1: Choose Common Components Wisely**
+- Common components can be anything that has broad applicability with an organization. Common components include object storage, version-control systems, observability, monitoring and orchestration systems, and processing engines.
+
+**Principle 2: Plan for Failure**
+- Availability: The percentage o time an IT service or component is in an operable state.
+- Reliability: The system's probability of meeting defined standards in performing its intended function during a specified intervals.
+- Recovery time objective.
+- Recovery point objective.
+
+**Principle 3: Architect for Scalability**
+- Scale up to handle significant quantities of data.
+- Scale down to cut cost.
+
+**Principle 4: Architecture Is Leadership**
+- Data architects are responsible for technology decisions and architecture descriptions and disseminating these choices through effective leadership and tranining.
+- An ideal data architect posses the technical skills of data enigneer but no longer practice data engineering day to day; they mentor curretn data engineers, make careful technology choice in consultation with their organization, and disseminate expertise through training and leadership. They train engineers in best practice and bring the company's engineering resources together to pursue common goals in both technology and business.
+
+**Principle 5: Always Be Architecting**
+- The data architect maintains a target architecture and sequencing plans that change over time. The target architecture becomes a moving target, adjusted in response to business and technology changes internally and worldwide.
+
+**Principle 6: Build Loosely Coupled Systems**
+- Putting data and services behind APIs enabled the loose coupling and eventually resulted in AWS as we know it now.
+- For software architecture, a loosely coupled system has the following properties:
+  - 1. Systems are broken into many components.
+  - 2. These systems interface with other services through abstraction layers, such as a messaging bus or an API. These abstraction layers hide and protect internal details of the service, such as a database backend or internal classes and method calls.
+  - 3. As a consequence of property 2, internal changes to a system component don't require changes in other parts. Details of code updates are hidden behind stable APIs. Each piece can evolve and improve separately.
+  - 4. As a consequence of property 3, there is no waterfall, global release cycle for the whole system. Instead, each component is updated separately as changes and improvements are made.
+
+- Organizational characteristics:
+  - 1. Many small teams engineer a large, complex system. Each team is tasked with engineering, maintaining, and improving some system components.
+  - 2. These teams publish the abstract details of their componentsd to other teams via API definitions, message schemas,... Teams need not concern themselves with other teams' components; they simply use the published API or message specifications to call these components. They iterate their part to improve their performance and capabilities over time. They might also publish new capabilities as they are added or request new stuff from other teams. Again, the latter happens without teams needing to worry about the internal technical details of the requested features. Teams work together through loosely couple communication.
+  - 3. As a consequence of 2, each team can rapidly evolve and improve its component independently of the work of other teams.
+  - 4. Specifically, 3 implies that team can release updates to their components with minal downtime. Teams release continuosly during regular working hours to make code changes and test them.
+
+**Principle 7: Make Reversible Decisions**
+- The decoupling / modularization of tech across your data architecture - always strive to pick the best-of-breed solutions that work for today
+
+**Principle 8: Prioritize Security**
+- Every data engineer must assume responsibility for the security of the systems
+they build and maintain. We focus now on two main ideas: zero-trust security
+and the shared responsibility security model. These align closely to a cloud-native
+architecture.
+
+**Principle 9: Embrace FinOps**
+- The term “FinOps” typically refers to the emerging professional movement that advo‐
+cates a collaborative working relationship between DevOps and Finance, resulting in an iterative, data-driven management of infrastructure spending (i.e., lowering the unit economics of cloud) while simultaneously increasing the cost efficiency and, ultimately, the profitability of the cloud environment.
+- In the cloud era, most data systems are pay-as-you-go and readily scalable. Systems
+can run on a cost-per-query model, cost-per-processing-capacity model, or another
+variant of a pay-as-you-go model. 
 
 ### Major Architecture Concepts
 
+- Main goal of all architectures: to take data and transform it into something useful for downstream consumption.
+
+**Domains and Services**
+- Domain is a real-world subject are for which are you architecting.
+- Service is a set of functionality whose goal is to accomplish a task.
+- Identify what should go in the domain. When determining what the domain should encompass and what services to include, the best advice is to simply go and talk with users and stakeholders, listen to what they’re saying, and build the services that will help them do their job. Avoid the classic trap of architecting in a vacuum.
+
+**Distributed Systems, Scalability, and Designing for Failure**
+- Scalability: Allows us to increase the capacity of a system to improve performance and
+handle the demand.
+- Elasticity: The ability of a scalable system to scale dynamically; a highly elastic system can
+automatically scale up and down based on the current workload.
+- Availability: The percentage of time an IT service or component is in an operable state.
+- Reliability: The system’s probability of meeting defined standards in performing its intended
+function during a specified interval.
+
+**Tight vs Loose Coupling: Tiers, Monoliths, and Microservices**
+- Tightly coupled: Every part of a domain and service is vitally dependent upon every other
+domain and service.
+- Loose coupling: you have decentralized domains and services that do not have strict dependence on each other.
+- Microservices: architecture comprises separate, decentralized, and loosely coupled services
+
 ### Examples and Types of Data Architecture
+**Data Warehouse**
+- A data warehouse is a central data hub used for reporting and analysis.
 
 ### Who's Involved with Designing a Data Architecture?
+Data architecture isn’t designed in a vacuum. Bigger companies may still employ data
+architects, but those architects will need to be heavily in tune and current with the
+state of technology and data. 
+
+Ideally, a data engineer will work alongside a dedicated data architect. However, if
+a company is small or low in its level of data maturity, a data engineer might work
+double duty as an architect. Because data architecture is an undercurrent of the data
+engineering lifecycle, a data engineer should understand “good” architecture and the
+various types of data architecture.
 
 ## 4. Choosing Technologies Across the Data Engineer Life Cycle
 
 ### Team Size and Capabilities
+There is a continuum of simple to complex technologies, and a team’s size roughly
+determines the amount of bandwidth your team can dedicate to complex solutions.
 
 ### Speed to Market
+In technology, speed to market wins. This means choosing the right technologies that
+help you deliver features and data faster while maintaining high-quality standards
+and security. It also means working in a tight feedback loop of launching, learning,
+iterating, and making improvements.
+
+Deliver value early and often. 
 
 ### Interoperability
+When choosing a technology or
+system, you’ll need to ensure that it interacts and operates with other technologies.
+Interoperability describes how various technologies or systems connect, exchange
+information, and interact.
 
 ### Cost Optimization and Business Value
+In a perfect world, you’d get to experiment with all the latest, coolest technologies
+without considering cost, time investment, or value added to the business. In reality,
+budgets and time are finite, and the cost is a major constraint for choosing the
+right data architectures and technologies.
+
+Data engineers need to be pragmatic about flexibility. The data landscape is changing
+too quickly to invest in long-term hardware that inevitably goes stale, can’t easily
+scale, and potentially hampers a data engineer’s flexibility to try new things. Given the
+upside for flexibility and low initial costs, we urge data engineers to take an opex-first
+approach centered on the cloud and flexible, pay-as-you-go technologies.
 
 ### Today vs. Future: Immutable Vs. Transitory Technology
+In an exciting domain like data engineering, it’s all too easy to focus on a rapidly
+evolving future while ignoring the concrete needs of the present. The intention to
+build a better future is noble but often leads to overarchitecting and overengineering.
+Tooling chosen for the future may be stale and out-of-date when this future arrives;
+the future frequently looks little like what we envisioned years before.
+
+Given the reasonable probability of failure for many data technologies, you need to
+consider how easy it is to transition from a chosen technology. What are the barriers
+to leaving? As mentioned previously in our discussion about opportunity cost, avoid “bear traps.” Go into a new technology with eyes wide open, knowing the project might get abandoned, the company may not be viable, or the technology simply isn’t a good fit any longer.
 
 ### Location
+Companies now have numerous options when deciding where to run their technol‐
+ogy stacks. A slow shift toward the cloud culminates in a veritable stampede of
+companies spinning up workloads on AWS, Azure, and Google Cloud Platform
+(GCP).
 
 ### Build vs Buy
+Build versus buy is an age-old debate in technology. The argument for building is that you have end-to-end control over the solution and are not at the mercy of a vendor or open source community. The argument supporting buying comes down to resource constraints and expertise; do you have the expertise to build a better solution than something already available.
 
 ### Monolith Vs. Modular
+Monoliths versus modular systems is another longtime debate in the software archi‐
+tecture space. Monolithic systems are self-contained, often performing multiple func‐
+tions under a single system.
 
 ### Serverless vs. Servers
-
-### Optimization, Performance, and the Benchmark Wars
+A big trend for cloud providers is serverless, allowing developers and data engineers
+to run applications without managing servers behind the scenes. Serverless provides a
+quick time to value for the right use cases. For other cases, it might not be a good fit.
 
 ### Undercurrents and Their Impacts on Choosing Technologies
+As seen in this chapter, a data engineer has a lot to consider when evaluating technol‐
+ogies. Whatever technology you choose, be sure to understand how it supports the
+undercurrents of the data engineering lifecycle.
 
 ## Citation
 Cited as:
@@ -272,7 +444,7 @@ Or
 
 ```sh
 @article{nguyen2023mtl,
-  title   = "Fundamentals of Data Engineering: A Summary",
+  title   = "Fundamentals of Data Engineering: Foundation and Building Blocks",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
   year    = "2023",
@@ -288,7 +460,7 @@ Or
     <img class="img_size" src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/fundamentals_of_data_engineering_1/imgs/golden_bridge.png" />
 </center>
 <figcaption class="img_footer">
-    Fig. 2: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
+    Fig. 3: Golden Gate Bridge, San Francisco, U.S.A </br>(Image Source: 
     <a href="https://unsplash.com/photos/gZXx8lKAb7Y" class="img_footer">Maarten van den Heuvel @ Unsplash</a>).
 </figcaption>
 
