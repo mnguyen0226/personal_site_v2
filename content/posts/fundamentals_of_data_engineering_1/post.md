@@ -447,7 +447,7 @@ Or
   title   = "Fundamentals of Data Engineering: Foundation and Building Blocks",
   author  = "Nguyen, Minh",
   journal = "mnguyen0226.github.io",
-  year    = "2023",
+  year    = "2024",
   month   = "January",
   url     = "https://mnguyen0226.github.io/posts/fundamentals_of_data_engineering_1/post/"
 }
