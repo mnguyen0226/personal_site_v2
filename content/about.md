@@ -1,7 +1,7 @@
 ---
 author: "Minh T. Nguyen"
 title: "About Me"
-date: "2023-03-11"
+date: "2024-08-06"
 tags: ["about me"]
 categories: ["experience"]
 series: ["My Experience"]
@@ -11,6 +11,10 @@ TocOpen: true
 weight: 5
 ---
 ## 👨‍💻 Experience
+<details><summary><strong>Software Engineer</strong> @ BlackRock</summary><blockquote>
+</blockquote></details>
+<details><summary><strong>Software Engineer Intern</strong> @ Tesla</summary><blockquote>
+</blockquote></details>
 
 <details><summary><strong>Data Engineer Intern</strong> @ Homebase (Y-Combinator)</summary><blockquote>
     <summary><em><strong>▪ Tech Stack:</strong></em> Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS.</summary>

@@ -1,7 +1,7 @@
 baseURL: "https://mnguyen0226.github.io/"
 title: Minh T. Nguyen
 theme: PaperMod
-paginate: 8
+paginate: 5
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -75,7 +75,7 @@ params:
             
             - 🤝 Let's connect and discuss how I can provide service to your team! 
 
-            - 📨 I am best reached via **mnguyen0226@vt.edu** or via direct message on **[LinkedIn](https://www.linkedin.com/in/minhbtnguyen/)**.            
+            - 📨 I am best reached via **minhbtnguyen.work@gmail.com** or via direct message on **[LinkedIn](https://www.linkedin.com/in/minhbtnguyen/)**.            
     socialIcons:
         - name: linkedin
           url: "https://www.linkedin.com/in/minhbtnguyen/"
