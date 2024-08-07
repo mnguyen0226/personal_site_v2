@@ -10,14 +10,14 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/my-experience/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/series/my-experience/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://mnguyen0226.github.io/about/</link>
-      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/about/</guid>
-      <description>👨‍💻 Experience Data Engineer Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS. &amp;nbsp; &amp;nbsp; ▪ Date: 06/2023 - 9/2023. ▪ Location: Ho Chi Minh City, Vietnam (Remote). ▪ Site. Responsibilities ▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%. ▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</description>
+      <description>👨‍💻 Experience Software Engineer @ BlackRock Software Engineer Intern @ Tesla Data Engineer Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS. &amp;nbsp; &amp;nbsp; ▪ Date: 06/2023 - 9/2023. ▪ Location: Ho Chi Minh City, Vietnam (Remote). ▪ Site. Responsibilities ▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%. ▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</description>
     </item>
     
   </channel>

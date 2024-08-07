@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>experience</title>
+      <link>https://mnguyen0226.github.io/categories/experience/</link>
+      <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/categories/experience/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>data engineer</title>
       <link>https://mnguyen0226.github.io/categories/data-engineer/</link>
@@ -32,18 +41,9 @@
     <item>
       <title>software engineer</title>
       <link>https://mnguyen0226.github.io/categories/software-engineer/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/categories/software-engineer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>information security</title>
-      <link>https://mnguyen0226.github.io/categories/information-security/</link>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/categories/information-security/</guid>
       <description></description>
     </item>
     
@@ -62,15 +62,6 @@
       <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/categories/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>experience</title>
-      <link>https://mnguyen0226.github.io/categories/experience/</link>
-      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/categories/experience/</guid>
       <description></description>
     </item>
     

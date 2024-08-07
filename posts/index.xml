@@ -23,24 +23,6 @@ Data engineering is the development, implementation, and maintenance of systems 
     </item>
     
     <item>
-      <title>System Design Roadmap</title>
-      <link>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</guid>
-      <description>Notes on fundamentals system design concepts, collected from Sahn Lam&amp;#39;s lecture series.</description>
-    </item>
-    
-    <item>
-      <title>Information and Network Security Concepts</title>
-      <link>https://mnguyen0226.github.io/posts/info_security_1/post/</link>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/info_security_1/post/</guid>
-      <description>An exploration of computer security, delving into the OSI security architecture, various security attacks, and models for network protection. This guide also covers essential security services, mechanisms, potential attack surfaces, and principles</description>
-    </item>
-    
-    <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
@@ -95,48 +77,12 @@ Data engineering is the development, implementation, and maintenance of systems 
     </item>
     
     <item>
-      <title>Java Fundamentals (Part 4)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</link>
-      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</guid>
-      <description>Explore the key differences between ArrayLists and LinkedLists.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 3)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</link>
-      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</guid>
-      <description>A brief introduction on test-driven development (TDD).</description>
-    </item>
-    
-    <item>
       <title>Odin&#39;s Resources Repository</title>
       <link>https://mnguyen0226.github.io/posts/web_dev_odin/post/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/web_dev_odin/post/</guid>
       <description>Learning notes and resources from the Odin project.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 2)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</guid>
-      <description>Dive into the distinctions and practical uses of static and final modifiers in Java. Discover the intricacies of arrays versus lists, and understand the fundamental differences between interfaces and their implementations.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 1)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</link>
-      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</guid>
-      <description>Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. </description>
     </item>
     
   </channel>

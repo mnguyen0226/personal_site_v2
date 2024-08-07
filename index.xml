@@ -10,7 +10,16 @@
       <link>https://mnguyen0226.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mnguyen0226.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://mnguyen0226.github.io/about/</link>
+      <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://mnguyen0226.github.io/about/</guid>
+      <description>👨‍💻 Experience Software Engineer @ BlackRock Software Engineer Intern @ Tesla Data Engineer Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS. &amp;nbsp; &amp;nbsp; ▪ Date: 06/2023 - 9/2023. ▪ Location: Ho Chi Minh City, Vietnam (Remote). ▪ Site. Responsibilities ▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%. ▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</description>
+    </item>
+    
     <item>
       <title>Fundamentals of Data Engineering: Foundation and Building Blocks</title>
       <link>https://mnguyen0226.github.io/posts/fundamentals_of_data_engineering_1/post/</link>
@@ -20,24 +29,6 @@
       <description>[v.1.0] (01/05/2024): Post started!
 1. Data Engineering Described What Is Data Engineering? A data engineer gets data, stores it, and prepares it for consumption by data scientists, analysts, and others.
 Data engineering is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases, such as analysis and machine learning. Data engineering is the intersection of security, data management, DataOps, data architecture, orchestration, and software engineering.</description>
-    </item>
-    
-    <item>
-      <title>System Design Roadmap</title>
-      <link>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</guid>
-      <description>Notes on fundamentals system design concepts, collected from Sahn Lam&amp;#39;s lecture series.</description>
-    </item>
-    
-    <item>
-      <title>Information and Network Security Concepts</title>
-      <link>https://mnguyen0226.github.io/posts/info_security_1/post/</link>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/info_security_1/post/</guid>
-      <description>An exploration of computer security, delving into the OSI security architecture, various security attacks, and models for network protection. This guide also covers essential security services, mechanisms, potential attack surfaces, and principles</description>
     </item>
     
     <item>
@@ -86,15 +77,6 @@ Data engineering is the development, implementation, and maintenance of systems 
     </item>
     
     <item>
-      <title>About Me</title>
-      <link>https://mnguyen0226.github.io/about/</link>
-      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/about/</guid>
-      <description>👨‍💻 Experience Data Engineer Intern @ Homebase (Y-Combinator) ▪ Tech Stack: Python (Scrapy, Selenium, Pandas), PHP, Redis, Airflow, PostgreSQL, AWS. &amp;nbsp; &amp;nbsp; ▪ Date: 06/2023 - 9/2023. ▪ Location: Ho Chi Minh City, Vietnam (Remote). ▪ Site. Responsibilities ▪ Developed a distributed web‑scraper with Python (Scrapy, Selenium, Pandas), Redis, and Airflow, reducing runtime by 75%. ▪ Automated ETL from WordPress to Strapi CMS with PHP, Pandas, RESTful APIs, PostgreSQL, and AWS S3, reducing operational time by 25%.</description>
-    </item>
-    
-    <item>
       <title>System Design Concepts Mega-Blog</title>
       <link>https://mnguyen0226.github.io/posts/system_design_concepts/post/</link>
       <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
@@ -104,48 +86,12 @@ Data engineering is the development, implementation, and maintenance of systems 
     </item>
     
     <item>
-      <title>Java Fundamentals (Part 4)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</link>
-      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</guid>
-      <description>Explore the key differences between ArrayLists and LinkedLists.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 3)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</link>
-      <pubDate>Mon, 25 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</guid>
-      <description>A brief introduction on test-driven development (TDD).</description>
-    </item>
-    
-    <item>
       <title>Odin&#39;s Resources Repository</title>
       <link>https://mnguyen0226.github.io/posts/web_dev_odin/post/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mnguyen0226.github.io/posts/web_dev_odin/post/</guid>
       <description>Learning notes and resources from the Odin project.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 2)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</link>
-      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</guid>
-      <description>Dive into the distinctions and practical uses of static and final modifiers in Java. Discover the intricacies of arrays versus lists, and understand the fundamental differences between interfaces and their implementations.</description>
-    </item>
-    
-    <item>
-      <title>Java Fundamentals (Part 1)</title>
-      <link>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</link>
-      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</guid>
-      <description>Explore the essentials of object-oriented programming in Java, from core terminologies to Java-specific elements. </description>
     </item>
     
     

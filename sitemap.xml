@@ -2,14 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mnguyen0226.github.io/about/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mnguyen0226.github.io/posts/fundamentals_of_data_engineering_1/post/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/info_security_1/post/</loc>
-    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/mathbridge/post/</loc>
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
@@ -26,29 +23,32 @@
     <loc>https://mnguyen0226.github.io/posts/multitask_learning/post/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/about/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/posts/system_design_concepts/post/</loc>
     <lastmod>2023-01-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_4/post/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_3/post/</loc>
-    <lastmod>2023-09-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/posts/web_dev_odin/post/</loc>
     <lastmod>2023-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_2/post/</loc>
-    <lastmod>2023-09-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/posts/java_fundamentals_1/post/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
+    <loc>https://mnguyen0226.github.io/tags/about-me/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/categories/experience/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/my-experience/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/tags/</loc>
+    <lastmod>2024-08-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/data-engineer/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
@@ -56,13 +56,7 @@
     <loc>https://mnguyen0226.github.io/tags/long-read/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/posts/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/systems-design/</loc>
@@ -71,35 +65,11 @@
     <loc>https://mnguyen0226.github.io/series/systems-design/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mnguyen0226.github.io/tags/</loc>
-    <lastmod>2024-01-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mnguyen0226.github.io/tags/web-development/</loc>
     <lastmod>2024-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/categories/software-engineer/</loc>
-    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/java/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/software-engineering/</loc>
-    <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/tdd/</loc>
-    <lastmod>2023-09-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/oop/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/cybersecurity/</loc>
-    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/categories/information-security/</loc>
-    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/information-security/</loc>
-    <lastmod>2023-08-21T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/dash/</loc>
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
@@ -114,6 +84,9 @@
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/python/</loc>
+    <lastmod>2023-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mnguyen0226.github.io/series/software-engineering/</loc>
     <lastmod>2023-08-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/data-science/</loc>
@@ -142,15 +115,6 @@
   </url><url>
     <loc>https://mnguyen0226.github.io/tags/transformers/</loc>
     <lastmod>2023-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/tags/about-me/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/categories/experience/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mnguyen0226.github.io/series/my-experience/</loc>
-    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mnguyen0226.github.io/archives/</loc>
   </url><url>

@@ -23,15 +23,6 @@ Data engineering is the development, implementation, and maintenance of systems 
     </item>
     
     <item>
-      <title>System Design Roadmap</title>
-      <link>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</link>
-      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mnguyen0226.github.io/posts/system_design_roadmap/post/</guid>
-      <description>Notes on fundamentals system design concepts, collected from Sahn Lam&amp;#39;s lecture series.</description>
-    </item>
-    
-    <item>
       <title>Building a Data Visualization Web App with Dash</title>
       <link>https://mnguyen0226.github.io/posts/mathbridge/post/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
